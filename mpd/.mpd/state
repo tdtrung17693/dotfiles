@@ -1,0 +1,85 @@
+sw_volume: 60
+audio_device_state:1:ALSA
+audio_device_state:1:My HTTP Stream
+audio_device_state:1:visualizer
+state: pause
+current: 60
+time: 248.430000
+random: 0
+repeat: 1
+single: 0
+consume: 0
+crossfade: 3
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Portable/CLANNAD/[KSLC-0003] Toki wo Kizamu Uta／Torch -Piano Arrange Disc/01. 時を刻む唄 (PianoVer).mp3
+1:Portable/CLANNAD/[KSLC-0003] Toki wo Kizamu Uta／Torch -Piano Arrange Disc/02. TORCH (PianoVer).mp3
+2:Portable/CLANNAD/Clannad Original Soundtrack Disk 1/03-meg-mell.mp3
+3:Portable/CLANNAD/Clannad Original Soundtrack Disk 1/04-town-flow-of-time-people.mp3
+4:Portable/CLANNAD/Clannad Original Soundtrack Disk 2/02-roaring-tides.mp3
+5:Portable/CLANNAD/Clannad Original Soundtrack Disk 2/04-toe.mp3
+6:Portable/CLANNAD/Clannad Original Soundtrack Disk 2/16-nagisa-farewell-at-the-foot-of-a-hill.mp3
+7:Portable/CLANNAD/Clannad Original Soundtrack Disk 2/17-the-palm-of-a-tiny-hand.mp3
+8:Portable/CLANNAD/Clannad Original Soundtrack Disk 2/14-the-place-where-wishes-come-true-ii.mp3
+9:Portable/CLANNAD/Clannad Original Soundtrack Disk 3/09-meg-mell-cockool-mix-full-ver.-.mp3
+10:Portable/CLANNAD/Clannad Original Soundtrack Disk 3/05-meaningful-ways-to-pass-the-time-guitar-.mp3
+11:Portable/Crepe/Pure (2011)/Dreaming Girl - [WOIM].mp3
+12:Portable/Crepe/Pure (2011)/Talk With Sad - [WOIM].mp3
+13:Portable/Crepe/Pure (2011)/Tears - [WOIM].mp3
+14:Portable/Crepe/Pure (2011)/Travelling - [WOIM].mp3
+15:Portable/Crepe/Pure (2011)/Called Lovely Days - [WOIM].mp3
+16:Portable/Crepe/Rainy Season (2012)/The Eyes of Sorrows.mp3
+17:Portable/Crepe/Rainy Season (2012)/I Wish - [WOIM].mp3
+18:Portable/Crepe/Rainy Season (2012)/End Of Despair - [WOIM].mp3
+19:Portable/Crepe/Salt Doll (2012)/Salt Dolls Love - [WOIM].mp3
+20:Portable/Crepe/Salt Doll (2012)/Sunshine Over The Sea - [WOIM].mp3
+21:Portable/Crepe/Salt Doll (2012)/Remember The Ocean In Spring - [WOIM].mp3
+22:Portable/I'm waiting - Pianotales [MP3 - 320]/Im Waiting - [WOIM].mp3
+23:Portable/I'm waiting - Pianotales [MP3 - 320]/Here I Am - [WOIM].mp3
+24:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 1 - Kavin Hoo/01. Fireside Glow.flac
+25:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 1 - Kavin Hoo/02. Home Is Where The Heart Is.flac
+26:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 1 - Kavin Hoo/03. December.flac
+27:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 1 - Kavin Hoo/04. Do You Ever Wonder.flac
+28:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 1 - Kavin Hoo/05. All Is Calm.flac
+29:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 1 - Kavin Hoo/06. Heart To Heart.flac
+30:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 1 - Kavin Hoo/07. Kindred Spirits.flac
+31:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 1 - Kavin Hoo/08. Reflections.flac
+32:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 1 - Kavin Hoo/09. Memories of Yesterdays.flac
+33:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 1 - Kavin Hoo/10. The First Snowfall.flac
+34:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 1 - Kavin Hoo/11. If You Only Knew.flac
+35:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 1 - Kavin Hoo/12. Winter's Lullaby.flac
+36:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 2 - Rob Arthur/01. Fireside.flac
+37:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 2 - Rob Arthur/02. Beautiful Tonight.flac
+38:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 2 - Rob Arthur/03. So Peaceful.flac
+39:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 2 - Rob Arthur/04. Winter's Serenade.flac
+40:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 2 - Rob Arthur/05. Together.flac
+41:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 2 - Rob Arthur/06. Always.flac
+42:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 2 - Rob Arthur/07. Frosty Windows.flac
+43:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 2 - Rob Arthur/08. Possibilities.flac
+44:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 2 - Rob Arthur/09. Dancing Snowflakes.flac
+45:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 2 - Rob Arthur/10. Still of the Night.flac
+46:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 2 - Rob Arthur/11. Wonder Fall.flac
+47:Portable/Kavin Hoo & Rob Arthur - Lifescapes Relaxing Fireside Piano (2 CD) (2012)/Disc 2 - Rob Arthur/12. Goodnight.flac
+48:Portable/DJ Okawari/DJ Okawari (2011) Kaleidoscope [FLAC]/04 - Kaleidoscope.flac
+49:Portable/DJ Okawari/DJ Okawari (2011) Kaleidoscope [FLAC]/05 - Flower Dance.flac
+50:Portable/DJ Okawari/DJ Okawari (2011) Kaleidoscope [FLAC]/03 - Represent.flac
+51:Portable/Tran Thu Ha & Tran Tien - Tu Hoa - Chuyen Pho Ben Song (1999) [FLAC] {HQM}/02 - Tran Thu Ha - Vo Tinh.flac
+52:Portable/Tran Thu Ha & Tran Tien - Tu Hoa - Chuyen Pho Ben Song (1999) [FLAC] {HQM}/05 - Tran Thu Ha - Mua Thu Trang.flac
+53:Portable/Tran Thu Ha & Tran Tien - Tu Hoa - Chuyen Pho Ben Song (1999) [FLAC] {HQM}/01 - Tran Thu Ha - Dong Song Mua Thu.flac
+54:Portable/Tran Thu Ha & Tran Tien - Tu Hoa - Chuyen Pho Ben Song (1999) [FLAC] {HQM}/07 - Tran Thu Ha - Toc Gio Thoi Bay.flac
+55:Portable/Tran Thu Ha & Tran Tien - Tu Hoa - Chuyen Pho Ben Song (1999) [FLAC] {HQM}/10 - Tran Tien - Nguoi Thich Tinh Ca.flac
+56:Portable/Tran Thu Ha & Tran Tien - Tu Hoa - Chuyen Pho Ben Song (1999) [FLAC] {HQM}/04 - Tran Thu Ha - Em Van Nhu Ngay Xua.flac
+57:Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/01. Daniel Pemberton TV Orchestra - Pacific Drift.flac
+58:Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/02. Sven Van Hees - Bossambique.flac
+59:Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/03. Scalpel - Sculpture.flac
+60:Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/04. The Superimposers - Golden  (Shawn Lee Instrumental Remix).flac
+61:Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/05. Black Mighty Orchestra - Ocean Beach ( Cybophonia Cinematic Remix).flac
+62:Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/06. Dj Food - Nocturne Sleep.flac
+63:Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/07. The Starseeds - Parallel Life.flac
+64:Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/08. Kraak & Smaak - Danse Macabre.flac
+65:Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/09. Monte La Rue - Adeus.flac
+66:Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/10. La Perla Noir - Inverno A Capri.flac
+67:Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/11. Montefiori Coctail - Gipsy Woman.flac
+68:Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/12. Julien Sabre - Swimming Places.flac
+playlist_end

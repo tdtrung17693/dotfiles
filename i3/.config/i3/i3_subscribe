@@ -1,0 +1,24 @@
+#!/bin/python3
+
+import i3ipc
+import sys
+import argparse
+import unicodedata
+import subprocess
+import shlex
+import re
+import time
+from time import sleep
+
+# Create the Connection object that can be used to send commands and subscribe
+# to events.
+i3 = i3ipc.Connection()
+
+def on_mode_change(i3, ev):
+    subprocess.call(shlex.split('/home/tdtrung17693/.config/i3/toast.sh ' + ev.change))
+
+# Subscribe to events
+i3.on('mode', on_mode_change)
+
+# Start the main loop and wait for events to come in.
+i3.main()
