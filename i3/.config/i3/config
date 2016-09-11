@@ -34,10 +34,10 @@ bar {
 
 # Floating mode for some apps
 for_window [title="^ncmpcpp$"] floating enable
+for_window [title="^ranger$"] floating enable
 for_window [class="vlc"] floating enable
 for_window [class="mpv"] floating enable
-for_window [class="lxqt-openssh-askpass"] floating enable
-for_window [title="^DeSmuME*"] floating enable
+bindsym $mod+bracketright exec urxvt -name SideTerm
 
 bindsym $mod+d exec --no-startup-id rofi -font 'TamzenForPowerline 12' -show run
 
@@ -257,8 +257,7 @@ mode "$mode_mpc" {
     bindsym Escape mode "default"
 }
 
-for_window [class="^.*"] border pixel 0
-# new_window pixel
+for_window [class=".*"] border pixel 0
 for_window [class=".*"] title_format "<span>   %title</span>"
 
 # Colors

@@ -12,17 +12,17 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 CD="$HOME/.Xdefaults"
 
 # Fetch the Colors
-BG=$(cat ${CD} | grep -i base00 | head -c 23 | tail -c 8)
-FG=$(cat ${CD} | grep -i base05 | head -c 23 | tail -c 8)
+BG=$(cat ${CD} | grep -i background | tail -c 8)
+FG=$(cat ${CD} | grep -i foreground | tail -c 8)
 
-BLACK=$(cat ${CD} | grep -i base03 | head -c 23 | tail -c 8)
-RED=$(cat ${CD} | grep -i base08 | head -c 23 | tail -c 8)
-GREEN=$(cat ${CD} | grep -i base0B | head -c 23 | tail -c 8)
-YELLOW=$(cat ${CD} | grep -i base0A | head -c 23 | tail -c 8)
-BLUE=$(cat ${CD} | grep -i base0D | head -c 23 |tail -c 8)
-MAGENTA=$(cat ${CD} | grep -i base0E | head -c 23 | tail -c 8)
-CYAN=$(cat ${CD} | grep -i base0C | head -c 23 | tail -c 8)
-WHITE=$(cat ${CD} | grep -i base07 | head -c 23 | tail -c 8)
+BLACK=$(cat ${CD} | grep -i 'color8 :' | tail -c 8)
+RED=$(cat ${CD} | grep -i 'color9 :' | tail -c 8)
+GREEN=$(cat ${CD} | grep -i 'color10:' | tail -c 8)
+YELLOW=$(cat ${CD} | grep -i 'color11:' | tail -c 8)
+BLUE=$(cat ${CD} | grep -i 'color12:' | tail -c 8)
+MAGENTA=$(cat ${CD} | grep -i 'color13:' | tail -c 8)
+CYAN=$(cat ${CD} | grep -i 'color14:' | tail -c 8)
+WHITE=$(cat ${CD} | grep -i 'color15:' | tail -c 8)
 
 # Fonts
 #FONT1="Source Han Sans JP Regular:size=11"
@@ -30,7 +30,7 @@ FONT1="TamzenForPowerline:size=11"
 FONT2="Unifont:size=11"
 FONT3="Siji:size=11"
 
-# Panel 
+# Panel
 PW=1920
 PH=25
 PX=0
@@ -50,7 +50,7 @@ OPENMUSIC="termite -e 'ncmpcpp --host ${host} --port ${port}' -t ncmpcpp &"
 
 music() {
 	state=$(mpc --host=$host --port=$port status | grep -E "(playing|paused)" -o)
-    
+
     if [[ $state == "playing" ]]; then
 		icon='\ue09b'
 	else
@@ -71,7 +71,7 @@ music() {
 
 net(){
 	ping=$(pn=$(timeout .8 ping 8.8.8.8 -c 1 -s 24 | sed '2!d;s/.*time=\([0-9]*\).*/\1/'); if [ -z $pn ] ; then echo "No Connection"; else echo "${pn}ms"; fi)
-    
+
 	echo -e "%{F$GREEN}\ue0f0 ${ping}"
 }
 
@@ -84,7 +84,7 @@ clock(){
 
 vol(){
     vol=$(amixer get Master | grep Mono | sed -nr 'N;s/^.*\[([0-9]+)%\].*/\1/p')
-    
+
     if [[ $(amixer get 'Master' | grep -c off) = 0 ]]; then
         if [[ $vol = 0 ]]
         then
@@ -116,9 +116,9 @@ ram() {
 
 pow() {
     onAC=$(cat /sys/class/power_supply/AC/online)
-    lvl=$(echo "$(cat /sys/class/power_supply/BAT0/charge_now)*100/$(cat /sys/class/power_supply/BAT0/charge_full)" | bc -l | sed -nr 's/^([0-9][^.]+).*/\1/p')
+    lvl=$(echo "$(cat /sys/class/power_supply/BAT0/charge_now)*100/$(cat /sys/class/power_supply/BAT0/charge_full)" | bc -l | sed -nr 's/^([0-9][^.]*).*/\1/p')
 	stat=$(cat /sys/class/power_supply/BAT0/status)
-    
+
     if [[ $onAC == 1 ]]
     then
         pow="\ue239"
@@ -139,7 +139,7 @@ zscroll -d 0.2 -n -u -M "mpc --host $host --port $port status" -m "playing" -s 1
 -m "paused" -s 0 "mpc --host $host --port $port current" |\
 
 while true; do
-	read -t 0.2 line 
+	read -t 0.2 line
 
 	echo -e "$(music)%{A:$OPENMUSIC:} ${line} %{A} %{c}$(cpu) $(temp) $(ram)  $(pow)%{r}$(net) %{A:$VOLT:}%{A4:$VOLU:}%{A5:$VOLD:}$(vol)%{A}%{A}%{A}  $(clock)  %{B#373A3B}%{F$FG}%{A:$HOME/.config/i3/lemonbar/pop_panel.sh:} \ue00d%{A} %{B- F-}"
 

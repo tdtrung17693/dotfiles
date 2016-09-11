@@ -1,0 +1,16 @@
+search /media/Data
+sear
+cd /media
+search cd /
+cd /media/Data/Pictures/
+rename home
+open_with 
+cd .mpd
+
+search 24
+cd /media/Passport/Music/Debussy - Beau Soir - Preludes Book 2 & Other works (Michael Lewin) [2014, FLAC 24]
+cd /media/Passport/Music/
+search Concerti
+search concerti
+touch 
+delete
