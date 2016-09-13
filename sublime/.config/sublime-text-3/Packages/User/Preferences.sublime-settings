@@ -1,0 +1,14 @@
+{
+	"color_scheme": "Packages/User/Darktooth.tmTheme",
+	"font_face": "TamzenForPowerline",
+	"font_size": 11,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"shift_tab_unindent": true,
+	"show_tab_close_buttons": false,
+	"theme": "gruvbox (Dark) (Hard).sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}

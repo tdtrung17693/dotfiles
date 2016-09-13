@@ -1,0 +1,4 @@
+*.log
+*.fifo
+log
+state

@@ -10,34 +10,41 @@ cursor          = #a89984
 background      = #1d2021
 
 # black
-color0  = #282828
-color8  = #665c54
+color0  = #1d2021
+color8  = #596265
 
 # red
-color1  = #fb543f
+color1  = #cd4533
 color9  = #fb543f
 
 # green
-color2  = #95c085
+color2  = #789b6b
 color10 = #95c085
 
 # yellow
-color3  = #fac03b
-color11 = #fac03b
+color3  = #d2a131
+color11 = #fac33b
 
 # blue
-color4  = #048da9
+color4  = #03829d
 color12 = #048da9
 
 # magenta
-color5  = #d3869b
+color5  = #a76a7b
 color13 = #d3869b
 
 # cyan
-color6  = #8ba59b
+color6  = #80988f
 color14 = #8ba59b
 
 # white
 color7  = #a89984
 color15 = #fdf4c1
 
+# 256 color
+color16 = #fe8265
+color17 = #a87322
+color18 = #32302f
+color19 = #504945
+color20 = #928374
+color21 = #d5c4a1

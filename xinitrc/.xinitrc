@@ -36,9 +36,9 @@ xset -b
 EXMONITOR=DisplayPort-2
 
 if [ $(xrandr | grep -c ' connected ') -eq 2 ]; then
-	xrandr --output $EXMONITOR --primary --output LVDS --right-of $EXMONITOR
+	xrandr --output $EXMONITOR --auto --primary --output LVDS --right-of $EXMONITOR
 else
-	xrandr --output LVDS --primary
+	xrandr --output LVDS --auto --primary
 fi
 	
 
