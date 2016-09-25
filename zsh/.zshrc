@@ -61,6 +61,9 @@ autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
+# Bind key for termite
 bindkey "^[OA" up-line-or-beginning-search # Up
 bindkey "^[OB" down-line-or-beginning-search # Down
-
+# Bind key for Urxvt
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down

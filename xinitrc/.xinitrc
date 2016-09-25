@@ -1,3 +1,4 @@
+#!/bin/evn bash
 # IBUS
 #######################
 
@@ -47,4 +48,13 @@ xrdb -load ~/.Xdefaults
 
 # START SESSION
 #######################
-exec i3
+case $WM in
+rpi)
+    exec xterm -e "~/test.sh $IP"
+    ;;
+i3)
+    exec i3
+    ;;
+raw)
+    exec wait.sh
+esac

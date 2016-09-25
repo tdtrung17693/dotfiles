@@ -41,6 +41,7 @@ bindsym $mod+bracketright exec urxvt -name SideTerm
 
 bindsym $mod+d exec --no-startup-id rofi -font 'TamzenForPowerline 12' -show run
 
+bindsym $mod+Shift+f focus parent; fullscreen; focus child
 # start a terminal
 bindsym $mod+Return exec --no-startup-id termite
 
