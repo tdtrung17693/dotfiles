@@ -67,3 +67,7 @@ bindkey "^[OB" down-line-or-beginning-search # Down
 # Bind key for Urxvt
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
+
+# Fix for duplicate characters when ssh to another host that unsupport current term info with syntax highlighted shell
+
+alias ssh="TERM=xterm-256color ssh"

@@ -136,7 +136,7 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 # Set syntax highlighting styles.
 zstyle ':prezto:module:syntax-highlighting' styles \
     'single-hyphen-option' 'fg=cyan' \
-    'double-hyphen-option' 'fg=cyan' \
+    'double-hyphen-option' 'fg=yellow' \
 
 #
 # Terminal

@@ -39,7 +39,7 @@ for_window [class="vlc"] floating enable
 for_window [class="mpv"] floating enable
 bindsym $mod+bracketright exec urxvt -name SideTerm
 
-bindsym $mod+d exec --no-startup-id rofi -font 'TamzenForPowerline 12' -show run
+bindsym $mod+d exec --no-startup-id rofi -font 'TamzenForPowerline 11' -show run
 
 bindsym $mod+Shift+f focus parent; fullscreen; focus child
 # start a terminal

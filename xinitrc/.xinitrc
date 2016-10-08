@@ -33,6 +33,7 @@ xset fp rehash
 
 xset -b
 
+xinput set-prop 13 "Device Enabled" 0
 # detect external monitor
 EXMONITOR=DisplayPort-2
 
