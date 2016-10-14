@@ -1,10 +1,8 @@
 sw_volume: 60
 audio_device_state:1:ALSA
-audio_device_state:1:My HTTP Stream
 audio_device_state:1:visualizer
-state: pause
+state: stop
 current: 60
-time: 248.430000
 random: 0
 repeat: 1
 single: 0

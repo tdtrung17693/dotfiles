@@ -8223,3 +8223,7 @@ Sep 04 15:45 : player: played "Portable/Tran Thu Ha & Tran Tien - Tu Hoa - Chuye
 Sep 04 15:49 : player: played "Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/01. Daniel Pemberton TV Orchestra - Pacific Drift.flac"
 Sep 04 15:57 : player: played "Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/02. Sven Van Hees - Bossambique.flac"
 Sep 04 16:01 : player: played "Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/03. Scalpel - Sculpture.flac"
+Oct 14 21:58 : errno: Failed to open "/home/tdtrung17693/Music/Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/04. The Superimposers - Golden  (Shawn Lee Instrumental Remix).flac": No such file or directory
+Oct 14 21:58 : errno: Failed to open "/home/tdtrung17693/Music/Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/04. The Superimposers - Golden  (Shawn Lee Instrumental Remix).flac": No such file or directory
+Oct 14 21:58 : player: played "Portable/Various Artists - Cafe Del Mar - Jazz (2013) [FLAC]/04. The Superimposers - Golden  (Shawn Lee Instrumental Remix).flac"
+Oct 14 21:58 : config: option 'enable' on line 34 was not recognized

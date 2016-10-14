@@ -208,4 +208,8 @@ endfunction
 function! Encoding()
     return winwidth(0) > 70 ? (strlen(&fenc) ? &enc : &enc) : ''
 endfunction
+
+" CtrlP
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 " }}}

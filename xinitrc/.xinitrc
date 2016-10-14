@@ -9,11 +9,6 @@ ibus-daemon -drx
 
 mpd
 
-# URXVTD
-#######################
-
-urxvtd -o -f -q &
-
 # COMPTON
 #######################
 
@@ -49,13 +44,4 @@ xrdb -load ~/.Xdefaults
 
 # START SESSION
 #######################
-case $WM in
-rpi)
-    exec xterm -e "~/test.sh $IP"
-    ;;
-i3)
-    exec i3
-    ;;
-raw)
-    exec wait.sh
-esac
+exec i3

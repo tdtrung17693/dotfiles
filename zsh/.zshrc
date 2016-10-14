@@ -34,7 +34,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-eval `dircolors ~/LS_COLORS`
+# eval `dircolors ~/LS_COLORS`
 unsetopt correct
 unsetopt correctall
 DISABLE_CORRECTION="true"

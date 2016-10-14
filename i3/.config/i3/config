@@ -14,7 +14,7 @@ set $mod Mod4
 font xft:TamzenForPowerline 11
 
 # Set wallpaper
-exec --no-startup-id feh --bg-fill /media/Data/Pictures/papers.co-mz92-green-moss-flower-nature-25-wallpaper.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/papers.co-mx34-nature-leaf-bokeh-spring-green-water-1920x1080.jpg
 
 #exec --no-startup-id /home/tdtrung17693/.config/i3/i3_subscribe &
 
@@ -39,7 +39,7 @@ for_window [class="vlc"] floating enable
 for_window [class="mpv"] floating enable
 bindsym $mod+bracketright exec urxvt -name SideTerm
 
-bindsym $mod+d exec --no-startup-id rofi -font 'TamzenForPowerline 11' -show run
+bindsym $mod+d exec --no-startup-id rofi -show run -fullscreen -padding 400 -font 'TamzenForPowerline 11'
 
 bindsym $mod+Shift+f focus parent; fullscreen; focus child
 # start a terminal
