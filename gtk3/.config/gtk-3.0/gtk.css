@@ -1,7 +1,7 @@
-/* shrink headebars */
+/*
 headerbar {
     min-height: 28px;
-    padding-left: 2px; /* same as childrens vertical margins for nicer proportions */
+    padding-left: 2px;
     padding-right: 2px;
 }
 
@@ -9,18 +9,17 @@ headerbar entry,
 headerbar spinbutton,
 headerbar button,
 headerbar separator {
-    margin-top: 2px; /* same as headerbar side padding for nicer proportions */
+    margin-top: 2px;
     margin-bottom: 2px;
 }
 
-/* shrink ssd titlebars */
 .default-decoration {
-    min-height: 0; /* let the entry and button drive the titlebar size */ 
+    min-height: 0;  let the entry and button drive the titlebar size
     padding: 2px
 }
 
 .default-decoration .titlebutton {
-    min-height: 26px; /* tweak these two props to reduce button size */
+    min-height: 26px;
     min-width: 26px;
 }
 
@@ -34,7 +33,7 @@ window.ssd headerbar.titlebar button.titlebutton {
     padding-top: 1px;
     padding-bottom: 1px;
     min-height: 0;
-}
+}*/
 
 VteTerminal,
 vte-terminal {

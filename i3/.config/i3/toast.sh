@@ -2,17 +2,17 @@
 
 CD="/home/tdtrung17693/.Xdefaults"
 
-BG=$(cat ${CD} | grep -i base00 | head -c 23 | tail -c 8)
-FG=$(cat ${CD} | grep -i base05 | head -c 23 | tail -c 8)
-
-BLACK=$(cat ${CD} | grep -i base03 | head -c 23 | tail -c 8)
-RED=$(cat ${CD} | grep -i base08 | head -c 23 | tail -c 8)
-GREEN=$(cat ${CD} | grep -i base0B | head -c 23 | tail -c 8)
-YELLOW=$(cat ${CD} | grep -i base0A | head -c 23 | tail -c 8)
-BLUE=$(cat ${CD} | grep -i base0D | head -c 23 |tail -c 8)
-MAGENTA=$(cat ${CD} | grep -i base0E | head -c 23 | tail -c 8)
-CYAN=$(cat ${CD} | grep -i base0C | head -c 23 | tail -c 8)
-WHITE=$(cat ${CD} | grep -i base07 | head -c 23 | tail -c 8)
+BG=$(cat ${CD} | grep -i background | tail -c 8)
+FG=$(cat ${CD} | grep -i foreground | tail -c 8)
+ 
+BLACK=$(cat ${CD} | grep -i 'color8 :' | tail -c 8)
+RED=$(cat ${CD} | grep -i 'color9 :' | tail -c 8)
+GREEN=$(cat ${CD} | grep -i 'color10:' | tail -c 8)
+YELLOW=$(cat ${CD} | grep -i 'color11:' | tail -c 8)
+BLUE=$(cat ${CD} | grep -i 'color12:' | tail -c 8)
+MAGENTA=$(cat ${CD} | grep -i 'color13:' | tail -c 8)
+CYAN=$(cat ${CD} | grep -i 'color14:' | tail -c 8)
+WHITE=$(cat ${CD} | grep -i 'color15:' | tail -c 8)
 
 VW=1920
 VH=1080
@@ -28,7 +28,7 @@ msg=$1
 
 while :; do 
     echo %{c}$msg
-    sleep 1s
+    sleep 2s
     break
 done | lemonbar -g ${PW}x${PH}+${X}+${Y} -f "${FONT}" -B "${BG}" -F "${FG}" -d
 

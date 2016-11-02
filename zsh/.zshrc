@@ -42,10 +42,10 @@ DISABLE_CORRECTION="true"
 # XDG Environment Variables
 . ~/.config/user-dirs.dirs
 
-[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
-source /usr/share/nvm/nvm.sh
-source /usr/share/nvm/bash_completion
-source /usr/share/nvm/install-nvm-exec
+#[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+#source /usr/share/nvm/nvm.sh
+#source /usr/share/nvm/bash_completion
+#source /usr/share/nvm/install-nvm-exec
 
 # Less clear screen after quit
 export LESS="+X"
@@ -71,3 +71,14 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 # Fix for duplicate characters when ssh to another host that unsupport current term info with syntax highlighted shell
 
 alias ssh="TERM=xterm-256color ssh"
+eval $(dircolors -b $HOME/.dircolors)
+
+export NVM_DIR="/home/tdtrung17693/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+export ANDROID_SDK_PATH="/media/Data/AndroidSDK"
+
+export PATH="$ANDROID_SDK_PATH/platform-tools:$PATH"
