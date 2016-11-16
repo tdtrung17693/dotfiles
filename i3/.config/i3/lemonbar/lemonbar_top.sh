@@ -115,9 +115,9 @@ ram() {
 }
 
 pow() {
-    onAC=$(cat /sys/class/power_supply/AC/online)
-    lvl=$(echo "$(cat /sys/class/power_supply/BAT0/charge_now)*100/$(cat /sys/class/power_supply/BAT0/charge_full)" | bc -l | sed -nr 's/^([0-9][^.]*).*/\1/p')
-	stat=$(cat /sys/class/power_supply/BAT0/status)
+    onAC=$(cat /sys/class/power_supply/ADP1/online)
+    lvl=$(echo "$(cat /sys/class/power_supply/BAT1/charge_now)*100/$(cat /sys/class/power_supply/BAT1/charge_full)" | bc -l | sed -nr 's/^([0-9][^.]*).*/\1/p')
+	stat=$(cat /sys/class/power_supply/BAT1/status)
 
     if [[ $onAC == 1 ]]
     then
@@ -139,11 +139,11 @@ zscroll -d 0.2 -n -u -M "mpc --host $host --port $port status" -m "playing" -s 1
 -m "paused" -s 0 "mpc --host $host --port $port current" |\
 
 while true; do
-	read -t 0.2 line
+	read -t 0.1 line
 
 	echo -e "$(music)%{A:$OPENMUSIC:} ${line} %{A} %{c}$(cpu) $(temp) $(ram)  $(pow)%{r}$(net) %{A:$VOLT:}%{A4:$VOLU:}%{A5:$VOLD:}$(vol)%{A}%{A}%{A}  $(clock)  %{B#373A3B}%{F$FG}%{A:$HOME/.config/i3/lemonbar/pop_panel.sh:} \ue00d%{A} %{B- F-}"
 
-	sleep 0.2
+	sleep 0.1
 done | \
 lemonbar -g ${PW}x${PH}+${PX}+${PY} -o -1 -f "$FONT1" -o 0 -f "$FONT2" -o -2 -f "$FONT3" -B "$BG" -F "$FG" -p | zsh
 

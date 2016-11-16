@@ -2,9 +2,6 @@ set $mod Mod4
 
 font xft:TamzenForPowerline 11
 
-# Set wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/papers.co-mx34-nature-leaf-bokeh-spring-green-water-1920x1080.jpg
-
 #exec --no-startup-id /home/tdtrung17693/.config/i3/i3_subscribe &
 
 #exec --no-startup-id /home/tdtrung17693/.config/i3/dual_monitor

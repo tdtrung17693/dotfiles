@@ -18442,3 +18442,319 @@ Nov 02 09:06 : player: played "MediaTomb/Audio/Artists/Scott Joplin, Marvin Haml
 Nov 02 09:09 : player: played "MediaTomb/Audio/Artists/Scott Joplin, Marvin Hamlisch/All - full name/Scott Joplin, Marvin Hamlisch - The Sting - Hooker's Hooker"
 Nov 02 09:11 : player: played "MediaTomb/Audio/Artists/Scott Joplin, Marvin Hamlisch/All - full name/Scott Joplin, Marvin Hamlisch - The Sting - Little Girl (violin solo)"
 Nov 02 09:14 : player: played "MediaTomb/Audio/Artists/Scott Joplin, Marvin Hamlisch/All - full name/Scott Joplin, Marvin Hamlisch - The Sting - Luther"
+Nov 06 13:55 : config: option 'enable' on line 37 was not recognized
+Nov 06 14:31 : config: option 'enable' on line 37 was not recognized
+Nov 06 15:18 : config: option 'enable' on line 37 was not recognized
+Nov 06 15:43 : config: option 'enable' on line 37 was not recognized
+Nov 06 16:11 : config: option 'enable' on line 37 was not recognized
+Nov 06 16:44 : config: option 'enable' on line 37 was not recognized
+Nov 06 21:05 : config: option 'enable' on line 37 was not recognized
+Nov 06 22:56 : config: option 'enable' on line 37 was not recognized
+Nov 06 22:56 : errno: Failed to open "/home/tdtrung17693/Music/Portable/Vivaldi 24 Bit Vinyl Pack/1973 Organ Concertos/01 Vivaldi, Organ Concertos - (Allegro).flac": No such file or directory
+Nov 06 22:56 : errno: Failed to open "/home/tdtrung17693/Music/Portable/Vivaldi 24 Bit Vinyl Pack/1973 Organ Concertos/01 Vivaldi, Organ Concertos - (Allegro).flac": No such file or directory
+Nov 06 22:56 : player: played "Portable/Vivaldi 24 Bit Vinyl Pack/1973 Organ Concertos/01 Vivaldi, Organ Concertos - (Allegro).flac"
+Nov 07 17:37 : config: option 'enable' on line 37 was not recognized
+Nov 07 18:40 : config: option 'enable' on line 37 was not recognized
+Nov 07 20:20 : config: option 'enable' on line 37 was not recognized
+Nov 07 20:22 : config: option 'enable' on line 37 was not recognized
+Nov 07 21:10 : config: option 'enable' on line 37 was not recognized
+Nov 08 13:30 : config: option 'enable' on line 37 was not recognized
+Nov 08 13:32 : avahi: Client Disconnected, will reconnect shortly
+Nov 08 13:32 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Nov 08 17:36 : config: option 'enable' on line 37 was not recognized
+Nov 08 18:58 : config: option 'enable' on line 37 was not recognized
+Nov 08 19:08 : update: removing Classic Jazz Standards | Jazz Saxophone Classics | Classic Jazz Instrumental Music | Soft Jazz.mp3
+Nov 08 19:08 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/01. Buc thu tinh thu tu - Ho Quynh Huong.flac
+Nov 08 19:08 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/02. Thoi gian de yeu - Nguyen Thao.flac
+Nov 08 19:08 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/03. Chim trong muon thuo - Nguyen Ngoc Anh.flac
+Nov 08 19:08 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/04. May - Tung Duong.flac
+Nov 08 19:08 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/05. Bai ca thang sau - Ha Tran.flac
+Nov 08 19:08 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/06. Doi mat xanh - Thanh Lam.flac
+Nov 08 19:08 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/07. Buc thu tinh thu ba - Tan Minh.flac
+Nov 08 19:08 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/08. Cau tra loi - Ha Tran.flac
+Nov 08 19:08 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/09. Ky niem - Huy Pham.flac
+Nov 08 19:08 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/10. Nhung khung troi khac - Nguyen Thao.flac
+Nov 08 19:08 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/11. Thuy chung - Le Hieu.flac
+Nov 08 19:08 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/12. Nguoc sang - Tung Duong.flac
+Nov 08 19:08 : ffmpeg/mp3: Failed to read frame size: Could not seek to 2931.
+Nov 08 19:09 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/01. Buc thu tinh thu tu - Ho Quynh Huong.flac
+Nov 08 19:09 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/02. Thoi gian de yeu - Nguyen Thao.flac
+Nov 08 19:09 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/03. Chim trong muon thuo - Nguyen Ngoc Anh.flac
+Nov 08 19:09 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/04. May - Tung Duong.flac
+Nov 08 19:09 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/05. Bai ca thang sau - Ha Tran.flac
+Nov 08 19:09 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/06. Doi mat xanh - Thanh Lam.flac
+Nov 08 19:09 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/07. Buc thu tinh thu ba - Tan Minh.flac
+Nov 08 19:09 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/08. Cau tra loi - Ha Tran.flac
+Nov 08 19:09 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/09. Ky niem - Huy Pham.flac
+Nov 08 19:09 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/10. Nhung khung troi khac - Nguyen Thao.flac
+Nov 08 19:09 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/11. Thuy chung - Le Hieu.flac
+Nov 08 19:09 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/12. Nguoc sang - Tung Duong.flac
+Nov 08 19:09 : ffmpeg/mp3: Failed to read frame size: Could not seek to 2931.
+Nov 08 19:11 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/01. Buc thu tinh thu tu - Ho Quynh Huong.flac
+Nov 08 19:11 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/02. Thoi gian de yeu - Nguyen Thao.flac
+Nov 08 19:11 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/03. Chim trong muon thuo - Nguyen Ngoc Anh.flac
+Nov 08 19:11 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/04. May - Tung Duong.flac
+Nov 08 19:11 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/05. Bai ca thang sau - Ha Tran.flac
+Nov 08 19:11 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/06. Doi mat xanh - Thanh Lam.flac
+Nov 08 19:11 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/07. Buc thu tinh thu ba - Tan Minh.flac
+Nov 08 19:11 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/08. Cau tra loi - Ha Tran.flac
+Nov 08 19:11 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/09. Ky niem - Huy Pham.flac
+Nov 08 19:11 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/10. Nhung khung troi khac - Nguyen Thao.flac
+Nov 08 19:11 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/11. Thuy chung - Le Hieu.flac
+Nov 08 19:11 : update: updating Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/12. Nguoc sang - Tung Duong.flac
+Nov 08 19:11 : ffmpeg/mp3: Failed to read frame size: Could not seek to 2931.
+Nov 08 19:11 : player: played "Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/01. Buc thu tinh thu tu - Ho Quynh Huong.flac"
+Nov 08 19:16 : player: played "Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/02. Thoi gian de yeu - Nguyen Thao.flac"
+Nov 08 20:07 : player: played "Portable/Album Canh cung Vol 2 - Thoi gian de yeu - Do Bao [FLAC]/03. Chim trong muon thuo - Nguyen Ngoc Anh.flac"
+Nov 08 20:10 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/01 Kaze No Tani No Naushika [Nausicaä Of The Valley Of The Wind].flac"
+Nov 08 20:13 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/02 Kaze No Tani No Naushika (Opening) [Nausicaä Of The Valley Of The Wind].flac"
+Nov 08 20:15 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/03 Nausicaä ・ Requiem [Nausicaä Of The Valley Of The Wind].flac"
+Nov 08 20:19 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/04 Kimi Wo Nosete [Laputa： Castle In The Sky].flac"
+Nov 08 20:21 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/05 Sanpo [My Neighbor Totoro].flac"
+Nov 08 20:25 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/06 Tonari No Totoro [My Neighbor Totoro].flac"
+Nov 08 20:29 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/07 Kaze No Toorimichi [My Neighbor Totoro].flac"
+Nov 08 20:32 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/08 Umi No Mieru Machi [Kiki's Delivery Service].flac"
+Nov 08 20:35 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/09 Yasashisa Ni Tsutsumareta Nara [Kiki's Delivery Service].flac"
+Nov 08 20:37 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/10 Ai Ha Hana, Kimi Ha Sono Tane (The Rose) [Only Yesterday].flac"
+Nov 08 20:40 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/11 Toki Ni Ha Mukashi No Hanashi Wo [Porco Rosso].flac"
+Nov 08 20:42 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/12 Itsu Demo Dare Ka Ga [Pom Poko].flac"
+Nov 08 20:44 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/13 Engel's Zimmer (Tenshi No Heya) [Whisper Of The Heart].flac"
+Nov 08 20:48 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/14 Country Road (Take Me Home, Country Roads) [Whisper Of The Heart].flac"
+Nov 08 20:50 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/15 Ashitaka Sekki [Princess Mononoke].flac"
+Nov 08 20:54 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/16 Mononoke No Hime [Princess Mononoke].flac"
+Nov 08 20:58 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/17 Hitoribocchi Ha Yameta [My Neighbors The Yamadas].flac"
+Nov 09 08:25 : player: played "Portable/@rosy_T_Nana Hiwatari - Ghibli The Guitar [2007]_flac/18 Itsumo Nando Demo [Spirited Away].flac"
+Nov 09 15:20 : player: played "Portable/1 Litre No Namida OST/21-Only Human (Piano Version).mp3"
+Nov 09 15:38 : config: option 'enable' on line 37 was not recognized
+Nov 09 15:38 : errno: Failed to open "/home/tdtrung17693/Music/Portable/1 Litre No Namida OST/21-Only Human (Piano Version).mp3": No such file or directory
+Nov 09 15:38 : errno: Failed to open "/home/tdtrung17693/Music/Portable/1 Litre No Namida OST/21-Only Human (Piano Version).mp3": No such file or directory
+Nov 09 15:38 : player: played "Portable/1 Litre No Namida OST/21-Only Human (Piano Version).mp3"
+Nov 10 09:27 : config: option 'enable' on line 37 was not recognized
+Nov 10 17:46 : config: option 'enable' on line 37 was not recognized
+Nov 11 13:10 : config: option 'enable' on line 37 was not recognized
+Nov 11 19:47 : config: option 'enable' on line 37 was not recognized
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/ChiecLaHyVong-TaQuangThang_3vecy.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/ChuyenNguoiDanhCa-TaQuangThang_3vecm.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/DeGioCuonDi-TaQuangThang-2872417.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/Duyen-TaQuangThang-3556630.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/Emvetinhkhoi-TaQuangThang_knrn.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/HanhPhuc-VanMaiHuongTaQuangThang-2664156.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/HaNoiNiuBongEm-TaQuangThang_3ved8.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/Hoatimngoaisan-TaQuangThang_3sfr.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/LaCo-TaQuangThang_3vedu.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/MotToiRatMoi-TaQuangThang-3556631.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/NangCho-QuangThang-2633413.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/NgayHomNay-TaQuangThang-3556639.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/NgayTho-TaQuangThang_3vea4.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/NgoiSaoTrongDem-TaQuangThang_3vedm.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/NhuLoaiMeo-KaiDinhTaQuangThang-3181068.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/Phochieu-TaQuangThang_c3kn.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/Phutgiaydautien-TaQuangThang_4snx.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/Ruaoi-TaQuangThang_csfc.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/SongRiengMinh-TaQuangThang_3vecr.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/TraiTimKhongNguYen-ThuyChiTaQuangThang-4167405.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/VeVoiEm-TaQuangThang-2737091_hq.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/VietTinhCa-TaQuangThang-4512963.mp3
+Nov 11 22:28 : update: added Portable/Ta Quang Thang/VoiVang-TaQuangThang-4412665.mp3
+Nov 11 22:28 : ffmpeg/mp3: Failed to read frame size: Could not seek to 2931.
+Nov 11 22:32 : player: played "Portable/Ta Quang Thang/NhuLoaiMeo-KaiDinhTaQuangThang-3181068.mp3"
+Nov 11 22:36 : player: played "Portable/Ta Quang Thang/VeVoiEm-TaQuangThang-2737091_hq.mp3"
+Nov 11 22:42 : player: played "Portable/Ta Quang Thang/Duyen-TaQuangThang-3556630.mp3"
+Nov 11 22:46 : player: played "Portable/Ta Quang Thang/MotToiRatMoi-TaQuangThang-3556631.mp3"
+Nov 11 22:50 : player: played "Portable/Ta Quang Thang/NgayHomNay-TaQuangThang-3556639.mp3"
+Nov 11 22:55 : player: played "Portable/Ta Quang Thang/TraiTimKhongNguYen-ThuyChiTaQuangThang-4167405.mp3"
+Nov 11 23:00 : player: played "Portable/Ta Quang Thang/VietTinhCa-TaQuangThang-4512963.mp3"
+Nov 11 23:04 : player: played "Portable/Ta Quang Thang/VoiVang-TaQuangThang-4412665.mp3"
+Nov 12 09:31 : player: played "Portable/Ta Quang Thang/ChiecLaHyVong-TaQuangThang_3vecy.mp3"
+Nov 12 09:36 : player: played "Portable/Ta Quang Thang/ChuyenNguoiDanhCa-TaQuangThang_3vecm.mp3"
+Nov 12 09:55 : player: played "Portable/Ta Quang Thang/Emvetinhkhoi-TaQuangThang_knrn.mp3"
+Nov 12 10:20 : player: played "Portable/Ta Quang Thang/HaNoiNiuBongEm-TaQuangThang_3ved8.mp3"
+Nov 12 10:27 : player: played "Portable/Ta Quang Thang/Hoatimngoaisan-TaQuangThang_3sfr.mp3"
+Nov 12 10:33 : player: played "Portable/Ta Quang Thang/LaCo-TaQuangThang_3vedu.mp3"
+Nov 12 10:37 : player: played "Portable/Ta Quang Thang/NgayTho-TaQuangThang_3vea4.mp3"
+Nov 12 10:42 : player: played "Portable/Ta Quang Thang/NgoiSaoTrongDem-TaQuangThang_3vedm.mp3"
+Nov 12 10:46 : player: played "Portable/Ta Quang Thang/Phochieu-TaQuangThang_c3kn.mp3"
+Nov 12 10:47 : player: played "Portable/Ta Quang Thang/Phutgiaydautien-TaQuangThang_4snx.mp3"
+Nov 12 10:50 : player: played "Portable/Ta Quang Thang/Ruaoi-TaQuangThang_csfc.mp3"
+Nov 12 10:51 : player: played "Portable/Ta Quang Thang/SongRiengMinh-TaQuangThang_3vecr.mp3"
+Nov 12 10:51 : player: played "Portable/Kelly Clarkson/01-kelly_clarkson-mr._know_it_all.flac"
+Nov 12 10:51 : player: played "Portable/Kelly Clarkson/03-kelly_clarkson-dark_side.flac"
+Nov 12 10:51 : player: played "Portable/Kelly Clarkson/04-kelly_clarkson-honestly.flac"
+Nov 12 10:51 : player: played "Portable/Kelly Clarkson/05-kelly_clarkson-you_love_me.flac"
+Nov 12 10:51 : player: played "Portable/Kelly Clarkson/06-kelly_clarkson-einstein.flac"
+Nov 12 10:51 : player: played "Portable/Kelly Clarkson/07-kelly_clarkson-standing_in_front_of_you.flac"
+Nov 12 10:51 : player: played "Portable/Kelly Clarkson/08-kelly_clarkson-i_forgive_you.flac"
+Nov 12 10:51 : player: played "Portable/Kelly Clarkson/09-kelly_clarkson-hello.flac"
+Nov 12 10:51 : player: played "Portable/Kelly Clarkson/13-kelly_clarkson-breaking_your_own_heart.flac"
+Nov 12 10:51 : player: played "Portable/Kelly Clarkson/14-kelly_clarkson-dont_you_wanna_stay_(with_jason_aldean).flac"
+Nov 12 10:51 : player: played "Portable/Kelly Clarkson/15-kelly_clarkson-alone.flac"
+Nov 12 10:51 : player: played "Portable/Kelly Clarkson/16-kelly_clarkson-dont_be_a_girl_about_it.flac"
+Nov 12 10:52 : player: played "Portable/Kelly Clarkson/17-kelly_clarkson-the_sun_will_rise_(feat._kara_dioguardi).flac"
+Nov 12 10:57 : player: played "Portable/Kelly Clarkson/01-kelly_clarkson-mr._know_it_all.flac"
+Nov 12 11:01 : player: played "Portable/Kelly Clarkson/03-kelly_clarkson-dark_side.flac"
+Nov 12 11:04 : player: played "Portable/Kelly Clarkson/04-kelly_clarkson-honestly.flac"
+Nov 12 11:08 : player: played "Portable/Kelly Clarkson/05-kelly_clarkson-you_love_me.flac"
+Nov 12 11:11 : player: played "Portable/Kelly Clarkson/06-kelly_clarkson-einstein.flac"
+Nov 12 11:15 : player: played "Portable/Kelly Clarkson/07-kelly_clarkson-standing_in_front_of_you.flac"
+Nov 12 11:18 : player: played "Portable/Kelly Clarkson/08-kelly_clarkson-i_forgive_you.flac"
+Nov 12 13:13 : player: played "Portable/Kelly Clarkson/09-kelly_clarkson-hello.flac"
+Nov 12 13:15 : player: played "Portable/My Linh/My Linh - Mot Ngay (Toc Ngan Acoustic) (2011) [FLAC] (HQM)/My Linh - Mot Ngay (Toc Ngan Acoustic) 2011 01 Chieu.FLAC"
+Nov 12 14:36 : player: played "Portable/Tran Manh Tuan - Ha Trang (2001) [FLAC] {HQM}/01 - Ha Trang.flac"
+Nov 12 14:37 : player: played "Portable/Yann Tiersen - Infinity - 2014 (320 kbps)/01. Infinity.mp3"
+Nov 12 15:22 : player: played "Portable/Vivaldi 24 Bit Vinyl Pack/1973 Organ Concertos/02 Vivaldi, Organ Concertos - (Adagio).flac"
+Nov 12 15:26 : player: played "Portable/Kelly Clarkson/01-kelly_clarkson-mr._know_it_all.flac"
+Nov 12 15:29 : player: played "Portable/Kelly Clarkson/03-kelly_clarkson-dark_side.flac"
+Nov 12 15:33 : player: played "Portable/Kelly Clarkson/04-kelly_clarkson-honestly.flac"
+Nov 12 22:38 : player: played "Portable/Kelly Clarkson/05-kelly_clarkson-you_love_me.flac"
+Nov 12 22:39 : config: option 'enable' on line 37 was not recognized
+Nov 12 22:39 : errno: Failed to open "/home/tdtrung17693/Music/Portable/Kelly Clarkson/05-kelly_clarkson-you_love_me.flac": No such file or directory
+Nov 12 22:39 : errno: Failed to open "/home/tdtrung17693/Music/Portable/Kelly Clarkson/05-kelly_clarkson-you_love_me.flac": No such file or directory
+Nov 12 22:39 : player: played "Portable/Kelly Clarkson/05-kelly_clarkson-you_love_me.flac"
+Nov 13 14:43 : update: added /Dragon Ball Super OP (Acoustic Guitar) - Chouzetsu Dynamic! 【Tabs】.mp3
+Nov 13 14:43 : update: added /Bravely You - Charlotte OP (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:43 : update: added /ninelie - Kabaneri of the Iron Fortress ED (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:43 : update: added /Kyouran Hey Kids!! - Noragami Aragoto OP (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:43 : update: added /Requiem of Silence - Re:Zero Episode 15 ED OST (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:43 : update: added /Wishing - Re:Zero Episode 18 Insert Song (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:43 : update: added /DREAM SOLISTER - Hibike! Euphonium OP (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:43 : update: added /Mitsuha's Theme & Kataware Doki - Kimi no Na wa. (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:43 : update: added /Mirai (未来) - Orange ED (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:43 : update: added /Secret Base - Anohana ED (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:43 : ffmpeg/mp3: Failed to read frame size: Could not seek to 2931.
+Nov 13 14:44 : update: added /Harumodoki - OreGairu Zoku OP (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:44 : update: added /RADWIMPS／なんでもないや - Nandemonaiya【君の名は。】Kimi no Na wa. (Your Name.)-reaIfS9JGIw.mp3
+Nov 13 14:44 : update: added /Harmonize Clover - Gakkou Gurashi! ED (Acoustic Guitar) 【Tabs】.mp3
+Nov 13 14:44 : update: added /Nanairo Symphony - Shigatsu wa Kimi no Uso OP 2 (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:44 : update: added /Tokyo Ghoul √A ED (Acoustic Guitar) - Kisetsu wa Tsugitsugi Shindeiku【Tabs】.mp3
+Nov 13 14:44 : update: added /Glassy Sky - Tokyo Ghoul √A OST (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:44 : update: added /Again & Again - Plastic Memories OST (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:44 : update: added /Nandemonaiya & Sparkle - Kimi no Na wa. (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:44 : update: added /Brave Shine - Fate-Stay Night: Unlimited Blade Works OP 2 (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:44 : update: added /Renegade - Gangsta. OP (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:44 : update: added /Unravel - Tokyo Ghoul OP (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:44 : update: added /Wareta Ringo - Shinsekai Yori ED (Violin-Guitar) Ft. Emily Wu.mp3
+Nov 13 14:44 : update: added /Kirameki - Shigatsu wa Kimi no Uso ED 1 (Acoustic Guitar)【Tabs】.mp3
+Nov 13 14:45 : ffmpeg/mp3: Failed to read frame size: Could not seek to 2931.
+Nov 13 14:45 : update: updating /RADWIMPS／なんでもないや - Nandemonaiya【君の名は。】Kimi no Na wa. (Your Name.)-reaIfS9JGIw.mp3
+Nov 13 14:56 : player: played "RADWIMPS／なんでもないや - Nandemonaiya【君の名は。】Kimi no Na wa. (Your Name.)-reaIfS9JGIw.mp3"
+Nov 13 14:59 : player: played "Again & Again - Plastic Memories OST (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:03 : player: played "Brave Shine - Fate-Stay Night: Unlimited Blade Works OP 2 (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:03 : player: played "Bravely You - Charlotte OP (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:03 : player: played "Dragon Ball Super OP (Acoustic Guitar) - Chouzetsu Dynamic! 【Tabs】.mp3"
+Nov 13 15:04 : player: played "Bravely You - Charlotte OP (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:04 : player: played "Dragon Ball Super OP (Acoustic Guitar) - Chouzetsu Dynamic! 【Tabs】.mp3"
+Nov 13 15:04 : player: played "DREAM SOLISTER - Hibike! Euphonium OP (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:08 : player: played "Glassy Sky - Tokyo Ghoul √A OST (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:11 : player: played "Harmonize Clover - Gakkou Gurashi! ED (Acoustic Guitar) 【Tabs】.mp3"
+Nov 13 15:13 : player: played "Harumodoki - OreGairu Zoku OP (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:17 : player: played "Kirameki - Shigatsu wa Kimi no Uso ED 1 (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:23 : player: played "Kyouran Hey Kids!! - Noragami Aragoto OP (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:27 : player: played "Mirai (未来) - Orange ED (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:31 : player: played "Mitsuha's Theme & Kataware Doki - Kimi no Na wa. (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:33 : player: played "Nanairo Symphony - Shigatsu wa Kimi no Uso OP 2 (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:41 : player: played "Nandemonaiya & Sparkle - Kimi no Na wa. (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:46 : player: played "ninelie - Kabaneri of the Iron Fortress ED (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:49 : player: played "Renegade - Gangsta. OP (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:51 : player: played "Requiem of Silence - Re:Zero Episode 15 ED OST (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 15:57 : player: played "Secret Base - Anohana ED (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 16:02 : player: played "Tokyo Ghoul √A ED (Acoustic Guitar) - Kisetsu wa Tsugitsugi Shindeiku【Tabs】.mp3"
+Nov 13 16:06 : player: played "Unravel - Tokyo Ghoul OP (Acoustic Guitar)【Tabs】.mp3"
+Nov 13 16:10 : player: played "Wareta Ringo - Shinsekai Yori ED (Violin-Guitar) Ft. Emily Wu.mp3"
+Nov 13 16:17 : player: played "Wishing - Re:Zero Episode 18 Insert Song (Acoustic Guitar)【Tabs】.mp3"
+Nov 14 17:18 : player: played "RADWIMPS／なんでもないや - Nandemonaiya【君の名は。】Kimi no Na wa. (Your Name.)-reaIfS9JGIw.mp3"
+Nov 14 17:42 : config: option 'enable' on line 37 was not recognized
+Nov 14 17:59 : player: played "RADWIMPS／なんでもないや - Nandemonaiya【君の名は。】Kimi no Na wa. (Your Name.)-reaIfS9JGIw.mp3"
+Nov 14 21:03 : config: option 'enable' on line 37 was not recognized
+Nov 15 01:00 : player: played "RADWIMPS／なんでもないや - Nandemonaiya【君の名は。】Kimi no Na wa. (Your Name.)-reaIfS9JGIw.mp3"
+Nov 15 14:26 : config: option 'enable' on line 37 was not recognized
+Nov 15 14:29 : player: played "RADWIMPS／なんでもないや - Nandemonaiya【君の名は。】Kimi no Na wa. (Your Name.)-reaIfS9JGIw.mp3"
+Nov 15 14:42 : config: option 'enable' on line 37 was not recognized
+Nov 15 21:41 : ffmpeg/mp3: Failed to read frame size: Could not seek to 2931.
+Nov 15 21:41 : player: played "RADWIMPS／なんでもないや - Nandemonaiya【君の名は。】Kimi no Na wa. (Your Name.)-reaIfS9JGIw.mp3"
+Nov 15 21:41 : update: added Portable/Kobasolo/500マイル_藤原さくら 『ラブソング』挿入歌- 忌野清志郎(Cover by コバソロ & 安果音)-pLWjxJqSA9E.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/Acapella VS Animation DANCE - Kobasolo & RIKU アカペラVSダンス-Pw5jA7ygXvw.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/back number「SISTER」（Full cover）- Kobasolo & Aky.K-_sdSuXYSOPg.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/No.1_西野カナ『掟上今日子の備忘録』主題歌（Full Cover by Kobasolo & Lefty Hand Cream）-kImpWphugRY.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/RPG_SEKAI NO OWARI（Acoustic cover by コバソロ & 橋本裕太） 歌詞付き-6AGIhABP5-Y.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/SHINOBIZM _ KOBASOLO (Original Song) on iTunes-3C6uRpjHu5o.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/Soup_藤原さくら『ラブソング』主題歌 (Full Cover by コバソロ&杏沙子) 歌詞付き-ETd5rKofx0A.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/Time After Time - Cyndi Lauper(Aky kamegawa,Kobasolo cover)-92fkEaJDhoE.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【Acapella】Blank Space_Taylor Swift(Cover  by KOBASOLO & Satomi)-sLhogbSHp9Y.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【auの歌】みんながみんな英雄_AI(Full Cover by コバソロ & 杏沙子)-BuaMdyMgVpc.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【English sub 好声音】Aiuta - whiteeeen - 愛唄～since 2007～ 『ストロボ・エッジ』主題歌（Kobasolo & Lefty Hand Cream Cover）-DJnexzGhNAw.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】未来_コブクロ「orange」主題歌（Cover by Kobasolo & 杏沙子）-Ng5FJg5EqoA.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】浜田ばみゅばみゅ_なんでやねんねん（Kobasolo & Lefty Hand Cream Cover）#ガキ使-UvTiQFZ03cg.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】真夏の果実_サザンオールスターズ(Full Covered by コバソロ & 安果音)歌詞付き-wGKJNmDagUo.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】高嶺の花子さん_back number (Full Covered by コバソロ & Lefty Hand Cream)歌詞付き-Sk1kJBJkPh8.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】魔法って言っていいかな？_平井堅(Full Covered by コバソロ & 安果音)歌詞付き-TYLhaADd4OA.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【特報】SHINOBIZM予告編 _ KOBASOLO - Japanese Action Movie Trailar-ruWaOoKLyJs.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【踊ってみた】コバソロがダンスに初挑戦!!『ONE WAY~love~ダンスバージョン』＋コメントその2 with 良知真次-E4kw3eZMIMA.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/あなたの好きなところ_西野カナ 歌詞付き(Full Cover by コバソロ & Lefty Hand Cream)-xho7zvk39HY.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/いきものがかり _ YELL（Cover）-F7_0gkj8zjg.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/もしも運命の人がいるのなら／西野カナ'If there is a soulmate'（Kobasolo & Aky Kamegawa cover）-y85zpfQQM_4.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/クリスマスソング _ back number 歌詞付き(Full cover)『5→9～私に恋したお坊さん～ 』主題歌 - 圣诞歌曲-lRtv6bIhgk4.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/クリスマスソング_back number(Acoustic cover by コバソロ & 橋本裕太)歌詞付き-XLkZvrZQGas.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】なんでもないや_RADWIMPS『君の名は。』歌詞付き(Full Covered by コバソロ & Lefty Hand Cream)-Z8oxYSEUnuU.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】キセキ_GReeeeN『青空エール』主題歌 -whiteeeen(Covered by コバソロ & Lefty Hand Cream)歌詞付き-qgnMRNoT-PM.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】クリスマスソング _ back number (フルカバー)『5→9～私に恋したお坊さん～ 』- 圣诞歌曲-yBCbjFM7mzg.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】ヒロイン_back number (Full Cover by Kobasolo & 杏沙子)-saq0a2eG5y4.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】僕の名前を_back number『オオカミ少女と黒王子』主題歌(Full cover by コバソロ & 杏沙子) 歌詞付き-pqUHymGIOe4.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】前前前世_RADWIMPS『君の名は。』主題歌(Covered by コバソロ & Lefty Hand Cream)歌詞付-fsmKwdVOJFY.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】奏_スキマスイッチ - 一週間フレンズ - One week friends（Cover by コバソロ & 安果音）-gT7IMidxBIk.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】小さな恋のうた_MONGOL800(Full Covered by コバソロ & 杏沙子)歌詞付き-NyXApXudtaU.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】恋_星野源『逃げるは恥だが役に立つ』主題歌(Full Covered by コバソロ & 杏沙子)歌詞付き-SoYU3HKbR84.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】明日はきっといい日になる_高橋優(Full Cover by コバソロ & 杏沙子)-EfxLe-fq2IY.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】時よ_星野源（Full Cover by Kobasolo & 杏沙子）-zeLqNx7dMBM.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/好きな人がいること_JY『好きな人がいること』主題歌(Full Covered by コバソロ & Lefty Hand Cream)歌詞付き-cC8NBJTc6aI.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/宇多田ヒカル_花束を君に NHK連続テレビ小説『とと姉ちゃん』主題歌 (Cover by コバソロ & 安果音)-lqsQBMi-rjM.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/宇多田ヒカル_花束を君に『とと姉ちゃん』主題歌 (Full Cover by コバソロ & Lefty Hand Cream)-J2MmguthQuI.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/手嶌葵／明日への手紙『いつかこの恋を思い出してきっと泣いてしまう』主題歌（Full Cover by コバソロ & 安果音）-r1HVp3GfyBY.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/手紙 _ Morimatsu from Psalm(original)-pSG2bMlYdfE.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/手紙〜拝啓十五の君へ〜_アンジェラ・アキ『くちびるに歌を』主題歌（コバソロ & Eurie Cover）-zscYyB3k7qQ.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/真夏の通り雨_宇多田ヒカル 「NEWS ZERO」テーマ曲(Full cover by コバソロ & 杏沙子)-NxsGrDIx5VI.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/私以外私じゃないの_ゲスの極み乙女。（Acoustic cover）- I except not a me-Y1b5gWNdaso.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/糸_中島みゆき（Cover by コバソロ & 安果音）-luVxqpLOU3c.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/蝶々結び_Aimer(Full Covered by コバソロ & Lefty Hand Cream)歌詞付き-VdU53TKsltE.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/西野カナ『トリセツ』『ヒロイン失格』主題歌 歌詞つき（フルカバー）(Kobasolo & Lefty hand cream) - 西野加奈『使用說明書』 - 翻唱歌曲 니시노 카나 _토리세츠-sW3RT0tF020.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/遠く遠く_槇原敬之 (コバソロ & 亀川アキ Cover)-T9e4k2WEZgU.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【English sub】[Cherry Blossom Hill] - 桜坂_福山雅治（Cover by コバソロ & 亀川アキ）-chxl-4EiLe4.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【English sub】あなたに恋をしてみました - 为了你，我想爱 _chay『デート』主題歌 （コバソロ & Lefty Hand Cream Cover）-HKiq4-qeAOc.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【LIVE】So shine_亀川アキ（Original）with Kobasolo-4IPZCRbTq7M.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【MV】ONE WAY~love~_コバソロ with 良知真次(Original)-9QRfx1-7Qvw.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【卒業ソング】'旅立ちの日に'独唱(Aky Kamegawa & KOBASOLO Cover)-_VLs5ifZCUY.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【君の名は。】スパークル_RADWIMPS(Full Covered by コバソロ&橋本裕太)歌詞付き-BcMOS6OuEfM.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】SUN_星野源(Full Cover by Kobasolo & 杏沙子)-7dxZBeQRdP0.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】Thinking out loud_Ed Sheeran (Cover by Kobasolo & Lefty Hand Cream)-YDEk8rwOv_g.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【English sub】'STAND BY ME Doraemon'ひまわりの約束 - Himawari No Yakusoku_秦基博 好聲音 向日葵承诺_哆啦A梦 （Cover）-UOL4DOlfgVM.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】Wherever you are_ONE OK ROCK(Cover by Kobasolo & Lefty Hand Cream)-l-XRDlV08Uw.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/【女性が歌う】有心論_RADWIMPS(Covered by コバソロ & Lefty Hand Cream)-7rKTVlLYiTc.mp3
+Nov 15 21:41 : update: added Portable/Kobasolo/ヒロイン_back number (Acoustic covered by コバソロ & 橋本裕太)-dly89kvrFIY.mp3
+Nov 15 21:43 : player: played "Again & Again - Plastic Memories OST (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 21:48 : player: played "Brave Shine - Fate-Stay Night: Unlimited Blade Works OP 2 (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 21:50 : player: played "Bravely You - Charlotte OP (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 21:52 : player: played "Dragon Ball Super OP (Acoustic Guitar) - Chouzetsu Dynamic! 【Tabs】.mp3"
+Nov 15 21:54 : player: played "DREAM SOLISTER - Hibike! Euphonium OP (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 21:57 : player: played "Glassy Sky - Tokyo Ghoul √A OST (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 22:00 : player: played "Harmonize Clover - Gakkou Gurashi! ED (Acoustic Guitar) 【Tabs】.mp3"
+Nov 15 22:02 : player: played "Harumodoki - OreGairu Zoku OP (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 22:07 : player: played "Kirameki - Shigatsu wa Kimi no Uso ED 1 (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 22:13 : player: played "Kyouran Hey Kids!! - Noragami Aragoto OP (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 22:17 : player: played "Mirai (未来) - Orange ED (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 22:21 : player: played "Mitsuha's Theme & Kataware Doki - Kimi no Na wa. (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 22:23 : player: played "Nanairo Symphony - Shigatsu wa Kimi no Uso OP 2 (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 22:31 : player: played "Nandemonaiya & Sparkle - Kimi no Na wa. (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 22:36 : player: played "ninelie - Kabaneri of the Iron Fortress ED (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 22:39 : player: played "Renegade - Gangsta. OP (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 22:43 : player: played "Requiem of Silence - Re:Zero Episode 15 ED OST (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 22:49 : player: played "Secret Base - Anohana ED (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 22:54 : player: played "Tokyo Ghoul √A ED (Acoustic Guitar) - Kisetsu wa Tsugitsugi Shindeiku【Tabs】.mp3"
+Nov 15 22:58 : player: played "Unravel - Tokyo Ghoul OP (Acoustic Guitar)【Tabs】.mp3"
+Nov 15 23:02 : player: played "Wareta Ringo - Shinsekai Yori ED (Violin-Guitar) Ft. Emily Wu.mp3"
+Nov 15 23:09 : player: played "Wishing - Re:Zero Episode 18 Insert Song (Acoustic Guitar)【Tabs】.mp3"
+Nov 16 09:20 : player: played "RADWIMPS／なんでもないや - Nandemonaiya【君の名は。】Kimi no Na wa. (Your Name.)-reaIfS9JGIw.mp3"
+Nov 16 09:20 : player: played "Portable/Kobasolo/【Acapella】Blank Space_Taylor Swift(Cover  by KOBASOLO & Satomi)-sLhogbSHp9Y.mp3"
+Nov 16 09:20 : player: played "Portable/Kobasolo/【auの歌】みんながみんな英雄_AI(Full Cover by コバソロ & 杏沙子)-BuaMdyMgVpc.mp3"
+Nov 16 09:21 : player: played "Portable/Ta Quang Thang/ChiecLaHyVong-TaQuangThang_3vecy.mp3"
+Nov 16 09:21 : player: played "Portable/Ta Quang Thang/HanhPhuc-VanMaiHuongTaQuangThang-2664156.mp3"
+Nov 16 09:21 : player: played "Portable/Ta Quang Thang/NangCho-QuangThang-2633413.mp3"
+Nov 16 09:21 : player: played "Portable/Ta Quang Thang/NgayHomNay-TaQuangThang-3556639.mp3"

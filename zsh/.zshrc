@@ -79,6 +79,9 @@ export NVM_DIR="/home/tdtrung17693/.nvm"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-export ANDROID_SDK_PATH="/media/Data/AndroidSDK"
+export XMODIFIERS=@im=ibus
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export LC_CTYPE=en_US.UTF-8
 
-export PATH="$ANDROID_SDK_PATH/platform-tools:$PATH"
+export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre

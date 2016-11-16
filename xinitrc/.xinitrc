@@ -2,8 +2,8 @@
 # IBUS
 #######################
 
-ibus-daemon -drx
-
+#ibus-daemon -drx
+fcitx -d
 # MPD
 #######################
 
@@ -23,28 +23,34 @@ dunst 2>>/tmp/dunst.log &
 #######################
 
 xset +fp /home/tdtrung17693/.fonts
-xset +fp /home/tdtrung17693/.fonts/tamzen/bdf
 xset fp rehash
 
 xset -b
 
 xinput set-prop 13 "Device Enabled" 0
 # detect external monitor
-EXMONITOR=DisplayPort-2
+EXMONITOR=HDMI2
+INMONITOR=eDP1
 
 if [ $(xrandr | grep -c ' connected ') -eq 2 ]; then
-	xrandr --output $EXMONITOR --auto --primary --output LVDS --right-of $EXMONITOR
+    xrandr --output $EXMONITOR --auto --primary --output $INMONITOR --right-of $EXMONITOR --gamma 0.9:0.82:0.8 --brightness 1.0
+    # Set wallpaper
+    feh --bg-max --no-xinerama ~/Pictures/pjimage.jpg
 else
-	xrandr --output LVDS --auto --primary
+  	xrandr --output $INMONITOR --auto --primary --gamma 0.9:0.82:0.8 --brightness 1.0
+    # Set wallpaper
+    feh --bg-fill ~/Pictures/photo-1464491965784-a12f0f70642b.jpg
 fi
-	
 
 xrdb -load ~/.Xdefaults
 
-
 # START SESSION
 #######################
-keychain ~/.ssh/id_rsa
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+keychain --confhost
 [ -f ~/.keychain/$HOSTNAME-sh ] && . ~/.keychain/$HOSTNAME-sh 2>/dev/null
 [ -f ~/.keychain/$HOSTNAME-sh-gpg ] && . ~/.keychain/$HOSTNAME-sh-gpg 2>/dev/null
 
