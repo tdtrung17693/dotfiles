@@ -1,3 +1,11 @@
 [
-    { "keys": ["ctrl+alt+m"], "command": "toggle_menu"}
+    { "keys": ["ctrl+alt+m"], "command": "toggle_menu"},
+    {
+        "keys": ["j", "j"],
+        "command": "_enter_normal_mode",
+        "args": {
+            "mode": "mode_insert"
+        },
+        "context": [{"key": "vi_insert_mode_aware"}]
+    }
 ]

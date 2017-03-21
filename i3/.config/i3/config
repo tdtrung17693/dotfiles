@@ -21,11 +21,12 @@ bar {
 # Floating mode for some apps
 for_window [title="^ncmpcpp$"] floating enable
 for_window [title="^ranger$"] floating enable
-for_window [class="vlc"] floating enable
+for_window [class="Vlc"] floating enable
 for_window [class="mpv"] floating enable
+for_window [class="qt4-ssh-askpass"] floating enable
 bindsym $mod+bracketright exec urxvt -name SideTerm
 
-bindsym $mod+d exec --no-startup-id rofi -show run -fullscreen -padding 400 -font 'TamzenForPowerline 11'
+bindsym $mod+d exec --no-startup-id "rofi -lines 5 -padding 10 -font 'TamzenForPowerline 11' -show combi -combi-modi 'window,run,ssh' -modi combi"
 
 bindsym $mod+Shift+f focus parent; fullscreen; focus child
 # start a terminal

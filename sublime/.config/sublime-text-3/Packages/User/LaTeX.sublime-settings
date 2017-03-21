@@ -1,5 +1,11 @@
 // These settings override both User and Default settings for the LaTeX syntax
 {
-    "font_face": "Source Code Pro",
-    "font_size": 10
+    "font_face": "Unifont",
+    "font_size": 11,
+    "font_options": ["subpixel_antialias"],
+    "line_padding_top": 4,
+    "line_padding_bottom": 4,
+    "caret_extra_top": 4,
+    "caret_extra_bottom": 4,
+    "caret_style": "phase",
 }

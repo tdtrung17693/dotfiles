@@ -76,8 +76,8 @@ eval $(dircolors -b $HOME/.dircolors)
 export NVM_DIR="/home/tdtrung17693/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#export PATH="$HOME/.rbenv/bin:/media/Data/esp/xtensa-esp32-elf/bin:$PATH"
+#eval "$(rbenv init -)"
 
 export XMODIFIERS=@im=ibus
 export GTK_IM_MODULE=ibus
@@ -85,3 +85,6 @@ export QT_IM_MODULE=ibus
 export LC_CTYPE=en_US.UTF-8
 
 export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre
+
+# ESP-IDF SDK path
+export IDF_PATH="/media/Data/esp/esp-idf"

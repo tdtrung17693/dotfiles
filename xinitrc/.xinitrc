@@ -4,6 +4,12 @@
 
 #ibus-daemon -drx
 fcitx -d
+
+# THUNAR
+#######################
+
+thunar --daemon 2>/dev/null &
+
 # MPD
 #######################
 
@@ -27,7 +33,7 @@ xset fp rehash
 
 xset -b
 
-xinput set-prop 13 "Device Enabled" 0
+# xinput set-prop 13 "Device Enabled" 0
 # detect external monitor
 EXMONITOR=HDMI2
 INMONITOR=eDP1
@@ -46,12 +52,16 @@ xrdb -load ~/.Xdefaults
 
 # START SESSION
 #######################
+export SSH_ASKPASS=/usr/bin/lxqt-openssh-askpass
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
-keychain --confhost
+keychain --confhost ~/.ssh/id_{ed25519,rsa}
 [ -f ~/.keychain/$HOSTNAME-sh ] && . ~/.keychain/$HOSTNAME-sh 2>/dev/null
 [ -f ~/.keychain/$HOSTNAME-sh-gpg ] && . ~/.keychain/$HOSTNAME-sh-gpg 2>/dev/null
 
-exec i3
+case $WM in
+    i3) exec i3 ;;
+    *) exec i3 ;;
+esac

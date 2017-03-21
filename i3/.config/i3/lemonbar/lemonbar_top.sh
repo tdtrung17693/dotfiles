@@ -8,21 +8,8 @@ fi
 
 trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 
- # Color directory
-CD="$HOME/.Xdefaults"
-
-# Fetch the Colors
-BG=$(cat ${CD} | grep -i background | tail -c 8)
-FG=$(cat ${CD} | grep -i foreground | tail -c 8)
-
-BLACK=$(cat ${CD} | grep -i 'color8 :' | tail -c 8)
-RED=$(cat ${CD} | grep -i 'color9 :' | tail -c 8)
-GREEN=$(cat ${CD} | grep -i 'color10:' | tail -c 8)
-YELLOW=$(cat ${CD} | grep -i 'color11:' | tail -c 8)
-BLUE=$(cat ${CD} | grep -i 'color12:' | tail -c 8)
-MAGENTA=$(cat ${CD} | grep -i 'color13:' | tail -c 8)
-CYAN=$(cat ${CD} | grep -i 'color14:' | tail -c 8)
-WHITE=$(cat ${CD} | grep -i 'color15:' | tail -c 8)
+# import colors
+. ~/.config/i3/lemonbar/colors
 
 # Fonts
 #FONT1="Source Han Sans JP Regular:size=11"
