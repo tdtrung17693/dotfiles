@@ -1,7 +1,8 @@
-sw_volume: 100
+sw_volume: 84
 audio_device_state:1:ALSA
 audio_device_state:1:visualizer
 state: stop
+current: 21
 random: 0
 repeat: 0
 single: 0
@@ -10,4 +11,237 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
+0:Portable/So Rin/My Love Is Pain (2012)/Gloomy Day.mp3
+1:Portable/[2012.08.22] DOUBLES BEST/01 全力少年.m4a
+2:Portable/[2012.08.22] DOUBLES BEST/02 アイスクリーム シンドローム.m4a
+3:Portable/[2012.08.22] DOUBLES BEST/03 ふれて未来を.m4a
+4:Portable/[2012.08.22] DOUBLES BEST/04 藍.m4a
+5:Portable/[2012.08.22] DOUBLES BEST/05 螺旋.m4a
+6:Portable/[2012.08.22] DOUBLES BEST/06 ボクノート.m4a
+7:Portable/[2012.08.22] DOUBLES BEST/07 雫.m4a
+8:Portable/[2012.08.22] DOUBLES BEST/08 晴ときどき曇.m4a
+9:Portable/[2012.08.22] DOUBLES BEST/09 view.m4a
+10:Portable/[2012.08.22] DOUBLES BEST/10 ガラナ.m4a
+11:Portable/[2012.08.22] DOUBLES BEST/11 奏.m4a
+12:Portable/[2012.08.22] DOUBLES BEST/12 ただそれだけの風景.m4a
+13:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-01 view.m4a
+14:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-02 君の話.m4a
+15:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-03 奏.m4a
+16:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-04 ふれて未来を.m4a
+17:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-05 冬の口笛.m4a
+18:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-06 全力少年.m4a
+19:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-07 雨待ち風.m4a
+20:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-08 キレイだ.m4a
+21:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-09 飲みに来ないか.m4a
+22:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-10 ボクノート.m4a
+23:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-11 ガラナ.m4a
+24:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-12 スフィアの羽根.m4a
+25:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-13 アカツキの詩.m4a
+26:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-14 藍.m4a
+27:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-15 惑星タイマー.m4a
+28:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/1-16 マリンスノウ.m4a
+29:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/2-01 虹のレシピ.m4a
+30:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/2-02 雫.m4a
+31:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/2-03 ゴールデンタイムラバー.m4a
+32:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/2-04 ８ミリメートル.m4a
+33:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/2-05 アイスクリーム シンドローム.m4a
+34:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/2-06 さいごのひ.m4a
+35:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/2-07 晴ときどき曇.m4a
+36:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/2-08 石コロDays.m4a
+37:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/2-09 センチメンタル ホームタウン.m4a
+38:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/2-10 ラストシーン.m4a
+39:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/2-11 ユリーカ.m4a
+40:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/2-12 スカーレット.m4a
+41:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/2-13 トラベラーズ・ハイ.m4a
+42:Portable/[2013.08.21] POPMAN'S WORLD ~All Time Best 2003-2013~/2-14 Hello Especially.m4a
+43:Portable/Kobasolo/【Acapella】Blank Space_Taylor Swift(Cover  by KOBASOLO & Satomi)-sLhogbSHp9Y.mp3
+44:Portable/Romance - Hallo/01 涼風.mp3
+45:Portable/Ta Quang Thang/ChiecLaHyVong-TaQuangThang_3vecy.mp3
+46:Portable/Various Artists - Oldies For A Rainy Day (2008) [PR27790LPCD][FLAC]/Various - Oldies For A Rainy Day.flac
+47:Portable/Various Artists - Piano is Beautiful (2011) [FLAC]/01 - Flower Of The Earth.flac
+48:Portable/Eagles - Hotel California (1976) [VINYL] {24-96} {MFSL 1-126}/01 - Hotel California.flac
+49:Portable/Nerawareta Gakuen OP Single - Giniro Hikousen/01 - Giniro Hikousen.flac
+50:Portable/Nerawareta Gakuen OP Single - Giniro Hikousen/02 - Lillemor.flac
+51:Portable/Nerawareta Gakuen OP Single - Giniro Hikousen/03 - Anime Eiga 'Nerawareta Gakuen' Tokuhouyou BGM.flac
+52:Portable/Nerawareta Gakuen OP Single - Giniro Hikousen/04 - Giniro Hikousen -Instrumental-.flac
+53:Portable/Red hot Audiophile Collection [4CDs] [WAV-ISO]/Red Hot Audiophile 2010 Master.wav
+54:Portable/The Daydream - Kassation (2010) [FLAC]/01 - Rainy Days.flac
+55:Portable/The Daydream - Kassation (2010) [FLAC]/02 - Remembering You.flac
+56:Portable/The Daydream - Kassation (2010) [FLAC]/03 - Happy Spring.flac
+57:Portable/The Daydream - Kassation (2010) [FLAC]/04 - When I Was Young.flac
+58:Portable/The Daydream - Kassation (2010) [FLAC]/05 - Morning Of the Provence.flac
+59:Portable/The Daydream - Kassation (2010) [FLAC]/06 - Rhapsody In Winter.flac
+60:Portable/The Daydream - Kassation (2010) [FLAC]/07 - Kassation.flac
+61:Portable/The Daydream - Kassation (2010) [FLAC]/08 - Young Once.flac
+62:Portable/The Daydream - Kassation (2010) [FLAC]/09 - Lying In The Green Fields.flac
+63:Portable/The Daydream - Kassation (2010) [FLAC]/10 - Little Picnic.flac
+64:Portable/The Daydream - Kassation (2010) [FLAC]/11 - Petal Chair.flac
+65:Portable/The Daydream - Kassation (2010) [FLAC]/12 - Singing The Hope.flac
+66:Portable/The Daydream - Kassation (2010) [FLAC]/13 - Smile And Smile.flac
+67:Portable/[2012.08.22] DOUBLES BEST/01 全力少年.m4a
+68:Portable/[2012.08.22] DOUBLES BEST/02 アイスクリーム シンドローム.m4a
+69:Portable/Kotaro Oshio/Color of Life/01. Big Blue Ocean.flac
+70:Portable/Kotaro Oshio/Color of Life/02. YELLOW SUNSHINE.flac
+71:Portable/Kotaro Oshio/Color of Life/03. Indigo Love.flac
+72:Portable/Kotaro Oshio/Color of Life/04. Red Shoes Dance.flac
+73:Portable/Kotaro Oshio/Color of Life/05. クリスタル.flac
+74:Portable/Kotaro Oshio/Color of Life/06. グリーンスリーブス.flac
+75:Portable/Kotaro Oshio/Color of Life/07. ブラックモンスター.flac
+76:Portable/Kotaro Oshio/Color of Life/08. PINK CANDY.flac
+77:Portable/Kotaro Oshio/Color of Life/09. セピア色の写真.flac
+78:Portable/Kotaro Oshio/Color of Life/10. 星砂 ~金色に輝く砂浜~.flac
+79:Portable/Kotaro Oshio/Color of Life/11. Purple Highway.flac
+80:Portable/Kotaro Oshio/Color of Life/12. あの夏の白い雲.flac
+81:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/01 Chaconne.flac
+82:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/11 Loanna.flac
+83:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/11 Loanna.flac
+84:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/02 I.flac
+85:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/03 Maybe.flac
+86:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/04 Yellow Room.flac
+87:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/05 River.flac
+88:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/06 Indigo.flac
+89:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/07 Flows.flac
+90:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/08 Kiss The Rain.flac
+91:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/09 In you.flac
+92:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/10 Fairy Tale (Trio Version).flac
+93:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/12 I (Instrumental).flac
+94:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/13 Happy Couple, Sad Couple 'n Happy Again.flac
+95:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/14 Fairy Tale (Duo Version).flac
+96:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/15 I (Outro).flac
+97:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/01 Chaconne.flac
+98:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/01 Chaconne.flac
+99:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/02 I.flac
+100:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/03 Maybe.flac
+101:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/04 Yellow Room.flac
+102:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/05 River.flac
+103:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/06 Indigo.flac
+104:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/07 Flows.flac
+105:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/08 Kiss The Rain.flac
+106:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/09 In you.flac
+107:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/10 Fairy Tale (Trio Version).flac
+108:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/11 Loanna.flac
+109:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/12 I (Instrumental).flac
+110:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/13 Happy Couple, Sad Couple 'n Happy Again.flac
+111:Portable/Yiruma - Atmosfera (2014) [FLAC]-20170709T064427Z-001/Yiruma - Atmosfera (2014) [FLAC]/14 Fairy Tale (Duo Version).flac
+112:Portable/VA - Jazz Break The Best Of Contemporary Smooth Jazz (2007) {FLAC} vtwin88cube/02.When I Fall In Love.flac
+song_begin: Portable/Jazz for a Rainy Afternoon/Various Artists - Jazz for a Rainy Afternoon CD1.ape
+Range: 0-214560
+Time: 3160.533000
+Genre: Jazz
+Date: 2003
+AlbumArtist: Various
+Album: Jazz For A Rainy Afternoon 1
+Track: 01
+Title: 'Round Midnight
+Artist: Charles Brown
+mtime: 1497361716
+song_end
+song_begin: Portable/Jazz for a Rainy Afternoon/Various Artists - Jazz for a Rainy Afternoon CD1.ape
+Range: 216960-524666
+Time: 3160.533000
+Genre: Jazz
+Date: 2003
+AlbumArtist: Various
+Album: Jazz For A Rainy Afternoon 1
+Track: 02
+Title: Spring Can Really Hang You Up The Most
+Artist: Houston Person & Ron Carter
+mtime: 1497361716
+song_end
+song_begin: Portable/Jazz for a Rainy Afternoon/Various Artists - Jazz for a Rainy Afternoon CD1.ape
+Range: 527066-785853
+Time: 3160.533000
+Genre: Jazz
+Date: 2003
+AlbumArtist: Various
+Album: Jazz For A Rainy Afternoon 1
+Track: 03
+Title: Everything Must Change
+Artist: David 'Fathead' Newman
+mtime: 1497361716
+song_end
+song_begin: Portable/Jazz for a Rainy Afternoon/Various Artists - Jazz for a Rainy Afternoon CD1.ape
+Range: 788253-920733
+Time: 3160.533000
+Genre: Jazz
+Date: 2003
+AlbumArtist: Various
+Album: Jazz For A Rainy Afternoon 1
+Track: 04
+Title: A Tribute To A Rose
+Artist: Jimmy Ponder
+mtime: 1497361716
+song_end
+song_begin: Portable/Jazz for a Rainy Afternoon/Various Artists - Jazz for a Rainy Afternoon CD1.ape
+Range: 923133-1265680
+Time: 3160.533000
+Genre: Jazz
+Date: 2003
+AlbumArtist: Various
+Album: Jazz For A Rainy Afternoon 1
+Track: 05
+Title: Blue In Green
+Artist: Wallace Roney
+mtime: 1497361716
+song_end
+song_begin: Portable/Jazz for a Rainy Afternoon/Various Artists - Jazz for a Rainy Afternoon CD1.ape
+Range: 1268080-1683826
+Time: 3160.533000
+Genre: Jazz
+Date: 2003
+AlbumArtist: Various
+Album: Jazz For A Rainy Afternoon 1
+Track: 06
+Title: Talk Of The Town
+Artist: Houston Person
+mtime: 1497361716
+song_end
+song_begin: Portable/Jazz for a Rainy Afternoon/Various Artists - Jazz for a Rainy Afternoon CD1.ape
+Range: 1686226-2068266
+Time: 3160.533000
+Genre: Jazz
+Date: 2003
+AlbumArtist: Various
+Album: Jazz For A Rainy Afternoon 1
+Track: 07
+Title: I Can't Get Started
+Artist: Warren Vache
+mtime: 1497361716
+song_end
+song_begin: Portable/Jazz for a Rainy Afternoon/Various Artists - Jazz for a Rainy Afternoon CD1.ape
+Range: 2070666-2292613
+Time: 3160.533000
+Genre: Jazz
+Date: 2003
+AlbumArtist: Various
+Album: Jazz For A Rainy Afternoon 1
+Track: 08
+Title: My Ideal
+Artist: Sonny Criss
+mtime: 1497361716
+song_end
+song_begin: Portable/Jazz for a Rainy Afternoon/Various Artists - Jazz for a Rainy Afternoon CD1.ape
+Range: 2295013-2713866
+Time: 3160.533000
+Genre: Jazz
+Date: 2003
+AlbumArtist: Various
+Album: Jazz For A Rainy Afternoon 1
+Track: 09
+Title: St. Louis Blues
+Artist: Johnny Lytle
+mtime: 1497361716
+song_end
+song_begin: Portable/Jazz for a Rainy Afternoon/Various Artists - Jazz for a Rainy Afternoon CD1.ape
+Range: 2716266-
+Time: 3160.533000
+Genre: Jazz
+Date: 2003
+AlbumArtist: Various
+Album: Jazz For A Rainy Afternoon 1
+Track: 10
+Title: Imagination
+Artist: Woody Shaw
+mtime: 1497361716
+song_end
 playlist_end

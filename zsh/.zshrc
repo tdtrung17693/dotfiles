@@ -51,7 +51,7 @@ DISABLE_CORRECTION="true"
 export LESS="+X"
 
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # allow redirect to work with existed file
 setopt clobber
@@ -73,8 +73,8 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 alias ssh="TERM=xterm-256color ssh"
 eval $(dircolors -b $HOME/.dircolors)
 
-export NVM_DIR="/home/tdtrung17693/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR="/home/tdtrung17693/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 #export PATH="$HOME/.rbenv/bin:/media/Data/esp/xtensa-esp32-elf/bin:$PATH"
 #eval "$(rbenv init -)"
@@ -88,3 +88,6 @@ export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre
 
 # ESP-IDF SDK path
 export IDF_PATH="/media/Data/esp/esp-idf"
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+eval "$(rbenv init -)"

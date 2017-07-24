@@ -6,7 +6,7 @@ rofi.color-normal: #1d2021, #a49e95, #1d2021, #456e7a, #f3f3f3
 rofi.color-active: #d2a131, #2a2a2a, #d2a131, #fac33b, #ffffff
 rofi.color-urgent: #cec6ba, #fb543f, #cec6ba, #fb543f, #fdf6e3
 rofi.lines: 3
-rofi.opacity: 50
+rofi.opacity: 70
 
 ! COLORS
 ! =====================

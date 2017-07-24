@@ -1,14 +1,14 @@
-#!/bin/evn bash
+#!/bin/env bash
 # IBUS
 #######################
 
-#ibus-daemon -drx
-fcitx -d
+ibus-daemon -drx
+#fcitx -d
 
 # THUNAR
 #######################
 
-thunar --daemon 2>/dev/null &
+#thunar --daemon 2>/dev/null &
 
 # MPD
 #######################
@@ -35,31 +35,34 @@ xset -b
 
 # xinput set-prop 13 "Device Enabled" 0
 # detect external monitor
-EXMONITOR=HDMI2
-INMONITOR=eDP1
+EXMONITOR=HDMI-2
+INMONITOR=eDP-1
 
 if [ $(xrandr | grep -c ' connected ') -eq 2 ]; then
-    xrandr --output $EXMONITOR --auto --primary --output $INMONITOR --right-of $EXMONITOR --gamma 0.9:0.82:0.8 --brightness 1.0
+    xrandr --output $EXMONITOR --auto --primary --output $INMONITOR --off #--right-of $EXMONITOR --gamma 0.9:0.82:0.8 --brightness 1.0
     # Set wallpaper
-    feh --bg-max --no-xinerama ~/Pictures/pjimage.jpg
+    feh --bg-max --no-xinerama ~/Pictures/papers.co-mx34-nature-leaf-bokeh-spring-green-water-1920x1080.jpg
 else
   	xrandr --output $INMONITOR --auto --primary --gamma 0.9:0.82:0.8 --brightness 1.0
     # Set wallpaper
-    feh --bg-fill ~/Pictures/photo-1464491965784-a12f0f70642b.jpg
+    feh --bg-fill ~/Pictures/papers.co-mx34-nature-leaf-bokeh-spring-green-water-1920x1080.jpg
 fi
 
 xrdb -load ~/.Xdefaults
 
 # START SESSION
 #######################
-export SSH_ASKPASS=/usr/bin/lxqt-openssh-askpass
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
+#export SSH_ASKPASS=/usr/bin/lxqt-openssh-askpass
+#export GTK_IM_MODULE=fcitx
+#export QT_IM_MODULE=fcitx
+#export XMODIFIERS=@im=fcitx
 
-keychain --confhost ~/.ssh/id_{ed25519,rsa}
-[ -f ~/.keychain/$HOSTNAME-sh ] && . ~/.keychain/$HOSTNAME-sh 2>/dev/null
-[ -f ~/.keychain/$HOSTNAME-sh-gpg ] && . ~/.keychain/$HOSTNAME-sh-gpg 2>/dev/null
+#keychain --confhost ~/.ssh/id_{ed25519,rsa}
+#[ -f ~/.keychain/$HOSTNAME-sh ] && . ~/.keychain/$HOSTNAME-sh 2>/dev/null
+#[ -f ~/.keychain/$HOSTNAME-sh-gpg ] && . ~/.keychain/$HOSTNAME-sh-gpg 2>/dev/null
+
+# JetBrains License Server
+./IntelliJIDEALicenseServer_linux_amd64  -p 1234 -u tdtrung17693 &
 
 case $WM in
     i3) exec i3 ;;

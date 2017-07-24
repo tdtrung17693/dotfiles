@@ -70,7 +70,7 @@ clock(){
 }
 
 vol(){
-    vol=$(amixer get Master | grep Mono | sed -nr 'N;s/^.*\[([0-9]+)%\].*/\1/p')
+    vol=$(amixer get Master |grep % |awk '{print $5}'|sed 's/[^0-9\%]//g' | tr -d '[]' | uniq)
 
     if [[ $(amixer get 'Master' | grep -c off) = 0 ]]; then
         if [[ $vol = 0 ]]
@@ -128,10 +128,10 @@ zscroll -d 0.2 -n -u -M "mpc --host $host --port $port status" -m "playing" -s 1
 while true; do
 	read -t 0.1 line
 
-	echo -e "$(music)%{A:$OPENMUSIC:} ${line} %{A} %{c}$(cpu) $(temp) $(ram)  $(pow)%{r}$(net) %{A:$VOLT:}%{A4:$VOLU:}%{A5:$VOLD:}$(vol)%{A}%{A}%{A}  $(clock)  %{B#373A3B}%{F$FG}%{A:$HOME/.config/i3/lemonbar/pop_panel.sh:} \ue00d%{A} %{B- F-}"
+	echo -e "$(music)%{A:$OPENMUSIC:} ${line} %{A} %{c}$(cpu) $(temp) $(ram)  $(pow)%{r}$(net) %{A:$VOLT:}%{A4:$VOLU:}%{A5:$VOLD:}$(vol)%{A}%{A}%{A}  $(clock)  %{B#373A3B}%{F$FG}%{A:$HOME/.config/i3/lemonbar/pop_panel.sh:} \ue00d%{A}%{B- F-}"
 
 	sleep 0.1
 done | \
-lemonbar -g ${PW}x${PH}+${PX}+${PY} -o -1 -f "$FONT1" -o 0 -f "$FONT2" -o -2 -f "$FONT3" -B "$BG" -F "$FG" -p | zsh
+lemonbar -g ${PW}x${PH}+${PX}+${PY} -o -1 -f "$FONT1" -o 0 -f "$FONT2" -o -1 -f "$FONT3" -B "$BG" -F "$FG" -p | zsh
 
 wait
