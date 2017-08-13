@@ -70,7 +70,7 @@ clock(){
 }
 
 vol(){
-    vol=$(amixer get Master |grep % |awk '{print $5}'|sed 's/[^0-9\%]//g' | tr -d '[]' | uniq)
+    vol=$(amixer get Master |grep % |awk '{print $4}'|sed 's/[^0-9\%]//g' | tr -d '[]' | uniq)
 
     if [[ $(amixer get 'Master' | grep -c off) = 0 ]]; then
         if [[ $vol = 0 ]]
@@ -108,15 +108,15 @@ pow() {
 
     if [[ $onAC == 1 ]]
     then
-        pow="\ue239"
+        pow="\uE23A"
 	elif [[ $stat == "Charging" ]]
 	then
-		pow="\uE1A3"
+		pow="\uE239"
 	elif [[ $lvl > 20 ]]
 	then
-		pow="\uE1A4"
+		pow="\uE238"
 	else
-		pow="\uE19C"
+		pow="\uE237"
 	fi
 
 	echo -e "%{F$CYAN}${pow}%{F-} ${lvl}%"
