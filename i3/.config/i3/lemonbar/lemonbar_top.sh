@@ -14,7 +14,7 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 # Fonts
 #FONT1="Source Han Sans JP Regular:size=11"
 FONT1="TamzenForPowerline:size=11"
-FONT2="Unifont:size=11"
+FONT2="Unifont"
 FONT3="Siji:size=11"
 
 # Panel
