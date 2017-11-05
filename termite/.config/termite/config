@@ -1,50 +1,51 @@
 [options]
-font = TamzenForPowerline 10
+font = siji 12
+font = Iosevka Term 11
 
 [colors]
 
 # special
-foreground      = #a89984
-foreground_bold = #a89984
-cursor          = #a89984
-background      = #1d2021
+foreground      = #8fa388
+foreground_bold = #8fa388
+cursor          = #8fa388
+background      = #111314
 
 # black
-color0  = #1d2021
-color8  = #596265
+color0  = #39474a
+color8  = #4c5f63
 
 # red
-color1  = #cd4533
-color9  = #fb543f
+color1  = #986345
+color9  = #b07350
 
 # green
-color2  = #789b6b
-color10 = #95c085
+color2  = #788249
+color10 = #869151
 
 # yellow
-color3  = #d2a131
-color11 = #fac33b
+color3  = #9b6a46
+color11 = #af6b42
 
 # blue
-color4  = #03829d
-color12 = #048da9
+color4  = #3e5951
+color12 = #567a6e
 
 # magenta
-color5  = #a76a7b
-color13 = #d3869b
+color5  = #b9924a
+color13 = #d69d55
 
 # cyan
-color6  = #80988f
-color14 = #8ba59b
+color6  = #5d796a
+color14 = #668574
 
 # white
-color7  = #a89984
-color15 = #fdf4c1
+color7  = #977d5e
+color15 = #ab9c71
 
-# 256 color
-color16 = #fe8265
-color17 = #a87322
-color18 = #32302f
-color19 = #504945
-color20 = #928374
-color21 = #d5c4a1
+#color15 = #fdf4c1# 256 color
+#color16 = #fe8265
+#color17 = #a87322
+#color18 = #32302f
+#color19 = #504945
+#color20 = #928374
+#color21 = #d5c4a1

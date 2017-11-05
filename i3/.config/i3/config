@@ -26,7 +26,7 @@ for_window [class="mpv"] floating enable
 for_window [class="qt4-ssh-askpass"] floating enable
 bindsym $mod+bracketright exec urxvt -name SideTerm
 
-bindsym $mod+d exec --no-startup-id "rofi -lines 5 -padding 10 -font 'TamzenForPowerline 11' -show combi -combi-modi 'window,run,ssh' -modi combi"
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="rofi -lines 5 -padding 10 -font 'TamzenForPowerline 11' -show combi -combi-modi 'window,run,ssh' -modi combi"
 
 bindsym $mod+Shift+f focus parent; fullscreen; focus child
 # start a terminal
@@ -46,10 +46,10 @@ bindsym XF86AudioLowerVolume exec amixer sset Master -q 1%-
 bindsym XF86AudioMute exec amixer sset Master toggle
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -64,7 +64,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+Mod1+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -222,7 +222,7 @@ bindsym $mod+Shift+v mode "$mode_volume"
 mode "$mode_volume" {
     bindsym plus  exec amixer sset Master -q 1%+
     bindsym minus exec amixer sset Master -q 1%-
-    bindsym m     exec amixer sset Master toggle
+    bindsym m     exec pactl set-sink-mute 0 toggle
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -239,7 +239,7 @@ mode "$mode_mpc" {
     bindcode 60 exec mpc --host localhost --port 6601 next
     bindcode 59 exec mpc --host localhost --port 6601 prev
     bindsym  p  exec mpc --host localhost --port 6601 toggle
-    bindsym  s  exec --no-startup-id urxvtc -e ncmpcpp
+    bindsym  s  exec --no-startup-id termite -e ncmpcpp
 
     bindsym Return mode "default"
     bindsym Escape mode "default"

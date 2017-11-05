@@ -66,5 +66,6 @@ xrdb -load ~/.Xdefaults
 
 case $WM in
     i3) exec i3 ;;
+    electron) exec ./photo-attendance-client-linux-x64/photo-attendance-client ;;
     *) exec i3 ;;
 esac

@@ -28,7 +28,7 @@ host="localhost"
 port="6601"
 
 #Actions
-VOLT="amixer sset Master toggle"
+VOLT="pactl set-sink-mute 0 toggle"
 VOLU="amixer sset Master 5%+"
 VOLD="amixer sset Master 5%-"
 TMUS="mpc --host ${host} --port ${port} toggle"
@@ -108,10 +108,10 @@ pow() {
 
     if [[ $onAC == 1 ]]
     then
-        pow="\uE23A"
+        pow="\uE239"
 	elif [[ $stat == "Charging" ]]
 	then
-		pow="\uE239"
+		pow="\uE23A"
 	elif [[ $lvl > 20 ]]
 	then
 		pow="\uE238"
@@ -122,11 +122,11 @@ pow() {
 	echo -e "%{F$CYAN}${pow}%{F-} ${lvl}%"
 }
 
-zscroll -d 0.2 -n -u -M "mpc --host $host --port $port status" -m "playing" -s 1 \
+zscroll -d 0.3 -n -u -M "mpc --host $host --port $port status" -m "playing" -s 1 \
 -m "paused" -s 0 "mpc --host $host --port $port current" |\
 
 while true; do
-	read -t 0.1 line
+	read -t 0.3 line
 
 	echo -e "$(music)%{A:$OPENMUSIC:} ${line} %{A} %{c}$(cpu) $(temp) $(ram)  $(pow)%{r}$(net) %{A:$VOLT:}%{A4:$VOLU:}%{A5:$VOLD:}$(vol)%{A}%{A}%{A}  $(clock)  %{B#373A3B}%{F$FG}%{A:$HOME/.config/i3/lemonbar/pop_panel.sh:} \ue00d%{A}%{B- F-}"
 

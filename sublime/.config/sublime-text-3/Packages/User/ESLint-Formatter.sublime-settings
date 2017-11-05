@@ -1,0 +1,9 @@
+// Settings in here override those in "ESLint-Formatter/ESLint-Formatter.sublime-settings",
+
+{
+	"node_path": {
+		"windows": "node.exe",
+		"linux": "/usr/bin/node",
+		"osx": "/usr/local/bin/node"
+	},
+}

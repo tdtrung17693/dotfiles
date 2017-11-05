@@ -4,6 +4,10 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
 
 if [ "$TERM" = "linux" ]; then
   /bin/echo -e "
@@ -27,12 +31,6 @@ if [ "$TERM" = "linux" ]; then
   # get rid of artifacts
   clear
 fi
-
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
 # Customize to your needs...
 # eval `dircolors ~/LS_COLORS`
 unsetopt correct
@@ -76,7 +74,7 @@ eval $(dircolors -b $HOME/.dircolors)
 #export NVM_DIR="/home/tdtrung17693/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-#export PATH="$HOME/.rbenv/bin:/media/Data/esp/xtensa-esp32-elf/bin:$PATH"
+#export PATH="/media/Data/esp/xtensa-esp32-elf/bin:$PATH"
 #eval "$(rbenv init -)"
 
 export XMODIFIERS=@im=ibus
@@ -88,8 +86,8 @@ export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre
 
 # ESP-IDF SDK path
 export IDF_PATH="/media/Data/esp/esp-idf"
-export PATH="$HOME/.rbenv/bin:$PATH"
-
+export PATH="$HOME/.rbenv/bin:$HOME/esp/xtensa-esp32-elf/bin:/opt/genymobile/genymotion/tools:$PATH"
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 eval "$(rbenv init -)"
 
 # pip zsh completion start
@@ -110,3 +108,37 @@ export WORKON_HOME=~/.virtualenvs
 export PIP_VIRTUALENV_BASE=/home/tdtrung17693/.virtualenvs
 #BASE16_SHELL=$HOME/.config/base16-shell/
 #[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+# fzf color scheme
+# Base16 Darktooth
+# Author: Jason Milkins (https://github.com/jasonm23)
+
+_gen_fzf_default_opts() {
+
+local color00='#1D2021'
+local color01='#32302F'
+local color02='#504945'
+local color03='#665C54'
+local color04='#928374'
+local color05='#A89984'
+local color06='#D5C4A1'
+local color07='#FDF4C1'
+local color08='#FB543F'
+local color09='#FE8625'
+local color0A='#FAC03B'
+local color0B='#95C085'
+local color0C='#8BA59B'
+local color0D='#0D6678'
+local color0E='#8F4673'
+local color0F='#A87322'
+
+export FZF_DEFAULT_OPTS="
+  --height 40% --border
+  --color=bg+:$color01,bg:$color00,spinner:$color0C,hl:$color0D
+  --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C
+  --color=marker:$color0C,fg+:$color06,prompt:$color0A,hl+:$color0D
+"
+
+}
+
+_gen_fzf_default_opts

@@ -11,41 +11,27 @@ rofi.opacity: 50
 
 ! COLORS
 ! =====================
+*background: #1D2426
+*foreground: #8FA388
 
-! special
-*.foreground:   #a89984
-*.background:   #1d2021
-*.cursorColor:  #a89984
+! Alternate foreground
+!*foreground: #AB9C71
 
-! black
-*.color0:       #1d2021
-*.color8:       #596265
+*cursorColor: #BE5E1E
 
-! red
-*.color1:       #cd4533
-*.color9:       #fb543f
-
-! green
-*.color2:       #789b6b
-*.color10:      #95c085
-
-! yellow
-*.color3:       #d2a131
-*.color11:      #fac33b
-
-! blue
-*.color4:       #03829d
-*.color12:      #048da9
-
-! magenta
-*.color5:       #a76a7b
-*.color13:      #d3869b
-
-! cyan
-*.color6:       #80988f
-*.color14:      #8ba59b
-
-! white
-*.color7:       #a89984
-*.color15:      #fdf4c1
-
+*color0:  #39474A
+*color1:  #986345
+*color2:  #788249
+*color3:  #9B6A46
+*color4:  #3E5951
+*color5:  #B9924A
+*color6:  #5d796a
+*color7:  #977D5E
+*color8:  #4C5F63
+*color9:  #B07350
+*color10: #869151
+*color11: #AF6B42
+*color12: #567A6E
+*color13: #D69D55
+*color14: #668574
+*color15: #AB9C71

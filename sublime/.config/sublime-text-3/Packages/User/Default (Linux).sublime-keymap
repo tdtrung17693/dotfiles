@@ -9,4 +9,5 @@
         },
         "context": [{"key": "vi_insert_mode_aware"}]
     },
+    { "keys": ["ctrl+shift+r"], "command": "open_terminal" },
 ]

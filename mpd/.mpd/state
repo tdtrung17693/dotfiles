@@ -1,9 +1,9 @@
-sw_volume: 89
-audio_device_state:1:ALSA
+sw_volume: 98
+audio_device_state:0:alsa
+audio_device_state:1:pulse audio
 audio_device_state:1:visualizer
-state: play
-current: 5
-time: 116.587000
+state: stop
+current: 15
 random: 0
 repeat: 1
 single: 0
@@ -12,30 +12,25 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Portable/DEPAPEPE/Let's Go!!!/01. Hi-D!!!.mp3
-1:Portable/DEPAPEPE/Spur - Winter Version '05 & Swingin' Happy X-mas/Spur.mp3
-2:Portable/DEPAPEPE/Let's Go!!!/02. START.mp3
-3:Portable/DEPAPEPE/Let's Go!!!/03. Wake Up!.mp3
-4:Portable/DEPAPEPE/Let's Go!!!/04. MTMM.mp3
-5:Portable/DEPAPEPE/Let's Go!!!/05. Butterfly.mp3
-6:Portable/DEPAPEPE/Let's Go!!!/06. Kazami-dori.mp3
-7:Portable/DEPAPEPE/Let's Go!!!/07. Tokei-Jikake No Carnival.mp3
-8:Portable/DEPAPEPE/Let's Go!!!/08. Ame-agari.mp3
-9:Portable/DEPAPEPE/Let's Go!!!/09. Wedding Bell.mp3
-10:Portable/DEPAPEPE/Let's Go!!!/10. Over the Sea.mp3
-11:Portable/DEPAPEPE/Let's Go!!!/11. Ii-hi Dattane.mp3
-12:Portable/DEPAPEPE/Let's Go!!!/12. FLOW.mp3
-13:Portable/DEPAPEPE/Do!/03 Sailing.mp3
-14:Portable/DEPAPEPE/Do!/04 Ajisai.mp3
-15:Portable/DEPAPEPE/Do!/05 HighRock!!.mp3
-16:Portable/DEPAPEPE/Do!/06 Saigo no Bansan.mp3
-17:Portable/DEPAPEPE/Do!/07 Ninin no Shashin.mp3
-18:Portable/DEPAPEPE/Do!/08 orange.mp3
-19:Portable/DEPAPEPE/Do!/09 Dolphindance.mp3
-20:Portable/DEPAPEPE/Do!/10 Jamboree.mp3
-21:Portable/DEPAPEPE/Do!/11 PaPaPa.mp3
-22:Portable/DEPAPEPE/Do!/12 Manatsu no Giwaku.mp3
-23:Portable/DEPAPEPE/Do!/13 Quarrel.mp3
-24:Portable/DEPAPEPE/Do!/14 Mint.mp3
-25:Portable/DEPAPEPE/Do!/15 Special Lady~the wedding anthem~.mp3
+0:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 1/Mai Hoshimura - 01 - I miss you.flac
+1:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 1/Mai Hoshimura - 02 - hikari.flac
+2:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 1/Mai Hoshimura - 03 - regret.flac
+3:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 1/Mai Hoshimura - 04 - sunao ni narenai.flac
+4:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 1/Mai Hoshimura - 05 - himawari.flac
+5:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 1/Mai Hoshimura - 06 - story.flac
+6:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 2/Mai Hoshimura - 01 - suki nandesu.flac
+7:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 2/Mai Hoshimura - 02 - hikari.flac
+8:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 2/Mai Hoshimura - 03 - regret.flac
+9:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 2/Mai Hoshimura - 04 - kakegae no nai hito e.flac
+10:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 2/Mai Hoshimura - 05 - shunkan, strobe..flac
+11:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 2/Mai Hoshimura - 06 - sakurabiyori.flac
+12:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 2/Mai Hoshimura - 07 - Merry Go Round.flac
+13:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 2/Mai Hoshimura - 08 - sunao ni narenai.flac
+14:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 2/Mai Hoshimura - 09 - EVERY.flac
+15:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 2/Mai Hoshimura - 10 - Melodea.flac
+16:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 2/Mai Hoshimura - 11 - himawari.flac
+17:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 2/Mai Hoshimura - 12 - believer.flac
+18:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 2/Mai Hoshimura - 13 - GET HAPPY.flac
+19:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 2/Mai Hoshimura - 14 - Cherish.flac
+20:Portable/Mai Hoshimura - PIANO & BEST (2009) [FLAC]/disc 2/Mai Hoshimura - 15 - Stay With You.flac
 playlist_end
