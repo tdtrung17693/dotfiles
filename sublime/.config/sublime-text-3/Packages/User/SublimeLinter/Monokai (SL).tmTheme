@@ -16,7 +16,7 @@
 				<key>foreground</key>
 				<string>#F8F8F2</string>
 				<key>invisibles</key>
-				<string>#3B3A32</string>
+				<string>#F8F8F259</string>
 				<key>lineHighlight</key>
 				<string>#3E3D32</string>
 				<key>selection</key>
@@ -589,16 +589,6 @@
 		</dict>
 	<dict>
             <key>name</key>
-            <string>SublimeLinter Error</string>
-            <key>scope</key>
-            <string>sublimelinter.mark.error</string>
-            <key>settings</key>
-            <dict>
-                <key>foreground</key>
-                <string>#D02000</string>
-            </dict>
-        </dict><dict>
-            <key>name</key>
             <string>SublimeLinter Warning</string>
             <key>scope</key>
             <string>sublimelinter.mark.warning</string>
@@ -606,6 +596,16 @@
             <dict>
                 <key>foreground</key>
                 <string>#DDB700</string>
+            </dict>
+        </dict><dict>
+            <key>name</key>
+            <string>SublimeLinter Error</string>
+            <key>scope</key>
+            <string>sublimelinter.mark.error</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#D02000</string>
             </dict>
         </dict><dict>
             <key>name</key>
