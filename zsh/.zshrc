@@ -40,11 +40,6 @@ DISABLE_CORRECTION="true"
 # XDG Environment Variables
 . ~/.config/user-dirs.dirs
 
-#[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
-#source /usr/share/nvm/nvm.sh
-#source /usr/share/nvm/bash_completion
-#source /usr/share/nvm/install-nvm-exec
-
 # Less clear screen after quit
 export LESS="+X"
 
@@ -71,11 +66,9 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 alias ssh="TERM=xterm-256color ssh"
 eval $(dircolors -b $HOME/.dircolors)
 
-#export NVM_DIR="/home/tdtrung17693/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-#export PATH="/media/Data/esp/xtensa-esp32-elf/bin:$PATH"
-#eval "$(rbenv init -)"
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export XMODIFIERS=@im=ibus
 export GTK_IM_MODULE=ibus
@@ -87,7 +80,7 @@ export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre
 # ESP-IDF SDK path
 export IDF_PATH="/media/Data/esp/esp-idf"
 export PATH="$HOME/.rbenv/bin:$HOME/esp/xtensa-esp32-elf/bin:/opt/genymobile/genymotion/tools:$PATH"
-export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+export PATH="$HOME/.config/composer/vendor/bin:/opt/yarn-v1.3.2/bin:$HOME/.yarn/bin:$PATH"
 eval "$(rbenv init -)"
 
 # pip zsh completion start
@@ -103,11 +96,9 @@ compctl -K _pip_completion pip
 # pip zsh completion end
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source ~/.local/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/.virtualenvs
 export PIP_VIRTUALENV_BASE=/home/tdtrung17693/.virtualenvs
-#BASE16_SHELL=$HOME/.config/base16-shell/
-#[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # fzf color scheme
 # Base16 Darktooth
@@ -142,3 +133,5 @@ export FZF_DEFAULT_OPTS="
 }
 
 _gen_fzf_default_opts
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export WINEARCH=wine32

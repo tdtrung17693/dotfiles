@@ -25,7 +25,7 @@ PY=0
 
 # mpd
 host="localhost"
-port="6601"
+port="6600"
 
 #Actions
 VOLT="pactl set-sink-mute 0 toggle"
@@ -70,7 +70,7 @@ clock(){
 }
 
 vol(){
-    vol=$(amixer get Master |grep % |awk '{print $4}'|sed 's/[^0-9\%]//g' | tr -d '[]' | uniq)
+    vol=$(amixer get Master |grep % |awk '{print $5}'|sed 's/[^0-9\%]//g' | tr -d '[]' | uniq)
 
     if [[ $(amixer get 'Master' | grep -c off) = 0 ]]; then
         if [[ $vol = 0 ]]
@@ -122,8 +122,8 @@ pow() {
 	echo -e "%{F$CYAN}${pow}%{F-} ${lvl}%"
 }
 
-zscroll -d 0.3 -n -u -M "mpc --host $host --port $port status" -m "playing" -s 1 \
--m "paused" -s 0 "mpc --host $host --port $port current" |\
+MPD_HOST=$host MPD_PORT=$port zscroll -u t -b "♪ x" -d 0.3 -M "mpc status" -m "playing" \
+		"-b ''" -m "paused" "-b '' -s 0" "mpc current" |\
 
 while true; do
 	read -t 0.3 line

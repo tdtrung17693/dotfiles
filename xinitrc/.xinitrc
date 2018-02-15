@@ -13,7 +13,7 @@ ibus-daemon -drx
 # MPD
 #######################
 
-mpd
+mopidy &
 
 # COMPTON
 #######################
@@ -41,7 +41,7 @@ INMONITOR=eDP-1
 if [ $(xrandr | grep -c ' connected ') -eq 2 ]; then
     xrandr --output $EXMONITOR --auto --primary --output $INMONITOR --off #--right-of $EXMONITOR --gamma 0.9:0.82:0.8 --brightness 1.0
     # Set wallpaper
-    feh --bg-max --no-xinerama ~/Pictures/papers.co-mx34-nature-leaf-bokeh-spring-green-water-1920x1080.jpg
+    feh --bg-fill --no-xinerama ~/Pictures/papers.co-mx34-nature-leaf-bokeh-spring-green-water-1920x1080.jpg
 else
   	xrandr --output $INMONITOR --auto --primary --gamma 0.9:0.82:0.8 --brightness 1.0
     # Set wallpaper
@@ -64,6 +64,9 @@ xrdb -load ~/.Xdefaults
 # JetBrains License Server
 ./IntelliJIDEALicenseServer_linux_amd64  -p 1234 -u tdtrung17693 &
 
+/usr/libexec/polkit-gnome-authentication-agent-1 &
+export GTK_CSD=0
+export LD_PRELOAD=/usr/lib64/libgtk3-nocsd.so.0
 case $WM in
     i3) exec i3 ;;
     electron) exec ./photo-attendance-client-linux-x64/photo-attendance-client ;;

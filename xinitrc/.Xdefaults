@@ -1,13 +1,13 @@
 ! ROFI
 ! =====================
 rofi.color-enabled: true
-rofi.color-window: #501d2021, #1d2021, #501d2021
-rofi.color-normal: #501d2021, #50a49e95, #501d2021, #50456e7a, #50f3f3f3
-rofi.color-active: #50d2a131, #502a2a2a, #50d2a131, #50fac33b, #50ffffff
-rofi.color-urgent: #50cec6ba, #50fb543f, #50cec6ba, #50fb543f, #50fdf6e3
-rofi.padding: 50
-rofi.lines: 3
-rofi.opacity: 50
+rofi.color-window: #1d2021, #1d2021, #1d2021
+rofi.color-normal: #1d2021, #a49e95, #1d2021, #456e7a, #f3f3f3
+rofi.color-active: #d2a131, #2a2a2a, #d2a131, #fac33b, #ffffff
+rofi.color-urgent: #cec6ba, #fb543f, #cec6ba, #fb543f, #fdf6e3
+rofi.lines: 10
+rofi.padding: 350
+rofi.fullscreen: true
 
 ! COLORS
 ! =====================

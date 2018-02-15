@@ -4,8 +4,6 @@ font xft:TamzenForPowerline 11
 
 #exec --no-startup-id /home/tdtrung17693/.config/i3/i3_subscribe &
 
-#exec --no-startup-id /home/tdtrung17693/.config/i3/dual_monitor
-
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 
@@ -26,7 +24,7 @@ for_window [class="mpv"] floating enable
 for_window [class="qt4-ssh-askpass"] floating enable
 bindsym $mod+bracketright exec urxvt -name SideTerm
 
-bindsym $mod+d exec --no-startup-id "rofi -lines 5 -padding 10 -font 'TamzenForPowerline 11' -show combi -combi-modi 'window,run,ssh' -modi combi"
+bindsym $mod+d exec --no-startup-id "rofi -lines 5 -font 'TamzenForPowerline 11' -show combi -combi-modi 'window,run,ssh' -modi combi"
 
 bindsym $mod+Shift+f focus parent; fullscreen; focus child
 # start a terminal
@@ -250,4 +248,4 @@ for_window [class=".*"] title_format "<span>   %title</span>"
 
 # Colors
 client.focused #1d1f21 #1d1f21 #ffffff #1d1f21
-client.focused_inactive #1d1f21 #1d1f21 #000000 #1d1f21
+client.focused_inactive #1d1f21 #1d1f21 #ffffff #1d1f21
