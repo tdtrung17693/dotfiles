@@ -28,7 +28,7 @@ host="localhost"
 port="6600"
 
 #Actions
-VOLT="pactl set-sink-mute 0 toggle"
+VOLT="amixer -D pulse sset Master toggle"
 VOLU="amixer sset Master 5%+"
 VOLD="amixer sset Master 5%-"
 TMUS="mpc --host ${host} --port ${port} toggle"
@@ -122,13 +122,12 @@ pow() {
 	echo -e "%{F$CYAN}${pow}%{F-} ${lvl}%"
 }
 
-MPD_HOST=$host MPD_PORT=$port zscroll -u t -b "♪ x" -d 0.3 -M "mpc status" -m "playing" \
-		"-b ''" -m "paused" "-b '' -s 0" "mpc current" |\
+MPD_HOST=$host MPD_PORT=$port zscroll -u t -b "♪ x" -d 0.3 -M "mpc status" -m "playing" "-b ''" -m "paused" "-b '' -s 0" "mpc --port ${port} current" |\
 
 while true; do
 	read -t 0.3 line
 
-	echo -e "$(music)%{A:$OPENMUSIC:} ${line} %{A} %{c}$(cpu) $(temp) $(ram)  $(pow)%{r}$(net) %{A:$VOLT:}%{A4:$VOLU:}%{A5:$VOLD:}$(vol)%{A}%{A}%{A}  $(clock)  %{B#373A3B}%{F$FG}%{A:$HOME/.config/i3/lemonbar/pop_panel.sh:} \ue00d%{A}%{B- F-}"
+	echo -e "$(music)%{A:$OPENMUSIC:} ${line} %{A} %{c}$(cpu) $(temp) $(ram)  $(pow)%{r}$(net) %{A:$VOLT:}%{A4:$VOLU:}%{A5:$VOLD:}$(vol)%{A}%{A}%{A}  $(clock)  %{B#373A3B}%{F$FG}%{A:$HOME/.config/i3/lemonbar/launch_pop_panel.sh:} \ue00d%{A}%{B- F-}"
 
 	sleep 0.1
 done | \

@@ -43,9 +43,6 @@ DISABLE_CORRECTION="true"
 # Less clear screen after quit
 export LESS="+X"
 
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # allow redirect to work with existed file
 setopt clobber
 
@@ -80,8 +77,8 @@ export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre
 # ESP-IDF SDK path
 export IDF_PATH="/media/Data/esp/esp-idf"
 export PATH="$HOME/.rbenv/bin:$HOME/esp/xtensa-esp32-elf/bin:/opt/genymobile/genymotion/tools:$PATH"
-export PATH="$HOME/.config/composer/vendor/bin:/opt/yarn-v1.3.2/bin:$HOME/.yarn/bin:$PATH"
-eval "$(rbenv init -)"
+export PATH="$HOME/.config/composer/vendor/bin:/opt/yarn-v1.3.2/bin:$HOME/.yarn/bin:$HOME/.local/bin:$PATH"
+#eval "$(rbenv init -)"
 
 # pip zsh completion start
 function _pip_completion {
@@ -100,10 +97,11 @@ source /usr/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/.virtualenvs
 export PIP_VIRTUALENV_BASE=/home/tdtrung17693/.virtualenvs
 
+# fzf
+
 # fzf color scheme
 # Base16 Darktooth
 # Author: Jason Milkins (https://github.com/jasonm23)
-
 _gen_fzf_default_opts() {
 
 local color00='#1D2021'
@@ -129,9 +127,13 @@ export FZF_DEFAULT_OPTS="
   --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C
   --color=marker:$color0C,fg+:$color06,prompt:$color0A,hl+:$color0D
 "
-
 }
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 _gen_fzf_default_opts
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export WINEARCH=wine32
+
+export GOPATH=/media/Code/go
+export PATH="/media/Data/Android/SDK/platform-tools:/media/Data/Android/SDK/tools:$PATH"
+
+export PATH="$HOME/esp/xtensa-esp32-elf/bin:/usr/local/bin:$PATH"
+export IDF_PATH="$HOME/esp/esp-idf"

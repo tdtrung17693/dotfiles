@@ -35,8 +35,12 @@ window.ssd headerbar.titlebar button.titlebutton {
     min-height: 0;
 }*/
 
-VteTerminal,
+/*VteTerminal,
 vte-terminal {
     padding: 15px;
+}*/
+
+.termite  {
+  padding: 10px;
 }
 

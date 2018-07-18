@@ -18,7 +18,9 @@ bar {
 
 # Floating mode for some apps
 for_window [title="^ncmpcpp$"] floating enable
+for_window [title="^OpenSSH Authentication Passphrase request$"] floating enable
 for_window [title="^ranger$"] floating enable
+for_window [class="Lxappearance"] floating enable
 for_window [class="Vlc"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="qt4-ssh-askpass"] floating enable
@@ -29,6 +31,8 @@ bindsym $mod+d exec --no-startup-id "rofi -lines 5 -font 'TamzenForPowerline 11'
 bindsym $mod+Shift+f focus parent; fullscreen; focus child
 # start a terminal
 bindsym $mod+Return exec --no-startup-id termite
+# take screenshot
+bindsym $sup+Print exec "scrot '%Y-%m-%d_$wx$h.png' -ue 'mv $f ~/Pictures/screenshots/' && notify-send 'Scrot' 'Screenshot saved to ~/Pictures/screenshots/'"
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -129,7 +133,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec --no-startup-id "~/.config/i3/lemonbar/pop_panel.sh"
+bindsym $mod+Shift+e exec --no-startup-id "~/.config/i3/lemonbar/launch_pop_panel.sh"
 
 # resize window (you can also use the mouse for that)
 mode "Resize" {
@@ -234,10 +238,10 @@ set $mode_mpc mpc
 bindsym $mod+Shift+m mode "$mode_mpc"
 
 mode "$mode_mpc" {
-    bindcode 60 exec mpc --host localhost --port 6601 next
-    bindcode 59 exec mpc --host localhost --port 6601 prev
-    bindsym  p  exec mpc --host localhost --port 6601 toggle
-    bindsym  s  exec --no-startup-id termite -e ncmpcpp
+    bindcode 60 exec mpc --host localhost --port 6600 next
+    bindcode 59 exec mpc --host localhost --port 6600 prev
+    bindsym  p  exec mpc --host localhost --port 6600 toggle
+    bindsym  s  exec --no-startup-id termite -e 'ncmpcpp --host localhost --port 6600' -t ncmpcpp 
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -249,3 +253,4 @@ for_window [class=".*"] title_format "<span>   %title</span>"
 # Colors
 client.focused #1d1f21 #1d1f21 #ffffff #1d1f21
 client.focused_inactive #1d1f21 #1d1f21 #ffffff #1d1f21
+

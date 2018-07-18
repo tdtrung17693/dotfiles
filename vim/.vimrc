@@ -83,9 +83,20 @@ inoremap jj <ESC>
 " }}}
 
 " PLUGINS {{{
-execute pathogen#infect()
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
 
+call vundle#begin()
 
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'morhetz/gruvbox'
+Plugin 'itchyny/lightline.vim'
+Plugin 'cocopon/iceberg.vim'
+
+call vundle#end()
+filetype plugin indent on
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -192,7 +203,8 @@ endif
 
 set background=dark " for the dark version
 " set background=light " for the light version
-let g:one_allow_italics = 1
-colorscheme one
+let g:gruvbox_italic=1
+set termguicolors
+colorscheme iceberg
 
 " }}}

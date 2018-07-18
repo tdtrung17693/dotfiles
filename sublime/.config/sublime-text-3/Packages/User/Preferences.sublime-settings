@@ -1,16 +1,20 @@
 {
 	"color_scheme": "Packages/User/Darktooth.tmTheme",
-	"font_face": "PragmataPro",
+	"font_face": "Operator Mono Lig Book",
 	"font_size": 11,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Markdown",
-		"Vintage"
+		"ActionScript",
+		"Babel"
 	],
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
 	"shift_tab_unindent": true,
 	"show_tab_close_buttons": false,
+	"spacegray_sidebar_tree_large": true,
 	"theme": "gruvbox (Dark) (Hard).sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"update_check": false
 }
