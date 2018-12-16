@@ -41,7 +41,7 @@ DISABLE_CORRECTION="true"
 . ~/.config/user-dirs.dirs
 
 # Less clear screen after quit
-export LESS="+X"
+export LESS="-R"
 
 # allow redirect to work with existed file
 setopt clobber
@@ -134,6 +134,17 @@ _gen_fzf_default_opts
 
 export GOPATH=/media/Code/go
 export PATH="/media/Data/Android/SDK/platform-tools:/media/Data/Android/SDK/tools:$PATH"
+export EDITOR=vim
 
 export PATH="$HOME/esp/xtensa-esp32-elf/bin:/usr/local/bin:$PATH"
 export IDF_PATH="$HOME/esp/esp-idf"
+
+# Local TIL 
+alias ltil='til -d /media/Data/Code/TIL'
+alias push-til='git --git-dir=/media/Data/Code/TIL/.git push origin master'
+alias open-til='hub --git-dir=/media/Data/Code/TIL/.git browse'
+export SYMPHONYEDA="/home/tdtrung17693/bin/Simili"
+    . "$SYMPHONYEDA/bin/init.sh"
+
+export VIMCONFIG=~/.vim
+export VIMDATA=~/.vim

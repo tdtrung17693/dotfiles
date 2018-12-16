@@ -13,7 +13,8 @@ ibus-daemon -drx
 # MPD
 #######################
 
-mopidy &
+#mopidy &
+mpd &
 
 # COMPTON
 #######################
@@ -46,7 +47,8 @@ if [ $(xrandr | grep -c ' connected ') -eq 2 ]; then
 else
   	xrandr --output $INMONITOR --auto --primary --gamma 0.9:0.82:0.8 --brightness 1.0
     # Set wallpaper
-    feh --bg-fill ~/Pictures/papers.co-mx34-nature-leaf-bokeh-spring-green-water-1920x1080.jpg
+    # feh --bg-fill ~/Pictures/papers.co-mx34-nature-leaf-bokeh-spring-green-water-1920x1080.jpg
+    feh --bg-fill ~/Pictures/pixelart-1536123548021-9432.jpg
 fi
 
 xrdb -load ~/.Xdefaults

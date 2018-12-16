@@ -8,5 +8,5 @@
 	},
     "eslint_path": {
         "linux": "/home/tdtrung17693/.nvm/versions/node/v8.11.1/bin/eslint"
-    }
+    },
 }

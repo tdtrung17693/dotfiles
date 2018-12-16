@@ -1,10 +1,10 @@
-sw_volume: 70
-audio_device_state:0:alsa
+sw_volume: 35
+audio_device_state:1:alsa
 audio_device_state:1:pulse audio
 audio_device_state:1:visualizer
 state: pause
-current: 0
-time: 959.157000
+current: 3
+time: 243.066000
 random: 0
 repeat: 1
 single: 0
@@ -13,8 +13,18 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:🎧 Calm Study Beats 2 _ lofi hip hop mix.opus
-1:01 全力少年.m4a
-2:02 アイスクリーム シンドローム.m4a
-3:05 螺旋.m4a
+0:♫ Mary Poppins - A Spoonful of Sugar Lyrics ♫.mp3
+1:Sukima No Hanataba Love Song Selection/Ai2018Remaster-Sukimaswitch-5669618.mp3
+2:Sukima No Hanataba Love Song Selection/Arigatou-Sukimaswitch-5669623.mp3
+3:Sukima No Hanataba Love Song Selection/BokuNote2018Remaster-Sukimaswitch-5669616.mp3
+4:Sukima No Hanataba Love Song Selection/BokuToKasaToNichiyoubi2018Remaster-Sukimaswitch-5669613.mp3
+5:Sukima No Hanataba Love Song Selection/ChiisanaTe2018Remaster-Sukimaswitch-5669617.mp3
+6:Sukima No Hanataba Love Song Selection/IceCreamSyndrome-Sukimaswitch-5346691.mp3
+7:Sukima No Hanataba Love Song Selection/Kanade2018Remaster-Sukimaswitch-5669612.mp3
+8:Sukima No Hanataba Love Song Selection/LastScene2018Remaster-Sukimaswitch-5669620.mp3
+9:Sukima No Hanataba Love Song Selection/MiraikaForAnniversary-Sukimaswitch-5669622.mp3
+10:Sukima No Hanataba Love Song Selection/Parabolover-Sukimaswitch-5344826.mp3
+11:Sukima No Hanataba Love Song Selection/Revival2018Remaster-Sukimaswitch-5669615.mp3
+12:Sukima No Hanataba Love Song Selection/SenJuunanaShousetsuNoLoveSong2018Remaster-Sukimaswitch-5669614.mp3
+13:Sukima No Hanataba Love Song Selection/TadaSoredakeNoFuukei-Sukimaswitch-5346339.mp3
 playlist_end

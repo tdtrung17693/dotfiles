@@ -14,6 +14,7 @@
 "======================================================================"
 
 set nocompatible " be IMproved
+set shell=/bin/bash
 
 
 set modelines=0
@@ -62,7 +63,7 @@ set gdefault
 
 
 " syntax highlighting {{{
-syntax on
+syntax enable
 filetype on
 filetype plugin on
 filetype plugin indent on
@@ -86,16 +87,29 @@ inoremap jj <ESC>
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
-call vundle#begin()
-
+call plug#begin()
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'morhetz/gruvbox'
-Plugin 'itchyny/lightline.vim'
-Plugin 'cocopon/iceberg.vim'
+Plug 'VundleVim/Vundle.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'othree/yajs.vim'
+"Plug 'maxmellon/vim-jsx-pretty'
+Plug 'sheerun/vim-polyglot'
+Plug 'morhetz/gruvbox'
+Plug 'nanotech/jellybeans.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'Valloric/YouCompleteMe'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-surround'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-commentary'
+Plug '/home/tdtrung17693/.fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'JamshedVesuna/vim-markdown-preview' 
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 " Enable omni completion.
@@ -117,6 +131,31 @@ imap <C-Return> <CR><CR><C-o>k<Tab>
 
 " Tagbar {{{
 nmap <F8> :TagbarToggle<CR>
+" }}}
+
+" Markdown Preview {{{
+let vim_markdown_preview_github=1
+let vim_markdown_preview_use_xdg_open=1
+" }}}
+
+" Markdown {{{
+
+" }}}
+
+" fzf {{{
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" Advanced customization using autoload functions
+inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 " }}}
 
 " YouCompleteMe {{{
@@ -183,6 +222,10 @@ function! Encoding()
     return winwidth(0) > 70 ? (strlen(&fenc) ? &enc : &enc) : ''
 endfunction
 
+" GitGutter {{{
+set updatetime=100
+" }}}
+
 "Credit joshdick
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
@@ -200,11 +243,10 @@ if (empty($TMUX))
   endif
 endif
 
-
+let g:jellybeans_use_term_italics = 1
 set background=dark " for the dark version
-" set background=light " for the light version
 let g:gruvbox_italic=1
-set termguicolors
-colorscheme iceberg
+colorscheme jellybeans
+let g:polyglot_disabled = ['javascript']
 
 " }}}

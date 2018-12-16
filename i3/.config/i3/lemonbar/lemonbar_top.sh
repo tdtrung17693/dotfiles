@@ -57,7 +57,7 @@ music() {
 
 
 net(){
-	ping=$(pn=$(timeout .8 ping 8.8.8.8 -c 1 -s 24 | sed '2!d;s/.*time=\([0-9]*\).*/\1/'); if [ -z $pn ] ; then echo "No Connection"; else echo "${pn}ms"; fi)
+	ping=$(pn=$(timeout .8 ping 8.8.8.8 -c 1 -s 24 | sed '2!d;s/.*time=\([0-9]*\).*/\1/'); if [ -z $pn ] ; then echo "No Connection"; elif echo $pn | grep -E "Unreachable"; then echo "Network Timeout"; else echo "${pn}ms"; fi)
 
 	echo -e "%{F$GREEN}\ue0f0 ${ping}"
 }
@@ -122,14 +122,14 @@ pow() {
 	echo -e "%{F$CYAN}${pow}%{F-} ${lvl}%"
 }
 
-MPD_HOST=$host MPD_PORT=$port zscroll -u t -b "♪ x" -d 0.3 -M "mpc status" -m "playing" "-b ''" -m "paused" "-b '' -s 0" "mpc --port ${port} current" |\
+MPD_HOST=$host MPD_PORT=$port zscroll -u t -b "♪ x" -d 0.5 -M "mpc status" -m "playing" "-b ''" -m "paused" "-b '' -s 0" "mpc --port ${port} current" |\
 
 while true; do
-	read -t 0.3 line
+	read -t 0.01 line
 
 	echo -e "$(music)%{A:$OPENMUSIC:} ${line} %{A} %{c}$(cpu) $(temp) $(ram)  $(pow)%{r}$(net) %{A:$VOLT:}%{A4:$VOLU:}%{A5:$VOLD:}$(vol)%{A}%{A}%{A}  $(clock)  %{B#373A3B}%{F$FG}%{A:$HOME/.config/i3/lemonbar/launch_pop_panel.sh:} \ue00d%{A}%{B- F-}"
 
-	sleep 0.1
+	sleep 0.08
 done | \
 lemonbar -g ${PW}x${PH}+${PX}+${PY} -o -1 -f "$FONT1" -o 0 -f "$FONT2" -o -1 -f "$FONT3" -B "$BG" -F "$FG" -p | zsh
 

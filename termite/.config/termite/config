@@ -1,6 +1,8 @@
 [options]
 font = siji 12
-font = Iosevka Term 11
+#font = Iosevka Term 11
+#font = scientifica 9
+font = Dina 8
 
 [colors]
 

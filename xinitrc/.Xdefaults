@@ -37,3 +37,12 @@ rofi.fullscreen: true
 *color13: #D69D55
 *color14: #668574
 *color15: #AB9C71
+
+! Fonts
+
+xterm*rightScrollBar: false
+xterm*ScrollBar: false
+xterm*scrollTtyOutput: false
+xterm*.faceName: Dina
+xterm*.faceSize: 8
+

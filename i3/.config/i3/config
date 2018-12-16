@@ -9,6 +9,7 @@ font xft:TamzenForPowerline 11
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+workspace_layout tabbed
 
 focus_follows_mouse no
 
@@ -18,6 +19,7 @@ bar {
 
 # Floating mode for some apps
 for_window [title="^ncmpcpp$"] floating enable
+for_window [title="^Artha"] floating enable
 for_window [title="^OpenSSH Authentication Passphrase request$"] floating enable
 for_window [title="^ranger$"] floating enable
 for_window [class="Lxappearance"] floating enable
@@ -224,7 +226,7 @@ bindsym $mod+Shift+v mode "$mode_volume"
 mode "$mode_volume" {
     bindsym plus  exec amixer sset Master -q 1%+
     bindsym minus exec amixer sset Master -q 1%-
-    bindsym m     exec pactl set-sink-mute 0 toggle
+    bindsym m     exec amixer -D pulse sset Master toggle
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
