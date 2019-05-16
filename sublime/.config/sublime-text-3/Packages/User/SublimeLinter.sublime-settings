@@ -1,11 +1,5 @@
 {
-    "user": {
-        "debug": false,
-        "delay": 0.25,
-        "error_color": "D02000",
-        "gutter_theme": "Packages/gruvbox/extras/sublimelinter gutter-themes/gruvbox/gruvbox.gutter-theme",
-        "gutter_theme_excludes": [],
-        "lint_mode": "load/save",
+
         "linters": {
             "annotations": {
                 "@disable": false,
@@ -59,9 +53,7 @@
                 "excludes": []
             }
         },
-        "mark_style": "outline",
         "no_column_highlights_line": false,
-        "passive_warnings": false,
         "paths": {
             "linux": [
                 "/home/tdtrung17693/.config/composer/vendor/bin/",
@@ -71,15 +63,7 @@
             "osx": [],
             "windows": []
         },
-        "python_paths": {
-            "linux": [],
-            "osx": [],
-            "windows": []
-        },
-        "rc_search_limit": 3,
-        "shell_timeout": 10,
-        "show_errors_on_save": false,
-        "show_marks_in_minimap": true,
+
         "syntax_map": {
             "coffeescript (gulpfile)": "coffeescript",
             "html (django)": "html",
@@ -118,12 +102,4 @@
             "yaml (stylelint)": "yaml",
             "yaml (yarn)": "yaml"
         },
-        "tooltip_fontsize": "1rem",
-        "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme",
-        "tooltip_theme_excludes": [],
-        "tooltips": true,
-        "use_current_shell_path": false,
-        "warning_color": "DDB700",
-        "wrap_find": true
-    }
 }

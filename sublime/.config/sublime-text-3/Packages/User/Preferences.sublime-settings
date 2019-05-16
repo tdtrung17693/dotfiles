@@ -10,7 +10,13 @@
 			"selector": "source.ts"
 		}
 	],
-	"color_scheme": "Packages/ayu/ayu-dark.tmTheme",
+	"color_scheme": "Packages/ayu/ayu-dark.sublime-color-scheme",
+	"extra_file_exclude_patterns":
+	[
+	],
+	"extra_folder_exclude_patterns":
+	[
+	],
 	"file_exclude_patterns":
 	[
 	],
@@ -18,24 +24,29 @@
 	[
 	],
 	"font_face": "Operator Mono Lig Book",
-	"font_size": 11,
+	"font_size": 12,
 	"highlight_line": true,
 	"ignored_packages":
 	[
 		"ActionScript",
 		"C++ Starting Kit",
 		"JavaScript Enhancements",
+		"LSP",
 		"Six",
+		"SublimeCodeIntel",
 		"Vintage",
 		"Vintageous"
 	],
 	"line_padding_bottom": 2,
 	"line_padding_top": 2,
+	"neovintageous_build_version": 11100,
 	"shift_tab_unindent": true,
 	"show_tab_close_buttons": true,
 	"spacegray_sidebar_tree_large": true,
-	"theme": "DA.sublime-theme",
+	"theme": "ayu-dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"update_check": false
+	"update_check": false,
+	"vintageous_use_ctrl_keys": false,
+	"vintageous_use_super_keys": false
 }

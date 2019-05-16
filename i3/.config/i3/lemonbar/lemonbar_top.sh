@@ -2,8 +2,12 @@
 
 # Kill other instance
 if [ $(pgrep -cx $(basename $0)) -gt 1 ]; then
-    printf "%s\n" "Running" >&2
-    exit 1
+    echo "The panel is running. Stopping it"
+    pkill -n "lemonbar"
+    sleep 0.1
+    while [[ $(pgrep -c "lemonbar") != 0 ]]; do
+        pkill -n -9 "lemonbar"
+    done
 fi
 
 trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
@@ -13,7 +17,8 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 
 # Fonts
 #FONT1="Source Han Sans JP Regular:size=11"
-FONT1="TamzenForPowerline:size=11"
+# FONT1="TamzenForPowerline:size=11"
+FONT1="Dina:size=8"
 FONT2="Unifont"
 FONT3="Siji:size=11"
 
@@ -123,7 +128,6 @@ pow() {
 }
 
 MPD_HOST=$host MPD_PORT=$port zscroll -u t -b "♪ x" -d 0.5 -M "mpc status" -m "playing" "-b ''" -m "paused" "-b '' -s 0" "mpc --port ${port} current" |\
-
 while true; do
 	read -t 0.01 line
 

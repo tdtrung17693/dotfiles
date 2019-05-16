@@ -4,6 +4,7 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+PROMPT_FILTHY_PROMPT_CHAR=">>"
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
@@ -63,10 +64,6 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 alias ssh="TERM=xterm-256color ssh"
 eval $(dircolors -b $HOME/.dircolors)
 
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 export XMODIFIERS=@im=ibus
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
@@ -78,7 +75,7 @@ export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre
 export IDF_PATH="/media/Data/esp/esp-idf"
 export PATH="$HOME/.rbenv/bin:$HOME/esp/xtensa-esp32-elf/bin:/opt/genymobile/genymotion/tools:$PATH"
 export PATH="$HOME/.config/composer/vendor/bin:/opt/yarn-v1.3.2/bin:$HOME/.yarn/bin:$HOME/.local/bin:$PATH"
-#eval "$(rbenv init -)"
+eval "$(rbenv init -)"
 
 # pip zsh completion start
 function _pip_completion {
@@ -93,7 +90,7 @@ compctl -K _pip_completion pip
 # pip zsh completion end
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source /usr/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/.virtualenvs
 export PIP_VIRTUALENV_BASE=/home/tdtrung17693/.virtualenvs
 
@@ -132,19 +129,29 @@ export FZF_DEFAULT_OPTS="
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 _gen_fzf_default_opts
 
-export GOPATH=/media/Code/go
+export GOPATH=/media/Data/Code/go
+export CODE_DIR=/media/Data/Code
+export STU_DIR=/media/Data/Computer\ Science\ BKU
 export PATH="/media/Data/Android/SDK/platform-tools:/media/Data/Android/SDK/tools:$PATH"
 export EDITOR=vim
 
-export PATH="$HOME/esp/xtensa-esp32-elf/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/esp/xtensa-esp32-elf/bin:/usr/local/bin:$HOME/scripts:$PATH"
 export IDF_PATH="$HOME/esp/esp-idf"
 
 # Local TIL 
 alias ltil='til -d /media/Data/Code/TIL'
 alias push-til='git --git-dir=/media/Data/Code/TIL/.git push origin master'
 alias open-til='hub --git-dir=/media/Data/Code/TIL/.git browse'
-export SYMPHONYEDA="/home/tdtrung17693/bin/Simili"
-    . "$SYMPHONYEDA/bin/init.sh"
 
 export VIMCONFIG=~/.vim
 export VIMDATA=~/.vim
+
+export CPATH=$CPATH:/usr/include/gtk-3.0
+export CPATH=$CPATH:/usr/include/gdk-pixbuf-2.0
+export CPATH=$CPATH:/usr/include/glib-2.0/
+export CPATH=$CPATH:/lib64/glib-2.0/include/
+export CPATH=$CPATH:/usr/include/pango-1.0/
+export CPATH=$CPATH:/usr/lib64/gtk-3.0/3.0.0/
+export CPATH=$CPATH:/usr/include/atk-1.0/
+export CPATH=$CPATH:/usr/include/cairo/
+export PINTOS_DIR='/media/Data/Computer Science BKU/CO2017 - Operating Systems/cs160'

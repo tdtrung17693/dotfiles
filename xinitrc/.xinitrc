@@ -1,4 +1,10 @@
 #!/bin/env bash
+
+# DEFAULT TEXT EDITOR
+#######################
+export EDITOR='vim'
+export VISUAL='vim'
+
 # IBUS
 #######################
 
@@ -43,12 +49,12 @@ if [ $(xrandr | grep -c ' connected ') -eq 2 ]; then
     xrandr --output $EXMONITOR --auto --primary --output $INMONITOR --off #--right-of $EXMONITOR --gamma 0.9:0.82:0.8 --brightness 1.0
     # Set wallpaper
     # feh --bg-fill --no-xinerama ~/Pictures/papers.co-mx34-nature-leaf-bokeh-spring-green-water-1920x1080.jpg
-    feh --bg-fill --no-xinerama ~/Pictures/8-Bit-Wallpaper.jpg
+    feh --bg-center --no-xinerama --geometry "+0+-20" ~/Pictures/Slumber-wallpaper-1920x1200.jpg
 else
   	xrandr --output $INMONITOR --auto --primary --gamma 0.9:0.82:0.8 --brightness 1.0
     # Set wallpaper
     # feh --bg-fill ~/Pictures/papers.co-mx34-nature-leaf-bokeh-spring-green-water-1920x1080.jpg
-    feh --bg-fill ~/Pictures/pixelart-1536123548021-9432.jpg
+    feh --bg-center --geometry "+0+-20" ~/Pictures/Slumber-wallpaper-1920x1200.jpg
 fi
 
 xrdb -load ~/.Xdefaults

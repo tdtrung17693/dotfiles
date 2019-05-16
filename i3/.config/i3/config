@@ -10,12 +10,12 @@ font xft:TamzenForPowerline 11
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 workspace_layout tabbed
-
 focus_follows_mouse no
 
 bar {
     i3bar_command ~/.config/i3/lemonbar/lemonbar_top.sh
 }
+
 
 # Floating mode for some apps
 for_window [title="^ncmpcpp$"] floating enable
@@ -34,7 +34,7 @@ bindsym $mod+Shift+f focus parent; fullscreen; focus child
 # start a terminal
 bindsym $mod+Return exec --no-startup-id termite
 # take screenshot
-bindsym $sup+Print exec "scrot '%Y-%m-%d_$wx$h.png' -ue 'mv $f ~/Pictures/screenshots/' && notify-send 'Scrot' 'Screenshot saved to ~/Pictures/screenshots/'"
+bindsym $mod+z exec scrot '%Y-%m-%d_$wx$h.png' -ue 'mv $f ~/Pictures/screenshots/' && notify-send 'Scrot' 'Screenshot saved to ~/Pictures/screenshots/'
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -250,7 +250,7 @@ mode "$mode_mpc" {
 }
 
 for_window [class=".*"] border pixel 0
-for_window [class=".*"] title_format "<span>   %title</span>"
+for_window [class=".*"] title_format "<span> %title </span>"
 
 # Colors
 client.focused #1d1f21 #1d1f21 #ffffff #1d1f21
