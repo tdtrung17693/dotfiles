@@ -1,0 +1,7 @@
+#!/bin/bash
+
+posts="$PWD/_posts/*.md"
+
+for post in $posts; do
+    echo $post
+done

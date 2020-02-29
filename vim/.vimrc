@@ -1,30 +1,3 @@
-"======================================================================"
-"      ___                       ___           ___           ___       "
-"     /\__\          ___        /\__\         /\  \         /\  \      "
-"    /:/  /         /\  \      /::|  |       /::\  \       /::\  \     "
-"   /:/  /          \:\  \    /:|:|  |      /:/\:\  \     /:/\:\  \    "
-"  /:/__/  ___      /::\__\  /:/|:|__|__   /::\~\:\  \   /:/  \:\  \   "
-"  |:|  | /\__\  __/:/\/__/ /:/ |::::\__\ /:/\:\ \:\__\ /:/__/ \:\__\  "
-"  |:|  |/:/  / /\/:/  /    \/__/~~/:/  / \/_|::\/:/  / \:\  \  \/__/  "
-"  |:|__/:/  /  \::/__/           /:/  /     |:|::/  /   \:\  \        "
-"   \::::/__/    \:\__\          /:/  /      |:|\/__/     \:\  \       "
-"    ~~~~         \/__/         /:/  /       |:|  |        \:\__\      "
-"                               \/__/         \|__|         \/__/      "
-"                                                                      "
-"======================================================================"
-
-set nocompatible " be IMproved
-set shell=/bin/bash
-
-
-set modelines=0
-
-" completion {{{
-set wildmode=longest,list,full
-set wildmenu
-set wildignorecase
-" }}}
-
 " maintain undo history {{{
 set history=500
 set undofile
@@ -32,6 +5,13 @@ set undodir=~/.vim/undo
 set noswapfile
 " }}}
 
+" Set clipboard {{{
+set clipboard+=unnamed
+" }}}
+
+
+set termguicolors
+let mapleader = ','
 " tab settings {{{
 set tabstop=4
 set shiftwidth=4
@@ -78,175 +58,279 @@ set number
 set foldlevel=99
 set foldminlines=99
 
-" remap close normal mode
-inoremap jj <ESC>
+hi NonText guifg=bg
 
-" }}}
+set rtp+=~/.fzf
 
-" PLUGINS {{{
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
 
-call plug#begin()
-" let Vundle manage Vundle, required
-Plug 'VundleVim/Vundle.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'othree/yajs.vim'
-"Plug 'maxmellon/vim-jsx-pretty'
-Plug 'sheerun/vim-polyglot'
-Plug 'morhetz/gruvbox'
+filetype plugin indent off
+
+" Plugin Manager
+call plug#begin('~/.vim/plugged')
 Plug 'nanotech/jellybeans.vim'
-Plug 'itchyny/lightline.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'Valloric/YouCompleteMe'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-surround'
-Plug 'mattn/emmet-vim'
-Plug 'tpope/vim-commentary'
-Plug '/home/tdtrung17693/.fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'JamshedVesuna/vim-markdown-preview' 
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+Plug 'mhinz/vim-grepper'
+Plug 'janko-m/vim-test'
+Plug 'sgur/vim-editorconfig'
+Plug 'tomtom/tcomment_vim'
+Plug 'scrooloose/nerdtree'
+Plug 'jiangmiao/auto-pairs'
+Plug 'itchyny/lightline.vim'
+Plug 'shime/vim-livedown'
+Plug 'mattn/emmet-vim'
+Plug 'derekwyatt/vim-scala'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
+
+" End Plugin Manager
+
+colorscheme jellybeans
 filetype plugin indent on
 
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-set omnifunc=syntaxcomplete#Complete
-" Enable heavy omni completion.
-"if !exists('g:neocomplete#sources#omni#input_patterns')
-"  let g:neocomplete#sources#omni#input_patterns = {}
-"endif
+" Miscellaneous
+set gcr=a:block
+" mode aware cursor
+set gcr+=o:hor50-Cursor
+set gcr+=n:Cursor
+set gcr+=i-ci-sm:InsertCursor
+set gcr+=r-cr:ReplaceCursor-hor20
+set gcr+=c:CommandCursor
+set gcr+=v-ve:VisualCursor
 
-cnoremap cd. lcd %:p:h
-nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
-inoremap jj <ESC>
-imap <C-Return> <CR><CR><C-o>k<Tab>
+set gcr+=a:blinkon0
 
-" Tagbar {{{
-nmap <F8> :TagbarToggle<CR>
-" }}}
+hi InsertCursor  ctermfg=15 guifg=#fdf6e3 ctermbg=37  guibg=#2aa198
+hi VisualCursor  ctermfg=15 guifg=#fdf6e3 ctermbg=125 guibg=#d33682
+hi ReplaceCursor ctermfg=15 guifg=#fdf6e3 ctermbg=65  guibg=#dc322f
+hi CommandCursor ctermfg=15 guifg=#fdf6e3 ctermbg=166 guibg=#cb4b16
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+autocmd FileType json syntax match Comment +\/\/.\+$+
 
-" Markdown Preview {{{
-let vim_markdown_preview_github=1
-let vim_markdown_preview_use_xdg_open=1
-" }}}
+" Minpac Custom CMD
+command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
+command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
+command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
 
-" Markdown {{{
+au BufRead,BufNewFile *.sbt set filetype=scala
+" coc
 
-" }}}
+function! SetupCommandAbbrs(from, to)
+  exec 'cnoreabbrev <expr> '.a:from
+        \ .' ((getcmdtype() ==# ":" && getcmdline() ==# "'.a:from.'")'
+        \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+endfunction
 
-" fzf {{{
-" Mapping selecting mappings
-nmap <leader><tab> <plug>(fzf-maps-n)
-xmap <leader><tab> <plug>(fzf-maps-x)
-omap <leader><tab> <plug>(fzf-maps-o)
+" Autoformat, coc-prettier is required
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+" Use C to open coc config
+call SetupCommandAbbrs('C', 'CocConfig')
 
-" Insert mode completion
-imap <c-x><c-k> <plug>(fzf-complete-word)
-imap <c-x><c-f> <plug>(fzf-complete-path)
-imap <c-x><c-j> <plug>(fzf-complete-file-ag)
-imap <c-x><c-l> <plug>(fzf-complete-line)
+" Use <C-l> to trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+" Use <C-j> to select text for visual text of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+" Use <C-j> to jump to forward placeholder, which is default
+let g:coc_snippet_next = '<c-j>'
+" Use <C-k> to jump to backward placeholder, which is default
+let g:coc_snippet_prev = '<c-k>'
 
-" Advanced customization using autoload functions
-inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
-" }}}
+"s not set, TextEdit might fail.
+set hidden
 
-" YouCompleteMe {{{
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-" }}}
-" Statusline (Lightline) {{{
-set laststatus=2
-  let g:lightline = {
-    \ 'colorscheme': 'seoul256',
-    \ 'active': {
-    \   'left': [ [ 'mode', 'paste'],
-    \             [ 'filename', 'readonly', 'fugitive' ] ],
-    \   'right': [ [ 'percent', 'lineinfo' ],
-    \              [ 'fileencoding', 'filetype' ],
-    \              [ 'fileformat', 'syntastic' ] ]
-    \ },
-    \ 'component_function': {
-    \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-    \   'readonly': 'ReadOnly',
-    \   'fugitive': 'Git',
-    \   'filetype': 'Type',
-    \   'fileformat' : 'Format',
-    \   'fileencoding': 'Encoding'
-    \ },
-    \ 'component_expand': {
-    \   'syntastic': 'SyntasticStatuslineFlag',
-    \ },
-    \ 'component_type': {
-    \   'syntastic': 'error',
-    \ },
-    \ 'separator': { 'left': '▓▒░', 'right': '░▒▓' },
-    \ 'subseparator': { 'left': '▒', 'right': '░' }
+" Better display for messages
+set cmdheight=2
+
+" Smaller updatetime for CursorHold & CursorHoldI
+set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
+" always show signcolumns
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> for trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> for confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use `[c` and `]c` for navigate diagnostics
+nmap <silent> [c <Plug>(coc-diagnostic-prev)
+nmap <silent> ]c <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K for show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if &filetype == 'vim'
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight symbol under cursor on CursorHold
+" autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
+" Remap for format selected region
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
+" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
+vmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Remap for do codeAction of current line
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Fix autofix problem of current line
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Use `:Format` for format current buffer
+command! -nargs=0 Format :call CocAction('format')
+
+" Use `:Fold` for fold current buffer
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+
+" Add diagnostic info for https://github.com/itchyny/lightline.vim
+let g:lightline = {
+      \ 'colorscheme': 'seoul256',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status',
+      \ },
+      \ 'component': {
+      \ }
+      \ }
+
+" Using CocList
+" Show all diagnostics
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" Manage extensions
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+" Show commands
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+" Find symbol of current document
+nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+" Search workspace symbols
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.
+nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+" Resume latest coc list
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR> 
+" fzf
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+nnoremap <leader><c-f> :Files<CR>
+function! s:buflist()
+  redir => ls
+  silent ls
+  redir END
+  return split(ls, '\n')
+endfunction
+
+function! s:bufopen(e)
+  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+endfunction
+
+nnoremap <silent> <Leader><Enter> :call fzf#run({
+\   'source':  reverse(<sid>buflist()),
+\   'sink':    function('<sid>bufopen'),
+\   'options': '+m',
+\   'down':    len(<sid>buflist()) + 2
+\ })<CR>
+
+" ale
+let g:ale_linters = {
+\  'c': []
+\}
+" nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
+" easymotion
+let g:EasyMotion_do_mapping = 0
+nmap e <Plug>(easymotion-overwin-f)
+nmap E <Plug>(easymotion-overwin-f2)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+function! OpenFloatTerm()
+    " border window
+    let height = float2nr((&lines - 2) / 1.5)
+    let row = float2nr((&lines - height) / 2)
+    let width = float2nr(&columns / 1.5)
+    let col = float2nr((&columns - width) / 2)
+    let border_opts = {
+        \ 'relative': 'editor',
+        \ 'row': row - 2,
+        \ 'col': col - 2 ,
+        \ 'width': width + 4,
+        \ 'height': height + 4,
+        \ 'style': 'minimal'
     \ }
 
-function! Mod()
-    return &ft =~ 'help\|vimfiler' ? '' : &modified ? '»' : &modifiable ? '' : ''
+    let border_buf = nvim_create_buf(v:false, v:true)
+    let s:border_win = nvim_open_win(border_buf, v:true, border_opts)
+    
+    " main window
+    let opts = {
+        \ 'relative': 'editor',
+        \ 'row': row,
+        \ 'col': col,
+        \ 'width': width,
+        \ 'height': height,
+        \ 'style': 'minimal'
+    \ }
+
+    let buf = nvim_create_buf(v:false, v:true)
+    let win = nvim_open_win(buf, v:true, opts)
+
+    autocmd TermClose * ++once :q | call nvim_win_close(s:border_win, v:true)
+    terminal
+    startinsert
 endfunction
-
-function! ReadOnly()
-    return &ft !~? 'help\|vimfiler' && &readonly ? '×' : ''
-endfunction
-
-function! Git()
-    if &ft !~? 'help\|vimfiler' && exists("*fugitive#head")
-        return fugitive#head()
-endif
-    return ''
-endfunction
-
-function! Name()
-    return ('' != WizMod() ? WizMod() . ' ' : '') .
-      \ ('' != expand('%:t') ? expand('%:t') : '[none]')
-endfunction
-
-function! Type()
-    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : '') : ''
-endfunction
-
-function! Format()
-    return ''
-endfunction
-
-function! Encoding()
-    return winwidth(0) > 70 ? (strlen(&fenc) ? &enc : &enc) : ''
-endfunction
-
-" GitGutter {{{
-set updatetime=100
-" }}}
-
-"Credit joshdick
-"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
-"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
-"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
-if (empty($TMUX))
-  if (has("nvim"))
-  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
-
-let g:jellybeans_use_term_italics = 1
-set background=dark " for the dark version
-let g:gruvbox_italic=1
-colorscheme jellybeans
-let g:polyglot_disabled = ['javascript']
-
-" }}}

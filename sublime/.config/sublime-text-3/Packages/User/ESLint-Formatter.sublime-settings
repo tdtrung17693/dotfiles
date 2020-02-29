@@ -3,10 +3,10 @@
 {
 	"node_path": {
 		"windows": "node.exe",
-		"linux": "/home/tdtrung17693/.nvm/versions/node/v8.11.1/bin/node",
+		"linux": "/home/tdtrung17693/.nvm/versions/node/v8.9.1/bin/node",
 		"osx": "/usr/local/bin/node"
 	},
     "eslint_path": {
-        "linux": "/home/tdtrung17693/.nvm/versions/node/v8.11.1/bin/eslint"
-    },
+        "linux": "/home/tdtrung17693/.yarn/bin/eslint"
+    }
 }

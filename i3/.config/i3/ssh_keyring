@@ -1,0 +1,11 @@
+#!/bin/env bash
+
+# START SESSION    
+#######################    
+export SSH_ASKPASS=/usr/libexec/openssh/lxqt-openssh-askpass    
+  
+keychain --confhost ~/.ssh/id_rsa    
+[ -f ~/.keychain/$HOSTNAME-sh ] && . ~/.keychain/$HOSTNAME-sh 2>/dev/null    
+[ -f ~/.keychain/$HOSTNAME-sh-gpg ] && . ~/.keychain/$HOSTNAME-sh-gpg 2>/dev/null    
+
+/usr/libexec/polkit-mate-authentication-agent-1 & 

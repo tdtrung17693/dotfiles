@@ -73,9 +73,8 @@ export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre
 
 # ESP-IDF SDK path
 export IDF_PATH="/media/Data/esp/esp-idf"
-export PATH="$HOME/.rbenv/bin:$HOME/esp/xtensa-esp32-elf/bin:/opt/genymobile/genymotion/tools:$PATH"
+export PATH="$HOME/esp/xtensa-esp32-elf/bin:/opt/genymobile/genymotion/tools:$PATH"
 export PATH="$HOME/.config/composer/vendor/bin:/opt/yarn-v1.3.2/bin:$HOME/.yarn/bin:$HOME/.local/bin:$PATH"
-eval "$(rbenv init -)"
 
 # pip zsh completion start
 function _pip_completion {
@@ -118,6 +117,7 @@ local color0D='#0D6678'
 local color0E='#8F4673'
 local color0F='#A87322'
 
+export FZF_DEFAULT_COMMAND='ag -l'
 export FZF_DEFAULT_OPTS="
   --height 40% --border
   --color=bg+:$color01,bg:$color00,spinner:$color0C,hl:$color0D
@@ -138,6 +138,9 @@ export EDITOR=vim
 export PATH="$HOME/esp/xtensa-esp32-elf/bin:/usr/local/bin:$HOME/scripts:$PATH"
 export IDF_PATH="$HOME/esp/esp-idf"
 
+# CHRUBY
+# source /usr/local/share/chruby/chruby.sh
+
 # Local TIL 
 alias ltil='til -d /media/Data/Code/TIL'
 alias push-til='git --git-dir=/media/Data/Code/TIL/.git push origin master'
@@ -155,3 +158,18 @@ export CPATH=$CPATH:/usr/lib64/gtk-3.0/3.0.0/
 export CPATH=$CPATH:/usr/include/atk-1.0/
 export CPATH=$CPATH:/usr/include/cairo/
 export PINTOS_DIR='/media/Data/Computer Science BKU/CO2017 - Operating Systems/cs160'
+# ANTLR
+export CLASSPATH=".:$HOME/bin/antlr.jar:$CLASSPATH"
+alias antlr4='java -Xmx500M -cp "$HOME/bin/antlr.jar:$CLASSPATH" org.antlr.v4.Tool'
+alias grun='java -Xmx500M -cp "$HOME/bin/antlr.jar:$CLASSPATH" org.antlr.v4.gui.TestRig'
+
+function homestead() {
+    ( cd ~/Homestead && vagrant $* )
+}
+
+
+# For PPL Course
+export ANTLR_JAR="$HOME/bin/antlr.jar"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

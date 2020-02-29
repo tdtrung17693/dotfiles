@@ -11,73 +11,22 @@ export VISUAL='vim'
 ibus-daemon -drx
 #fcitx -d
 
-# THUNAR
-#######################
-
-#thunar --daemon 2>/dev/null &
 
 # MPD
 #######################
 
-#mopidy &
-mpd &
+# mopidy &
+# mpd &
 
-# COMPTON
-#######################
-
-compton --config ~/.compton/config --logpath /tmp/compton &
-
-# DUNST
-#######################
-
-dunst 2>>/tmp/dunst.log &
-
-# X's STUFF
-#######################
-
-xset +fp /home/tdtrung17693/.fonts
-xset fp rehash
-
-xset -b
-
-# xinput set-prop 13 "Device Enabled" 0
-# detect external monitor
-EXMONITOR=HDMI-2
-INMONITOR=eDP-1
-
-if [ $(xrandr | grep -c ' connected ') -eq 2 ]; then
-    xrandr --output $EXMONITOR --auto --primary --output $INMONITOR --off #--right-of $EXMONITOR --gamma 0.9:0.82:0.8 --brightness 1.0
-    # Set wallpaper
-    # feh --bg-fill --no-xinerama ~/Pictures/papers.co-mx34-nature-leaf-bokeh-spring-green-water-1920x1080.jpg
-    feh --bg-center --no-xinerama --geometry "+0+-20" ~/Pictures/Slumber-wallpaper-1920x1200.jpg
-else
-  	xrandr --output $INMONITOR --auto --primary --gamma 0.9:0.82:0.8 --brightness 1.0
-    # Set wallpaper
-    # feh --bg-fill ~/Pictures/papers.co-mx34-nature-leaf-bokeh-spring-green-water-1920x1080.jpg
-    feh --bg-center --geometry "+0+-20" ~/Pictures/Slumber-wallpaper-1920x1200.jpg
-fi
-
-xrdb -load ~/.Xdefaults
-
-# START SESSION
-#######################
-export SSH_ASKPASS=/usr/libexec/openssh/lxqt-openssh-askpass
-#export GTK_IM_MODULE=fcitx
-#export QT_IM_MODULE=fcitx
-#export XMODIFIERS=@im=fcitx
-
-keychain --confhost ~/.ssh/id_rsa
-[ -f ~/.keychain/$HOSTNAME-sh ] && . ~/.keychain/$HOSTNAME-sh 2>/dev/null
-[ -f ~/.keychain/$HOSTNAME-sh-gpg ] && . ~/.keychain/$HOSTNAME-sh-gpg 2>/dev/null
 
 # JetBrains License Server
-./IntelliJIDEALicenseServer_linux_amd64  -p 1337 -u tdtrung17693 &
-autossh -M 0 -R jetserv176:80:localhost:1337 serveo.net &
+# ./IntelliJIDEALicenseServer_linux_amd64  -p 1337 -u tdtrung17693 &
+# autossh -M 0 -R jetserv176:80:localhost:1337 serveo.net &
 
 # env XDG_CURRENT_DESKTOP=GNOME /usr/libexec/gsd-rfkill &
-/usr/libexec/polkit-mate-authentication-agent-1 &
+
 export GTK_CSD=0
-export LD_PRELOAD=/usr/lib64/libgtk3-nocsd.so.0
+#export LD_PRELOAD=/usr/lib64/libgtk3-nocsd.so.0
 export WM=i3
 case $WM in
     i3) exec i3 ;;

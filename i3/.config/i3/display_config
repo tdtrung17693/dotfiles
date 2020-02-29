@@ -1,0 +1,31 @@
+#!/bin/env bash
+
+EXMONITOR=HDMI-2    
+INMONITOR=eDP-1    
+  
+if [ $(xrandr | grep -c ' connected ') -eq 2 ]; then    
+  xrandr --output $EXMONITOR --auto --primary --output $INMONITOR --off #--right-of $EXMONITOR --gamma 0.9:0.82:0.8 --brightn  ess 1.0
+  feh --bg-center --no-xinerama --geometry "+0+-20" ~/Pictures/Slumber-wallpaper-1920x1200.jpg    
+else    
+  xrandr --output $INMONITOR --auto --primary --gamma 0.9:0.82:0.8 --brightness 1.0    
+  feh --bg-center --geometry "+0+-20" ~/Pictures/Slumber-wallpaper-1920x1200.jpg    
+fi    
+  
+# COMPTON
+#######################
+
+compton --config ~/.compton/config --logpath /tmp/compton &
+
+# DUNST
+#######################
+
+dunst 2>>/tmp/dunst.log &
+
+# X's STUFF
+#######################
+
+xset +fp /home/tdtrung17693/.fonts
+xset fp rehash
+
+xset -b
+xrdb -load ~/.Xdefaults 

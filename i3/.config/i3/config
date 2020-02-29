@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font xft:TamzenForPowerline 11
+font pango:DinaRemaster 12
 
 #exec --no-startup-id /home/tdtrung17693/.config/i3/i3_subscribe &
 
@@ -11,10 +11,15 @@ font xft:TamzenForPowerline 11
 floating_modifier $mod
 workspace_layout tabbed
 focus_follows_mouse no
+focus_on_window_activation urgent
 
 bar {
     i3bar_command ~/.config/i3/lemonbar/lemonbar_top.sh
 }
+
+exec_always --no-startup-id /home/tdtrung17693/.config/i3/ssh_keyring &
+exec_always --no-startup-id /home/tdtrung17693/.config/i3/display_config &
+exec_alwasy --no-startup-id ibus-daemon -drx
 
 
 # Floating mode for some apps
@@ -22,19 +27,24 @@ for_window [title="^ncmpcpp$"] floating enable
 for_window [title="^Artha"] floating enable
 for_window [title="^OpenSSH Authentication Passphrase request$"] floating enable
 for_window [title="^ranger$"] floating enable
+for_window [title="^win0$"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="Vlc"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="qt4-ssh-askpass"] floating enable
 bindsym $mod+bracketright exec urxvt -name SideTerm
 
-bindsym $mod+d exec --no-startup-id "rofi -lines 5 -font 'TamzenForPowerline 11' -show combi -combi-modi 'window,run,ssh' -modi combi"
+bindsym $mod+d exec --no-startup-id "rofi -lines 5 -font 'DinaRemaster 12' -show combi -combi-modi 'window,run,ssh' -modi combi"
 
 bindsym $mod+Shift+f focus parent; fullscreen; focus child
 # start a terminal
-bindsym $mod+Return exec --no-startup-id termite
+bindsym $mod+Return exec --no-startup-id alacritty 
+bindsym $mod+Shift+Return exec --no-startup-id alacritty -e ranger
+bindsym $mod+Mod1+Return exec --no-startup-id alacritty -e nvim
+
+
 # take screenshot
-bindsym $mod+z exec scrot '%Y-%m-%d_$wx$h.png' -ue 'mv $f ~/Pictures/screenshots/' && notify-send 'Scrot' 'Screenshot saved to ~/Pictures/screenshots/'
+bindsym $mod+z exec scrot '%Y-%m-%d-%HH-%MM-%SS_$wx$h.png' -ue 'mv $f ~/Pictures/screenshots/' && notify-send 'Scrot' 'Screenshot saved to ~/Pictures/screenshots/'
 
 # kill focused window
 bindsym $mod+Shift+q kill

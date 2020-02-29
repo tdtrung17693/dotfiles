@@ -62,9 +62,22 @@ music() {
 
 
 net(){
-	ping=$(pn=$(timeout .8 ping 8.8.8.8 -c 1 -s 24 | sed '2!d;s/.*time=\([0-9]*\).*/\1/'); if [ -z $pn ] ; then echo "No Connection"; elif echo $pn | grep -E "Unreachable"; then echo "Network Timeout"; else echo "${pn}ms"; fi)
+    ssid=$(iwgetid | sed  -rn 's/.*"(.*)"$/\1/p')
 
-	echo -e "%{F$GREEN}\ue0f0 ${ping}"
+    pn=$(timeout .8 ping 8.8.8.8 -c 1 -s 24 | sed '2!d;s/.*time=\([0-9]*\).*/\1/') 
+    
+    ping=$(if [ -z $pn ] ; then echo "No Connection"; elif [ -z $(echo $pn | grep -E "Unreachable") ]; then echo "${pn}ms"; else echo "Network Timeout"; fi)
+
+    netStatus=$(
+        if [ -z $ssid ]
+        then
+            echo "${ping} | Wired"
+        else
+            echo "${ping} | ${ssid}"
+        fi
+    )
+
+	echo -e "%{F$GREEN}\ue0f0 ${netStatus}"
 }
 
 

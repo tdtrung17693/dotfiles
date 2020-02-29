@@ -7,7 +7,7 @@ fi
 
 
 # Enable necessary copr
-COPR=( "yaroslav/i3desktop" "plambri/desktop-apps" "outman/bspwm")
+COPR=( "yaroslav/i3desktop" "plambri/desktop-apps" "atim/compton")
 
 for i in "${COPR[@]}"
 do
@@ -16,7 +16,7 @@ done
 
 # Install lightdm
 echo 'Installing lightdm & slick greeter...'
-dnf install lightdm slick-greeter
+dnf install lightdm lightdm-gtk
 echo 'Done'
 
 # Disable GDM
@@ -31,7 +31,7 @@ echo 'Done'
 
 # Install i3-gaps and additional applications
 echo 'Installing i3-gaps and additional applications'
-dnf install i3-gaps compton feh xbacklight rofi xdotool tlp pavucontrol lemonbar zsh aria2
+dnf install stow lxappearance xclip i3-gaps compton feh xbacklight rofi xdotool tlp pavucontrol zsh aria2
 echo 'Done'
 
 # Install Sublime Text
@@ -61,8 +61,8 @@ echo 'Done'
 
 # Make dotfiles' symlinks
 echo 'Installing dotfiles...'
-for file in {*} do
-    stow "${file}"
+for file in * do
+    stow $file
 done
 
 if [ -d "~/.config/sublime-text-3" ]; then
