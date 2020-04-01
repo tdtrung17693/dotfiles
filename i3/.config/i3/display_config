@@ -29,3 +29,7 @@ xset fp rehash
 
 xset -b
 xrdb -load ~/.Xdefaults 
+
+# REDSHIFT
+#######################
+redshift &

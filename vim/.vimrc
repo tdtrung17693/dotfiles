@@ -81,6 +81,8 @@ Plug 'mattn/emmet-vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-markdown'
+Plug 'posva/vim-vue'
 
 call plug#end()
 
@@ -284,6 +286,9 @@ nnoremap <silent> <Leader><Enter> :call fzf#run({
 \   'options': '+m',
 \   'down':    len(<sid>buflist()) + 2
 \ })<CR>
+
+" Markdown
+let g:markdown_fenced_languages = ['css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml', 'yaml']
 
 " ale
 let g:ale_linters = {
