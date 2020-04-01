@@ -44,7 +44,7 @@ bindsym $mod+Mod1+Return exec --no-startup-id alacritty -e nvim
 
 
 # take screenshot
-bindsym $mod+z exec scrot '%Y-%m-%d-%HH-%MM-%SS_$wx$h.png' -ue 'mv $f ~/Pictures/screenshots/' && notify-send 'Scrot' 'Screenshot saved to ~/Pictures/screenshots/'
+bindsym $mod+z exec /home/tdtrung17693/.config/i3/screenshot.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill

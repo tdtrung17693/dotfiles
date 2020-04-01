@@ -1,25 +1,50 @@
-search /media/Data
-sear
-cd /media
-search cd /
-cd /media/Data/Pictures/
-rename home
-open_with 
-cd .mpd
-search 24
-cd /media/Passport/Music/Debussy - Beau Soir - Preludes Book 2 & Other works (Michael Lewin) [2014, FLAC 24]
-cd /media/Passport/Music/
-search Concerti
-search concerti
-touch 
-delete
-cd $STU_DIR
-cd $STUDIR
-cd /media/Data/Computer Science BKU/
-
-search Software Engineering
-search engineering
-xdg-open
-!xdg-open 
-open_with 2
+cd /media/Data/Computer Science BKU
+map
+show map
+keymap
+rename CO3055 - Softwaretechnik Praktikum
+rename CO3005 - Prinzipien der Programmiersprachen
+rename CO3004 - Computernetzwerk
+rename CO3001 - Softwaretechnik
+rename CO2017 - Betriebssysteme
+open_with 0
+rename CO2013 - Datenbanksysteme
 find q
+mkdir 
+mkdir apu
+cd $H OM
+
+cd $HOMEEOMOMOAMSODMOASMO
+cd $HOM$HOME
+mvalskdlaskdlaksdlaksd
+cdlaksdlaksdlaksdlkaldsk
+cd alsdkalskdlaskd
+cd $HOME
+quitall! 
+cd /media/Data/Computer Science BKU/
+open_with 
+delete
+cd /media/Data/Books [must-read]/
+search Kubernetes
+search *Kubernetes*
+search .+Kubernetes
+search +Kubernetes
+cd 
+open_with 1
+move Lab_1.pdf
+help 
+rename Lab_1.pdf
+search tral
+search trel
+search clone
+search 
+cd Documents
+cd ..
+cd /media/Data/Code/vuelar/
+search pubc
+search publ
+search
+help
+mkdir img
+rename logo.png
+rename profile.png
