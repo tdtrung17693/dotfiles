@@ -6,70 +6,47 @@ if [ $UID != 0 ]; then
 fi
 
 
+# Distro: Fedora DNF
+
 # Enable necessary copr
-COPR=( "yaroslav/i3desktop" "plambri/desktop-apps" "atim/compton")
-
-for i in "${COPR[@]}"
-do
-    dnf copr enable "${i}"
-done
-
 # Install lightdm
-echo 'Installing lightdm & slick greeter...'
-dnf install lightdm lightdm-gtk
-echo 'Done'
+echo "Installing lightdm & slick greeter..."
+dnf install lightdm slick-greeter
+echo "Installed lightdm & slick greeter."
 
-# Disable GDM
-echo 'Disabling GDM...'
-systemctl disable gdm.service
-echo 'Done'
+# Install miscellaneous applications
+echo "Installing miscellaneous applications..."
+dnf install -y neovim git zsh tmux \
+  stow lxappearance xclip nitrogen \
+  xbacklight rofi xdotool tlp pavucontrol aria2 \
+  flameshot
+echo "Installed miscellaneous applications."
 
 # Enable lightdm
-echo 'Enabling lighdtm...'
+echo "Enabling lighdtm..."
 systemctl enable lightdm.service
-echo 'Done'
-
-# Install i3-gaps and additional applications
-echo 'Installing i3-gaps and additional applications'
-dnf install stow lxappearance xclip i3-gaps compton feh xbacklight rofi xdotool tlp pavucontrol zsh aria2
-echo 'Done'
-
-# Install Sublime Text
-echo 'Installing Sublime Text 3 Dev...'
-dnf config-manager --add-repo https://download.sublimetext.com/rpm/dev/x86_64/sublime-text.repo
-dnf install sublime-text
-echo 'Done'
-
-# Install zscroll for music player status scrolling text
-echo 'Installing zscroll...'
-git clone https://github.com/noctuid/zscroll.git /tmp/zscroll
-
-python3 /tmp/zscroll/setup.py install
-echo 'Done'
+echo "Enabled lighdtm."
 
 # Install prezto
-echo 'Installing prezto...'
+echo "Installing prezto..."
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-zsh -c 'setopt EXTENDED_GLOB
+zsh -c "setopt EXTENDED_GLOB"
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done'
-
 rm ~/{.zpreztorc,.zshrc}
-echo 'Done'
+echo "Installed prezto."
+
+echo "Installing tpm..."
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+echo "Installed tpm."
 
 # Make dotfiles' symlinks
-echo 'Installing dotfiles...'
+echo "Installing dotfiles..."
 for file in * do
     stow $file
 done
 
-if [ -d "~/.config/sublime-text-3" ]; then
-    pushd "~/.config/sublime-text-3"
-    aria2c -x16 -s16 https://packagecontrol.io/Package%20Control.sublime-packagels
-    popd
-fi
-echo 'Done'
+echo "Done"
 
     

@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-if [ -z "$1" -o "$1" = "-h" ]; then
-    echo "Usage: to-clipboard <FILENAME>"
-    exit 0
-fi
-
-cat "$1" | xclip -selection clipboard

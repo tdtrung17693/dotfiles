@@ -8,7 +8,7 @@ set $mod Mod4
 workspace_layout tabbed
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 1
+new_window pixel 2
 new_float normal
 
 # Hide borders
@@ -16,11 +16,14 @@ hide_edge_borders none
 
 # change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 1
+bindsym $mod+y border pixel 2
 bindsym $mod+n border normal
 bindsym XF86AudioRaiseVolume exec amixer sset Master -q 1%+
 bindsym XF86AudioLowerVolume exec amixer sset Master -q 1%-
 bindsym XF86AudioMute exec amixer sset Master toggle
+
+# screenshot 
+bindsym $mod+Shift+z exec --no-startup-id /home/$USER/scripts/screenshot.sh
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -30,7 +33,8 @@ font xft:Rec Mono Linear 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+# bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -60,8 +64,8 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec palemoon
-bindsym $mod+F4 exec pcmanfm
+# bindsym $mod+F2 exec palemoon
+# bindsym $mod+F4 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+F5 exec terminal -e 'mocp'
@@ -187,11 +191,11 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # assign [class="Skype"] $ws5
 
 # Open specific applications in floating mode
-for_window [title="alsamixer"] floating enable border pixel 1
+for_window [title="alsamixer"] floating enable border pixel 2
 for_window [class="calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
-for_window [class="Galculator"] floating enable border pixel 1
+for_window [class="Galculator"] floating enable border pixel 2
 for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-settings"] floating enable
@@ -272,9 +276,10 @@ mode "resize" {
 bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; picom --config ~/.compton/config -b
+exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1
+# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id nitrogen --restore; sleep 1; picom --config ~/.compton/config -b 
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id ibus-daemon -drx
 exec --no-startup-id bash ~/.config/polybar/launch.sh --grayblocks
 #exec --no-startup-id manjaro-hello
@@ -282,14 +287,15 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 # exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
-# exec --no-startup-id blueman-applet
+exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 #exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
-exec --no-startup-id /home/tdtrung17693/.screenlayout/main.sh
-exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id fix_xcursor
+# exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id /home/tdtrung17693/.screenlayout/main2.sh
+# exec_always --no-startup-id ff-theme-util
+# exec_always --no-startup-id fix_xcursor
+# exec --no-startup-id redshiftgui -l 10.823099:106.629662
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -329,7 +335,7 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  set $bg #282828
+set $bg #282828
 set $red #cc241d
 set $green #98971a
 set $yellow #d79921
@@ -340,14 +346,14 @@ set $gray #a89984
 set $darkgray #1d2021
 set $lightgray #bdae93
 
-default_border pixel 1
-default_floating_border pixel 1
-for_window [class="^.*"] border pixel 1
+default_border pixel 2
+default_floating_border pixel 2
+for_window [class="^.*"] border pixel 2
 
 # class                 border|backgr|text|indicator|child_border
-client.focused          $lightgray $lightgray $bg $purple $darkgray
-client.focused_inactive $darkgray $darkgray $lightgray $purple $darkgray
-client.unfocused        $darkgray $darkgray $lightgray $purple $darkgray
+client.focused          $lightgray $lightgray $bg $purple $aqua
+client.focused_inactive $darkgray $darkgray $lightgray $purple $lightgray
+client.unfocused        $darkgray $darkgray $lightgray $purple $lightgray
 client.urgent           $red $red $white $red $red
 
 for_window [class=".*"] title_format "<span>  %title </span>"
