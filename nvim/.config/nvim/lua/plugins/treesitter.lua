@@ -17,5 +17,9 @@ require('nvim-treesitter.configs').setup({
     "yaml",
     "vim",
     "latex",
+    "rust",
+    "typescript",
+    "javascript",
+    "html"
   },
 })

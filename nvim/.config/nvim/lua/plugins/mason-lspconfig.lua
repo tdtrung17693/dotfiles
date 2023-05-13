@@ -1,7 +1,14 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
 local utils = require("lsp.utils")
 
+require "nlspsettings".setup({
+  config_home = vim.fn.stdpath('config') .. "/nlsp-settings",
+  append_default_schemas = true,
+  ignored_servers = {},
+  loader = "json",
+})
 require("mason").setup()
 require("mason-lspconfig").setup {
   ensure_installed = {

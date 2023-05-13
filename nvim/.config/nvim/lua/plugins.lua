@@ -29,7 +29,10 @@ local packer_config = {
 local function packer_startup()
   use 'wbthomason/packer.nvim'
 
-  -- LSP
+  -- LSP related plugins
+  -- nlsp-settings' config goes in mason config file
+  use "tamago324/nlsp-settings.nvim"
+
   use {
     "williamboman/mason.nvim",
   }
@@ -42,7 +45,7 @@ local function packer_startup()
   use {
     "neovim/nvim-lspconfig",
     config = function()
-      require("plugins.lspconfig")
+      require("plugins.lsp_config")
     end
   }
 
@@ -62,6 +65,14 @@ local function packer_startup()
 
   use {
     "ray-x/lsp_signature.nvim",
+  }
+
+  use {
+      "SmiteshP/nvim-navic",
+      requires = "neovim/nvim-lspconfig",
+      config = function()
+        require("plugins.nvim-navic")
+      end
   }
 
   use {
@@ -97,6 +108,7 @@ local function packer_startup()
     end,
   }
 
+  use { "L3MON4D3/LuaSnip", config = function() require('plugins.snippets') end }
 
   -- Trouble
   use {
@@ -111,7 +123,7 @@ local function packer_startup()
   -- Treesitter
   use({
     'nvim-treesitter/nvim-treesitter',
-    -- config = function() require('plugins.treesitter') end,
+    config = function() require('plugins.treesitter') end,
     run = ':TSUpdate'
   })
 
@@ -144,26 +156,27 @@ local function packer_startup()
     event = 'BufWinEnter',
   })
 
-  use { "L3MON4D3/LuaSnip", config = function() require('plugins.snippets') end }
-
   -- nvim-tree
+  use 'nvim-tree/nvim-web-devicons'
   use {
-    "kyazdani42/nvim-tree.lua",
+    "nvim-tree/nvim-tree.lua",
     -- event = "BufWinOpen",
     -- cmd = "NvimTreeToggle",
+    after = "nvim-web-devicons",
     config = function()
       require("plugins.nvimtree")
     end
   }
+
   use {
     "simrat39/symbols-outline.nvim",
     config = function()
       require('symbols-outline').setup()
     end
   }
-  use {
-    "tpope/vim-surround"
-  }
+
+  use "tpope/vim-surround"
+
 
   use {
     "loctvl842/monokai-pro.nvim",
@@ -184,6 +197,9 @@ local function packer_startup()
     end
   }
 
+  use { "akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("plugins.toggleterm")
+  end }
 
 
   if packer_bootstrap then
