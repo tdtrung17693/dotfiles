@@ -51,5 +51,30 @@ local M = {
   Hint = "",
   Debug = "",
   Trace = "✎",
+  Ellipsis = "…",
+  -- git
+  LineAdded = "",
+  LineModified = "",
+  LineRemoved = "",
+  FileDeleted = "",
+  FileIgnored = "◌",
+  FileRenamed = "➜",
+  FileStaged = "S",
+  FileUnmerged = "",
+  FileUnstaged = "",
+  FileUntracked = "U",
+  Diff = "",
+  Repo = "",
+  Octoface = "",
+  Branch = "",
+
+  -- misc
+  Robot = "ﮧ",
+  Squirrel = "",
+  Tag = "",
+  Watch = "",
+  Smiley = "ﲃ",
+  CircuitBoard = "",
 }
+
 return M

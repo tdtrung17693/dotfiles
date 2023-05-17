@@ -77,35 +77,17 @@ local function packer_startup()
 
   use {
     "zbirenbaum/copilot.lua",
-    -- event = { "VimEnter" },
+
     config = function()
-      -- vim.defer_fn(function()
-      --   require("copilot").setup {
-      --     plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
-      --   }
-      -- end, 100)
       require("copilot").setup({
-        panel = {
-          auto_refresh = false,
-          keymap = {
-            accept = "<CR>",
-            jump_prev = "[[",
-            jump_next = "]]",
-            refresh = "gr",
-            open = "<M-CR>",
-          },
-        },
-        suggestion = {
-          auto_trigger = true,
-          keymap = {
-            accept = "<M-l>",
-            prev = "<M-[>",
-            next = "<M-]>",
-            dismiss = "<C-]>",
-          },
-        },
+        suggestion = { enabled=false},
+        panel = {enabled = false}
       })
     end,
+  }
+
+  use {
+      "zbirenbaum/copilot-cmp",
   }
 
   use { "L3MON4D3/LuaSnip", config = function() require('plugins.snippets') end }
@@ -160,8 +142,6 @@ local function packer_startup()
   use 'nvim-tree/nvim-web-devicons'
   use {
     "nvim-tree/nvim-tree.lua",
-    -- event = "BufWinOpen",
-    -- cmd = "NvimTreeToggle",
     after = "nvim-web-devicons",
     config = function()
       require("plugins.nvimtree")
@@ -200,6 +180,8 @@ local function packer_startup()
   use { "akinsho/toggleterm.nvim", tag = '*', config = function()
     require("plugins.toggleterm")
   end }
+
+  use 'f-person/git-blame.nvim'
 
 
   if packer_bootstrap then
