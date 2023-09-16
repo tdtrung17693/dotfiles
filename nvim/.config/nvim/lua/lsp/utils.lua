@@ -18,12 +18,22 @@ function E.common_on_attach(client, bufnr)
   bufnnoremap("<A-k>", "<Cmd>lua vim.lsp.buf.signature_help()<CR>")
 
   if client.server_capabilities.document_formatting then
-    cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+    --cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
   end
 
   if client.server_capabilities.documentSymbolProvider then
     navic.attach(client, bufnr)
   end
 end
+
+function E.organize_imports()
+  local params = {
+    command = "_typescript.organizeImports",
+    arguments = {vim.api.nvim_buf_get_name(0)},
+    title = ""
+  }
+  vim.lsp.buf.execute_command(params)
+end
+
 
 return E

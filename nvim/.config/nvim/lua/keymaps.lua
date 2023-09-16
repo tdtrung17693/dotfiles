@@ -1,17 +1,18 @@
+local utils = require("lsp.utils")
 local M = {
   mappings = {},
   vmappings = {},
 }
-
+--
 M.mappings = {
   [";"] = { "<cmd>Alpha<CR>", "Dashboard" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
-  ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle" },
+  ["/"] = { "<Cmd>set operatorfunc=CommentOperator<CR>g@", "Comment Toggle"},
   ["c"] = { "<cmd>BufferKill<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 }
 
-M.vmappings["/"] = { "<Plug>(comment_toggle_linewise_visual)", "Comment toggle" }
+M.vmappings["/"] = { "<Cmd>set operatorfunc=CommentOperator<CR>g@", "Comment toggle" }
 
 -- Bufferline {{{
 M.mappings["b"] = {
@@ -82,28 +83,30 @@ M.mappings["p"] = {
 -- Git {{{
 M.mappings["g"] = {
   name = "Git",
-  j = { "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>", "Next Hunk" },
-  k = { "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>", "Prev Hunk" },
-  l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
-  p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
-  r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
-  R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-  s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-  u = {
-    "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
-    "Undo Stage Hunk",
-  },
-  o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
-  b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-  c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-  C = {
-    "<cmd>Telescope git_bcommits<cr>",
-    "Checkout commit(for current file)",
-  },
-  d = {
-    "<cmd>Gitsigns diffthis HEAD<cr>",
-    "Git Diff",
-  },
+  j = { "<cmd>lua require 'vgit'.hunk_up()<cr>", "Next Hunk" },
+  k = { "<cmd>lua require 'vgit'.hunk_down()<cr>", "Prev Hunk" },
+  h = { "<cmd>lua require 'vgit'.buffer_history_preview()<cr>", "History"},
+  f = { "<cmd>lua require 'vgit'.buffer_diff_preview()<cr>", "Diff"},
+  l = { "<cmd>lua require 'vgit'.buffer_gutter_blame_preview()<cr>", "Blame"},
+  -- p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
+  -- r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
+  -- R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
+  -- s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+  -- u = {
+  --   "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
+  --   "Undo Stage Hunk",
+  -- },
+  -- o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
+  -- b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+  -- c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+  -- C = {
+  --   "<cmd>Telescope git_bcommits<cr>",
+  --   "Checkout commit(for current file)",
+  -- },
+  -- d = {
+  --   "<cmd>Gitsigns diffthis HEAD<cr>",
+  --   "Git Diff",
+  -- },
 }
 -- }}}
 
@@ -113,11 +116,12 @@ M.mappings["l"] = {
   a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
   -- d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
   d = { "<Cmd>lua vim.lsp.buf.declaration()<CR>", "Declarations" },
-  D = { "<Cmd>lua vim.lsp.buf.definition()<CR>", "Definitions" },
-  R = { "<cmd>Telescope lsp_references<CR>", "References" },
+  D = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
+  R = { "<cmd>Telescope lsp_references show_line=false<CR>", "References" },
   w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
   -- d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
   i = { "<Cmd>lua vim.lsp.buf.implementation()<CR>", "Implementations" },
+  o = { utils.organize_imports, "Organize Imports" },
   I = { "<cmd>Mason<cr>", "Mason Info" },
   j = {
     vim.diagnostic.goto_next,
@@ -129,7 +133,7 @@ M.mappings["l"] = {
     "Prev Diagnostic",
   },
   l = { vim.lsp.codelens.run, "CodeLens Action" },
-  q = { vim.diagnostic.setloclist, "Quickfix" },
+  q = { "<cmd>Trouble workspace_diagnostics<cr>", "Quickfix" },
   r = { vim.lsp.buf.rename, "Rename" },
   s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
   S = {
@@ -179,5 +183,6 @@ M.mappings["t"] = {
   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 }
 -- }}}
+
 
 return M

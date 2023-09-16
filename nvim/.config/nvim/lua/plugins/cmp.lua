@@ -1,12 +1,10 @@
 local fn = vim.fn
 
 local luasnip = require('luasnip')
-local copilot_cmp = require("copilot_cmp")
 local cmp = require('cmp')
 local icons = require("icons")
 
 
-copilot_cmp.setup()
 local function get_snippets_rtp()
   return vim.tbl_map(function(itm)
     return fn.fnamemodify(itm, ":h")
@@ -34,7 +32,6 @@ local source_names = {
   luasnip = "(Snippet)",
   buffer = "(Buffer)",
   tmux = "(TMUX)",
-  copilot = "(Copilot)",
   treesitter = "(TreeSitter)",
 }
 local duplicates  = {
@@ -157,33 +154,6 @@ cmp.setup({
 
   -- Complete options from the LSP servers and the snippet engine
   sources = {
-    {
-      name = "copilot",
-      max_item_count = 3,
-      trigger_characters = {
-        {
-          ".",
-          ":",
-          "(",
-          "'",
-          '"',
-          "[",
-          ",",
-          "#",
-          "*",
-          "@",
-          "|",
-          "=",
-          "-",
-          "{",
-          "/",
-          "\\",
-          "+",
-          "?",
-          " ",
-        },
-      },
-    },
     {
       name = "nvim_lsp",
       entry_filter = function(entry, ctx)
