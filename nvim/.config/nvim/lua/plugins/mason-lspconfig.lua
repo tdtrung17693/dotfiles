@@ -113,6 +113,9 @@ require("mason-lspconfig").setup_handlers({
 			capabilities = capabilities,
 		})
 	end,
+  ["rust_analyzer"] = function()
+    require("plugins.rust-tools")
+  end
 })
 -- vim.api.nvim_create_autocmd('BufWritePre', {
 --   pattern = { '*.tsx', '*.ts', '*.jsx', '*.js' },

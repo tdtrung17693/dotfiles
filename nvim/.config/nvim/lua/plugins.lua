@@ -143,13 +143,16 @@ local function packer_startup()
 	-- Telescope
 	use({
 		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/plenary.nvim" } },
+		requires = { { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-ui-select.nvim" } },
 		config = function()
 			require("plugins.telescope")
 		end,
 	})
 
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+  use({
+    "nvim-telescope/telescope-ui-select.nvim",
+  })
 
 	-- Autopairs
 	use({
@@ -245,11 +248,11 @@ local function packer_startup()
 
 	use({
 		"f-person/git-blame.nvim",
-    config = function()
-      vim.cmd([[
+		config = function()
+			vim.cmd([[
         let g:gitblame_message_template = '<author> - <date> - <summary>'
       ]])
-    end
+		end,
 	})
 
 	use({
@@ -277,6 +280,15 @@ local function packer_startup()
 	})
 
 	use({
+		"simrat39/rust-tools.nvim",
+		--config = function()
+		--  require("plugins.rust-tools")
+		--end
+	})
+
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+
+	use({
 		"windwp/nvim-ts-autotag",
 		config = function()
 			require("nvim-ts-autotag").setup()
@@ -300,6 +312,8 @@ local function packer_startup()
 			require("plugins.hlslens")
 		end,
 	})
+
+  use 'wakatime/vim-wakatime'
 
 	if packer_bootstrap then
 		require("packer").sync()

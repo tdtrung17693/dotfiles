@@ -4,12 +4,13 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+fpath=(${ASDF_DIR}/completions $fpath)
 PROMPT_FILTHY_PROMPT_CHAR=">>"
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-
+autoload -Uz compinit && compinit
 if [ "$TERM" = "linux" ]; then
   /bin/echo -e "
   \e]P01d2021
@@ -88,10 +89,10 @@ function _pip_completion {
 compctl -K _pip_completion pip
 # pip zsh completion end
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source /usr/local/bin/virtualenvwrapper.sh
-export WORKON_HOME=~/.virtualenvs
-export PIP_VIRTUALENV_BASE=/home/tdtrung17693/.virtualenvs
+#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+#source /usr/local/bin/virtualenvwrapper.sh
+#export WORKON_HOME=~/.virtualenvs
+#export PIP_VIRTUALENV_BASE=/home/tdtrung17693/.virtualenvs
 
 # fzf
 
@@ -130,7 +131,6 @@ export FZF_DEFAULT_OPTS="
 _gen_fzf_default_opts
 
 export GOPATH=/media/Data/Code/go
-export CODE_DIR=/media/Data/Code
 export STU_DIR=/media/Data/Computer\ Science\ BKU
 export PATH="/media/Data/Android/SDK/platform-tools:/media/Data/Android/SDK/tools:$PATH"
 export EDITOR=vim
@@ -179,3 +179,33 @@ if [ -f '/home/tdtrung17693/google-cloud-sdk/path.zsh.inc' ]; then . '/home/tdtr
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/tdtrung17693/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/tdtrung17693/google-cloud-sdk/completion.zsh.inc'; fi
+. "$HOME/.asdf/asdf.sh"
+export DATA_PATH=$HOME/Data
+export WORKSPACE=$DATA_PATH/Workspace
+export CODE=$DATA_PATH/Code
+
+#### ------------------------------
+
+#### exa - Color Scheme Definitions
+
+#### ------------------------------
+
+export EXA_COLORS="\
+uu=36:\
+gu=37:\
+sn=32:\
+sb=32:\
+da=34:\
+ur=34:\
+uw=35:\
+ux=36:\
+ue=36:\
+gr=34:\
+gw=35:\
+gx=36:\
+tr=34:\
+tw=35:\
+tx=36:"
+
+alias xl='exa -lag --icons --color=always'
+export GIT_EDITOR=nvim

@@ -31,12 +31,19 @@ require("telescope").setup({
 			-- the default case_mode is "smart_case"
 			hidden = true,
 		},
+
+		["ui-select"] = {
+			require("telescope.themes").get_dropdown({
+				-- even more opts
+			}),
+		},
 	},
-  pickers = {
-    find_files = {
-      hidden = true
-    }
-  }
+	pickers = {
+		find_files = {
+			hidden = true,
+		},
+	},
 })
 
 require("telescope").load_extension("fzf")
+require("telescope").load_extension("ui-select")

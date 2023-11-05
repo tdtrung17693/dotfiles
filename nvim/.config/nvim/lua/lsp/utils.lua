@@ -3,8 +3,8 @@ local cmd = vim.cmd
 
 local E = {}
 
-cmd([[autocmd ColorScheme * highlight NormalFloat guibg=#1f2335]])
-cmd([[autocmd ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]])
+--cmd([[autocmd ColorScheme * highlight NormalFloat guibg=#1f2335]])
+--cmd([[autocmd ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]])
 
 function E.common_on_attach(client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
