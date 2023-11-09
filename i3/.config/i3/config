@@ -96,6 +96,7 @@ set $right l
 
 # use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier $mod
+focus_follows_mouse no
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id kitty
@@ -149,7 +150,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+p floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle

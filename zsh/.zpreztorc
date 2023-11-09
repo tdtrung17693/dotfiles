@@ -35,6 +35,8 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'tmux' \
   'syntax-highlighting' \
+  'history-substring-search' \
+  'git' \
   
 
 #
@@ -60,6 +62,7 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
 zstyle ':prezto:module:git:status:ignore' submodules 'all'
+zstyle ':prezto:module:git:alias' submodules 'all'
 
 #
 # GNU Utility
