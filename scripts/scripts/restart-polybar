@@ -1,0 +1,4 @@
+#!/bin/env bash
+
+killall polybar
+bash .config/polybar/grayblocks/launch.sh &
