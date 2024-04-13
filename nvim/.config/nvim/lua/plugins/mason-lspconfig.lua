@@ -30,6 +30,13 @@ require("mason-lspconfig").setup_handlers({
 		lspconfig[server_name].setup({
 			on_attach = utils.common_on_attach,
 			capabilities = capabilities,
+			init_options = {
+				userLanguages = {
+					eelixir = "html-eex",
+					eruby = "erb",
+					rust = "html",
+				},
+			},
 		})
 	end,
 	["lua_ls"] = function()
@@ -64,43 +71,6 @@ require("mason-lspconfig").setup_handlers({
 		})
 	end,
 	["eslint"] = function()
-		-- lspconfig["eslint"].setup {
-		--   on_attach = function(client, bufnr)
-		--     utils.common_on_attach(client, bufnr)
-		--     client.resolved_capabilities.document_formatting = true
-		--     client.resolved_capabilities.document_range_formatting = true
-		--   end,
-		--   capabilities = capabilities,
-		--   -- filetypes = {
-		--   --   "javascript",
-		--   --   "javascriptreact",
-		--   --   "javascript.jsx",
-		--   --   "typescript",
-		--   --   "typescriptreact",
-		--   --   "typescript.tsx",
-		--   --   "vue",
-		--   --   "svelte",
-		--   -- },
-		--   settings = {
-		--     codeAction = {
-		--       disableRuleComment = { enable = true, location = "separateLine" },
-		--       showDocumentation = { enable = true },
-		--     },
-		--     -- experimental = { useFlatConfig = true },
-		--     -- nodePath = lib.path.resolve_config("linters/eslint/node_modules"),
-		--     onIgnoredFiles = "off",
-		--     options = {
-		--       cache = true,
-		--       fix = true,
-		--       --overrideConfigFile = lib.path.resolve_config("linters/eslint/dist/main.js"),
-		--       -- resolvePluginsRelativeTo = lib.path.resolve_config("linters/eslint/node_modules"),
-		--       useEslintrc = true,
-		--     },
-		--     packageManager = "npm",
-		--     run = "onType",
-		--     workingDirectory = { mode = "auto" },
-		--   },
-		-- }
 		lspconfig.eslint.setup({
 			on_init = function(client)
 				client.server_capabilities.documentFormattingProvider = true

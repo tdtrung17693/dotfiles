@@ -116,7 +116,6 @@ cmp.setup({
     end,
 
     ['<C-c>'] = cmp.mapping.close(),
-    
     -- select completion
     ['<CR>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,

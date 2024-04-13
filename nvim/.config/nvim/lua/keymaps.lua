@@ -133,7 +133,7 @@ M.mappings["l"] = {
     "Prev Diagnostic",
   },
   l = { vim.lsp.codelens.run, "CodeLens Action" },
-  q = { "<cmd>Trouble workspace_diagnostics<cr>", "Quickfix" },
+  q = { "<cmd>Trouble document_diagnostics<cr>", "Quickfix" },
   r = { vim.lsp.buf.rename, "Rename" },
   s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
   S = {

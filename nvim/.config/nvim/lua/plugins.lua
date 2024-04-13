@@ -1,325 +1,290 @@
 -- bootstrapping packer
-local ensure_packer = function()
-	local fn = vim.fn
-	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-	if fn.empty(fn.glob(install_path)) > 0 then
-		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
-		vim.cmd([[packadd packer.nvim]])
-		return true
-	end
-	return false
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-local packer_bootstrap = ensure_packer()
+local plugins = {
+  "wbthomason/packer.nvim",
 
-vim.cmd([[
-  augroup packer_user_config
-  autocmd!
-  autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]])
+  -- LSP related plugins
+  -- nlsp-settings' config goes in mason config file
+  "tamago324/nlsp-settings.nvim",
 
-local packer_config = {
-	display = {
-		open_fn = require("packer.util").float,
-	},
+  "williamboman/mason.nvim",
+  {
+    "williamboman/mason-lspconfig.nvim",
+    config = function()
+      require("plugins.mason-lspconfig")
+    end,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("plugins.lsp_config")
+    end,
+  },
+
+  {
+    "jay-babu/mason-null-ls.nvim",
+    requires = {
+      "williamboman/mason.nvim",
+      "jose-elias-alvarez/null-ls.nvim",
+    },
+    config = function()
+      require("plugins.null-ls")
+    end,
+  },
+
+  {
+    "hrsh7th/nvim-cmp",
+    -- Sources for nvim-cmp
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-nvim-lua",
+      "hrsh7th/cmp-cmdline",
+      "saadparwaiz1/cmp_luasnip",
+    },
+    config = function()
+      require("plugins.cmp")
+    end,
+  },
+
+  "ray-x/lsp_signature.nvim",
+
+  {
+    "SmiteshP/nvim-navic",
+    dependencies = "neovim/nvim-lspconfig",
+    config = function()
+      require("plugins.nvim-navic")
+    end,
+  },
+
+  "jose-elias-alvarez/null-ls.nvim",
+
+  {
+    "Exafunction/codeium.vim",
+
+    config = function()
+      -- Change '<C-g>' here to any keycode you like.
+      require("plugins.codeium")
+    end,
+  },
+
+  {
+    "L3MON4D3/LuaSnip",
+    version = "v2.*",
+    dependencies = { "rafamadriz/friendly-snippets" },
+    config = function()
+      require("plugins.snippets")
+    end,
+  },
+
+  -- Trouble
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+    dependencies = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup({})
+    end,
+  },
+
+  -- Telescope
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope-ui-select.nvim",
+    },
+    config = function()
+      require("plugins.telescope-config")
+    end,
+  },
+  {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build =
+    "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+    config = function()
+      require("telescope").load_extension("fzf")
+    end,
+  },
+
+  -- Autopairs
+  {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("plugins.autopairs")
+    end,
+  },
+
+  -- status line
+  {
+    "hoob3rt/lualine.nvim",
+    config = function()
+      require("plugins.lualine")
+    end,
+  },
+
+  -- bufferline
+  {
+    "akinsho/bufferline.nvim",
+    dependencies = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("plugins.bufferline")
+    end,
+    event = "BufWinEnter",
+  },
+
+  -- nvim-tree
+  {
+    "nvim-tree/nvim-tree.lua",
+    after = "nvim-web-devicons",
+    config = function()
+      require("plugins.nvimtree")
+    end,
+  },
+
+  {
+    "simrat39/symbols-outline.nvim",
+    config = function()
+      require("symbols-outline").setup()
+    end,
+  },
+  --
+  "tpope/vim-surround",
+  --
+  -- use({
+  -- 	"loctvl842/monokai-pro.nvim",
+  -- 	config = function()
+  -- 		require("monokai-pro").setup({
+  -- 			filter = "octagon",
+  -- 			background_clear = { "float_win" },
+  -- 		})
+  -- 		vim.cmd([[colorscheme monokai-pro]])
+  -- 	end,
+  -- })
+
+  -- use({
+  -- 	"tiagovla/tokyodark.nvim",
+  -- 	config = function()
+  -- 		vim.g.tokyodark_transparent_background = false
+  -- 		vim.g.tokyodark_enable_italic_comment = true
+  -- 		vim.g.tokyodark_enable_italic = true
+  -- 		vim.g.tokyodark_color_gamma = "1.0"
+  -- 		vim.cmd("colorscheme tokyodark")
+  -- 	end,
+  -- })
+  {
+    "rose-pine/neovim",
+    as = "rose-pine",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("rose-pine").setup({
+        variant = "dawn",
+      })
+      vim.cmd("colorscheme rose-pine")
+    end,
+  },
+
+  {
+    "folke/which-key.nvim",
+    config = function()
+      require("plugins.whichkey")
+    end,
+  },
+
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    config = function()
+      require("plugins.toggleterm")
+    end,
+  },
+
+  {
+    "f-person/git-blame.nvim",
+    config = function()
+      vim.cmd([[
+      let g:gitblame_message_template = '<author> - <date> - <summary>'
+      let g:gitblame_delay=20
+      ]])
+    end,
+  },
+
+  {
+    "akinsho/git-conflict.nvim",
+    version = "*",
+    config = function()
+      require("git-conflict").setup()
+    end,
+  },
+
+  -- use({
+  -- 	"tanvirtin/vgit.nvim",
+  -- 	requires = {
+  -- 		"nvim-lua/plenary.nvim",
+  -- 	},
+  -- 	config = function()
+  -- 		require("plugins.vgit")
+  -- 	end,
+  -- })
+  {
+    "terrortylor/nvim-comment",
+    config = function()
+      require("nvim_comment").setup()
+    end,
+  },
+
+  {
+    "simrat39/rust-tools.nvim",
+    --config = function()
+    --  require("plugins.rust-tools")
+    --end
+  },
+
+  -- use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+
+  {
+    "windwp/nvim-ts-autotag",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("plugins.treesitter")
+    end,
+    run = ":TSUpdate",
+  },
+
+  -- use({
+  -- 	"gorbit99/codewindow.nvim",
+  -- 	config = function()
+  -- 		local codewindow = require("codewindow")
+  -- 		codewindow.setup()
+  -- 		codewindow.apply_default_keybinds()
+  -- 	end,
+  -- })
+
+  {
+    "kevinhwang91/nvim-hlslens",
+    requires = "petertriho/nvim-scrollbar",
+    config = function()
+      -- require('hlslens').setup() is not required
+      require("plugins.hlslens")
+    end,
+  },
+
+  "wakatime/vim-wakatime",
 }
 
-local function packer_startup()
-	use("wbthomason/packer.nvim")
-
-	-- LSP related plugins
-	-- nlsp-settings' config goes in mason config file
-	use("tamago324/nlsp-settings.nvim")
-
-	use({
-		"williamboman/mason.nvim",
-	})
-	use({
-		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("plugins.mason-lspconfig")
-		end,
-	})
-	use({
-		"neovim/nvim-lspconfig",
-		config = function()
-			require("plugins.lsp_config")
-		end,
-	})
-
-	use({
-		"jay-babu/mason-null-ls.nvim",
-		requires = {
-			"williamboman/mason.nvim",
-			"jose-elias-alvarez/null-ls.nvim",
-		},
-		config = function()
-			require("plugins.null-ls")
-		end,
-	})
-
-	use({
-		"hrsh7th/nvim-cmp",
-		-- Sources for nvim-cmp
-		requires = {
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-nvim-lua",
-			"hrsh7th/cmp-cmdline",
-			"saadparwaiz1/cmp_luasnip",
-		},
-		config = function()
-			require("plugins.cmp")
-		end,
-	})
-
-	use({
-		"ray-x/lsp_signature.nvim",
-	})
-
-	use({
-		"SmiteshP/nvim-navic",
-		requires = "neovim/nvim-lspconfig",
-		config = function()
-			require("plugins.nvim-navic")
-		end,
-	})
-
-	-- use {
-	--   "jose-elias-alvarez/null-ls.nvim",
-	--   config = function ()
-	--     require("plugins.null-ls")
-	--   end
-	-- }
-
-	use({
-		"Exafunction/codeium.vim",
-
-		config = function()
-			-- Change '<C-g>' here to any keycode you like.
-			vim.keymap.set("i", "<C-g>", function()
-				return vim.fn["codeium#Accept"]()
-			end, { expr = true })
-			vim.keymap.set("i", "<c-;>", function()
-				return vim.fn["codeium#CycleCompletions"](1)
-			end, { expr = true })
-			vim.keymap.set("i", "<c-,>", function()
-				return vim.fn["codeium#CycleCompletions"](-1)
-			end, { expr = true })
-			vim.keymap.set("i", "<c-x>", function()
-				return vim.fn["codeium#Clear"]()
-			end, { expr = true })
-		end,
-	})
-
-	use({
-		"L3MON4D3/LuaSnip",
-		config = function()
-			require("plugins.snippets")
-		end,
-	})
-
-	-- Trouble
-	use({
-		"folke/trouble.nvim",
-		cmd = "TroubleToggle",
-		requires = "kyazdani42/nvim-web-devicons",
-		config = function()
-			require("trouble").setup({})
-		end,
-	})
-
-	-- Treesitter
-	use({
-		"nvim-treesitter/nvim-treesitter",
-		config = function()
-			require("plugins.treesitter")
-		end,
-		run = ":TSUpdate",
-	})
-
-	-- Telescope
-	use({
-		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-ui-select.nvim" } },
-		config = function()
-			require("plugins.telescope")
-		end,
-	})
-
-	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
-  use({
-    "nvim-telescope/telescope-ui-select.nvim",
-  })
-
-	-- Autopairs
-	use({
-		"windwp/nvim-autopairs",
-		config = function()
-			require("plugins.autopairs")
-		end,
-	})
-
-	-- status line
-	use({
-		"hoob3rt/lualine.nvim",
-		config = function()
-			require("plugins.lualine")
-		end,
-	})
-
-	-- bufferline
-	use({
-		"akinsho/bufferline.nvim",
-		requires = "kyazdani42/nvim-web-devicons",
-		config = function()
-			require("plugins.bufferline")
-		end,
-		event = "BufWinEnter",
-	})
-
-	-- nvim-tree
-	use("nvim-tree/nvim-web-devicons")
-	use({
-		"nvim-tree/nvim-tree.lua",
-		after = "nvim-web-devicons",
-		config = function()
-			require("plugins.nvimtree")
-		end,
-	})
-
-	use({
-		"simrat39/symbols-outline.nvim",
-		config = function()
-			require("symbols-outline").setup()
-		end,
-	})
-
-	use("tpope/vim-surround")
-
-	-- use({
-	-- 	"loctvl842/monokai-pro.nvim",
-	-- 	config = function()
-	-- 		require("monokai-pro").setup({
-	-- 			filter = "octagon",
-	-- 			background_clear = { "float_win" },
-	-- 		})
-	-- 		vim.cmd([[colorscheme monokai-pro]])
-	-- 	end,
-	-- })
-
-	-- use({
-	-- 	"tiagovla/tokyodark.nvim",
-	-- 	config = function()
-	-- 		vim.g.tokyodark_transparent_background = false
-	-- 		vim.g.tokyodark_enable_italic_comment = true
-	-- 		vim.g.tokyodark_enable_italic = true
-	-- 		vim.g.tokyodark_color_gamma = "1.0"
-	-- 		vim.cmd("colorscheme tokyodark")
-	-- 	end,
-	-- })
-	use({
-		"rose-pine/neovim",
-		as = "rose-pine",
-		config = function()
-			require("rose-pine").setup({
-				variant = "dawn",
-			})
-			vim.cmd("colorscheme rose-pine")
-		end,
-	})
-
-	use({
-		"folke/which-key.nvim",
-		config = function()
-			require("plugins.whichkey")
-		end,
-	})
-
-	use({
-		"akinsho/toggleterm.nvim",
-		tag = "*",
-		config = function()
-			require("plugins.toggleterm")
-		end,
-	})
-
-	use({
-		"f-person/git-blame.nvim",
-		config = function()
-			vim.cmd([[
-        let g:gitblame_message_template = '<author> - <date> - <summary>'
-      ]])
-		end,
-	})
-
-	use({
-		"akinsho/git-conflict.nvim",
-		tag = "*",
-		config = function()
-			require("git-conflict").setup()
-		end,
-	})
-
-	-- use({
-	-- 	"tanvirtin/vgit.nvim",
-	-- 	requires = {
-	-- 		"nvim-lua/plenary.nvim",
-	-- 	},
-	-- 	config = function()
-	-- 		require("plugins.vgit")
-	-- 	end,
-	-- })
-	use({
-		"terrortylor/nvim-comment",
-		config = function()
-			require("nvim_comment").setup()
-		end,
-	})
-
-	use({
-		"simrat39/rust-tools.nvim",
-		--config = function()
-		--  require("plugins.rust-tools")
-		--end
-	})
-
-	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
-
-	use({
-		"windwp/nvim-ts-autotag",
-		config = function()
-			require("nvim-ts-autotag").setup()
-		end,
-	})
-
-	use({
-		"gorbit99/codewindow.nvim",
-		config = function()
-			local codewindow = require("codewindow")
-			codewindow.setup()
-			codewindow.apply_default_keybinds()
-		end,
-	})
-
-	use({
-		"kevinhwang91/nvim-hlslens",
-		requires = "petertriho/nvim-scrollbar",
-		config = function()
-			-- require('hlslens').setup() is not required
-			require("plugins.hlslens")
-		end,
-	})
-
-  use 'wakatime/vim-wakatime'
-
-	if packer_bootstrap then
-		require("packer").sync()
-	end
-end
-return require("packer").startup({
-	packer_startup,
-	config = packer_config,
-})
+require("lazy").setup(plugins)
