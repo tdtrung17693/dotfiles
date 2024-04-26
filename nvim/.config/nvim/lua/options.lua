@@ -10,6 +10,7 @@ vim.o.incsearch = false
 
 vim.o.title = false -- fix ghost line printed to buffer
 
+vim.o.background = "dark"
 vim.o.swapfile = false
 
 vim.wo.number = true
@@ -67,3 +68,4 @@ vim.filetype.add({
 		tfstate = "json",
 	},
 })
+

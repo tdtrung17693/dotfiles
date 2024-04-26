@@ -5,7 +5,7 @@ local non_language_ft = { 'fugitive', 'startify' }
 
 require('lualine').setup({
   options = {
-    theme = "auto",
+    theme = "tokyonight",
     -- Separators might look weird for certain fonts (eg Cascadia)
     icons_enabled = true,
     component_separators = { left = '', right = '' },
