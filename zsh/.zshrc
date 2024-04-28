@@ -209,3 +209,6 @@ tx=36:"
 
 alias xl='exa -lag --icons --color=always'
 export GIT_EDITOR=nvim
+eval "$(zoxide init zsh)"
+
+eval "$(atuin init zsh)"
