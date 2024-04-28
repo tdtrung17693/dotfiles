@@ -1,4 +1,3 @@
--- bootstrapping packer
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -14,8 +13,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-	"wbthomason/packer.nvim",
-
 	-- LSP related plugins
 	-- nlsp-settings' config goes in mason config file
 	"tamago324/nlsp-settings.nvim",
@@ -76,8 +73,8 @@ local plugins = {
 			"SmiteshP/nvim-navic",
 		},
 		opts = {
-      theme = "tokyonight",
-    },
+			theme = "tokyonight",
+		},
 	},
 
 	{
@@ -114,15 +111,13 @@ local plugins = {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope-ui-select.nvim",
+			{
+				"nvim-telescope/telescope-fzf-native.nvim",
+				build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+			},
 		},
 		config = function()
 			require("plugins.telescope-config")
-		end,
-	},
-	{
-		"nvim-telescope/telescope-fzf-native.nvim",
-		build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
-		config = function()
 			require("telescope").load_extension("fzf")
 		end,
 	},

@@ -184,5 +184,9 @@ M.mappings["t"] = {
 }
 -- }}}
 
+vim.cmd([[
+  nnoremap <C-j> <C-e>j
+  nnoremap <C-k> <C-y>k
+]])
 
 return M
