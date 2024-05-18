@@ -52,6 +52,11 @@ require("mason-lspconfig").setup_handlers({
 			},
 		})
 	end,
+  ["clangd"] = function ()
+		lspconfig["clangd"].setup({
+      filetypes = { "c", "cpp", "objc", "objcpp" },
+    })
+  end,
 	["tsserver"] = function()
 		require("lspconfig").tsserver.setup({
 			on_init = function(client)
