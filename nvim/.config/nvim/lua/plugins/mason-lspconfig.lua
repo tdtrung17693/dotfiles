@@ -78,22 +78,25 @@ require("mason-lspconfig").setup_handlers({
     })
   end,
   ["tsserver"] = function()
-    require("lspconfig").tsserver.setup({
-      on_init = function(client)
-        client.server_capabilities.documentFormattingProvider = false
-      end,
-      on_attach = function(client, bufnr)
-        utils.common_on_attach(client, bufnr)
-        client.resolved_capabilities.document_formatting = false
-        client.resolved_capabilities.document_range_formatting = false
-      end,
-      commands = {
-        OrganizeImports = {
-          utils.organize_imports,
-          description = "Organize Imports",
-        },
-      },
-    })
+    require("plugins.typescript-tools")
+    -- require("lspconfig").tsserver.setup({
+    --   on_init = function(client)
+    --     client.server_capabilities.documentFormattingProvider = false
+    --   end,
+    --   on_attach = function(client, bufnr)
+    --     utils.common_on_attach(client, bufnr)
+    --
+    --     client.server_capabilities.document_formatting = false
+    --     client.server_capabilities.document_range_formatting = false
+    --     require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
+    --   end,
+    --   commands = {
+    --     OrganizeImports = {
+    --       utils.organize_imports,
+    --       description = "Organize Imports",
+    --     },
+    --   },
+    -- })
   end,
   ["eslint"] = function()
     lspconfig.eslint.setup({
@@ -102,8 +105,8 @@ require("mason-lspconfig").setup_handlers({
       end,
       on_attach = function(client, bufnr)
         utils.common_on_attach(client, bufnr)
-        client.resolved_capabilities.document_formatting = true
-        client.resolved_capabilities.document_range_formatting = true
+        client.server_capabilities.document_formatting = false
+        client.server_capabilities.document_range_formatting = false
       end,
       capabilities = capabilities,
     })
