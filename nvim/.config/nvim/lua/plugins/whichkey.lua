@@ -70,10 +70,10 @@ local opts = {
 }
 
 local which_key = require("which-key")
-which_key.setup(opts)
+-- which_key.setup(opts)
 
 local ropts = opts.opts
 local rvopts = opts.vopts
 
-which_key.register(keymaps.mappings, ropts)
-which_key.register(keymaps.vmappings, rvopts)
+which_key.add(keymaps.mappings, ropts)
+which_key.add(keymaps.vmappings, rvopts)
