@@ -75,5 +75,5 @@ local which_key = require("which-key")
 local ropts = opts.opts
 local rvopts = opts.vopts
 
-which_key.add(keymaps.mappings, ropts)
-which_key.add(keymaps.vmappings, rvopts)
+which_key.add(keymaps.mappings)
+which_key.add(keymaps.vmappings)

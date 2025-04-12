@@ -88,7 +88,7 @@ local plugins = {
 			"SmiteshP/nvim-navic",
 		},
 		opts = {
-			theme = "tokyonight",
+			theme = "tokyonight-storm",
 		},
 	},
 
@@ -214,7 +214,7 @@ local plugins = {
 			tokyonight.setup({
 				style = "day",
 			})
-			vim.cmd([[colorscheme tokyonight]])
+			vim.cmd([[colorscheme tokyonight-storm]])
 		end,
 	},
 	-- {
